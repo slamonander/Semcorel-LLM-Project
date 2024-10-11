@@ -90,7 +90,7 @@ struct ContentView: View {
                 <body>
                     <h1>Watch AI</h1>
                     <p>Get help with your watch</p>
-                    <form action="http://192.168.1.119:8080/submit" method="post">
+                    <form action="http://192.168.1.109:5000/submit" method="post">
                         <div class="input-group">
                             <input type="text" id="userInput" name="userInput" placeholder="Type something...">
                             <button type="button" class="microphone-button" onclick="startDictation()">
@@ -119,7 +119,6 @@ struct ContentView: View {
                                 };
                             } else {
                                 alert('Voice input is not supported in this browser.');
-                                
                             }
                         }
                     </script>
@@ -127,6 +126,6 @@ struct ContentView: View {
             </html>
 
             """)
-            .edgesIgnoringSafeArea(.all) // Expands the web view to the entire screen
+            .edgesIgnoringSafeArea(.all) // expands the web view to the entire screen
     }
 }
