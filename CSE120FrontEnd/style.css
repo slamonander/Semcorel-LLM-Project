@@ -1,0 +1,69 @@
+/* Global settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Container to center everything */
+.container {
+    text-align: center;
+    max-width: 600px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Header section styling */
+header h1 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    color: #666;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/* Button container */
+.button-container {
+    margin-top: 30px;
+}
+
+/* Button styling */
+.btn {
+    padding: 15px 25px;
+    font-size: 1.1rem;
+    color: #fff;
+    background-color: #3f45fa; /* Green button */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #849efc;
+}
+
+/* Footer */
+footer {
+    margin-top: 30px;
+    font-size: 0.9rem;
+    color: #aaa;
+}
