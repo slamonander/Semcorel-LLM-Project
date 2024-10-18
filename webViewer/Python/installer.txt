@@ -1,0 +1,4 @@
+pip install Flask
+pip install flask_cors
+pip install requests
+pip install langchain PyPDF2 sentence-transformers faiss-cpu transformers accelerate
