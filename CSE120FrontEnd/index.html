@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Hello</h1>
+            <p class="tagline">How Can I Help You Today?</p>
+        </header>
+
+        <div class="button-container">
+            <!-- First button to go to new page -->
+            <button id="SpeakButton" class="btn">Speak Question</button>
+
+            <!-- Second button to go to another page -->
+            <button id="TypeButton" class="btn">Type Question</button>
+        </div>
+
+    </div>
+
+    <script>
+        // JavaScript for button actions
+        document.getElementById("SpeakButton").addEventListener("click", function() {
+            window.location.href = "speak.html";
+        });
+
+        document.getElementById("TypeButton").addEventListener("click", function() {
+            window.location.href = "type.html";
+        });
+    </script>
+</body>
+</html>
