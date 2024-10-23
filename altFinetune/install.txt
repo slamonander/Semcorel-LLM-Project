@@ -1,0 +1,17 @@
+# Following unsloth's tutorial for easy/quick fine-tuning:
+https://colab.research.google.com/drive/1T5-zKWM_5OD21QHwXHiV9ixTRR7k3iB9?usp=sharing#scrollTo=IqM-T1RTzY6C 
+
+# Installing unsloth:
+https://github.com/unslothai/unsloth?tab=readme-ov-file#-installation-instructions
+
+    #I had problems installing this, you may have to install PyTorch and Triton to install unsloth
+
+
+# Once those two libraries are installed run the following commands in terminal:
+    pip install --upgrade pip
+    pip install "unsloth[cu121-torch240] @ git+https://github.com/unslothai/unsloth.git"
+
+
+#For prompting we must follow the huggingface prompt template, which will be added to the prompt spreadsheet in google drive
+    #Or huggingface does it automatically?
+        pip install datasets
