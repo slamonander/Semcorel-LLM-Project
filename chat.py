@@ -39,7 +39,7 @@ def handle_conversation(faqs):
 
         relevant_faqs = retrieve_faqs(user_input, faqs)
 
-        result = chain.invoke({"faqs": relevant_faqs, "question": user_input})
+        result = chain.invoke({"faqs": relevant_faqs, "question": user_input}) # Clear this up
         print("Coco: ", result, "\n")
         # context += f"\nUser: {user_input}\nAI: {result}"
 
@@ -51,8 +51,8 @@ def retrieve_faqs(question, faqs):
 
     # Search through JSON data
     for faq in faqs:
-        if any(keyword in faq['prompt'].lower() for keyword in keywords):
-            relevant_faqs.append(f"**Question:** {faq['prompt']}\n**Answer:** {faq['completion']}")
+        if any(keyword in faq['Prompts'].lower() for keyword in keywords):
+            relevant_faqs.append("Question: {faq['Prompts']}\nAnswer: {faq['Completion']}")
     
     return '\n'.join(relevant_faqs)
 

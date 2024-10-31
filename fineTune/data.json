@@ -1,30 +1,4 @@
 [
-
-    {
-        "prompt": "My watch is not getting any sound and my phone does not ring.",
-        "completion": "1. Your phone is not in silent mode. Double-check the silent mode control button, which is the first button on the left side of your iPhone. 2. Ensure that your smartwatch shows as connected. 3. Swipe toward your hand if you wear it on your left wrist or toward your arm if you wear it on your right wrist. Swipe down to find Functions, click on it, and then click Find Phone. Your phone should make a sound.",
-        "tags": ["No sound", "no ringing", "phone not ringing", "watch sound issue", "connections", "notification", "smartwatch", "alert", "audio", "ringtone"]
-    },
-    {
-        "prompt": "How do I put 911 on CoCobtz smart watch?",
-        "completion": "Use the dial pad on your smartwatch and dial 911.",
-        "tags": ["911", "emergency contact", "smartwatch setup", "SOS", "safety settings", "emergency call", "emergency services"]
-    },
-    {
-        "prompt": "How does one find and download software updates for both the watch and cellular phone?",
-        "completion": "iPhone: For the CoCo App, if there is a critical update, we will prompt you to update it when you access the app. Alternatively, you can check for updates in the App Store. Smartwatch: To check for updates on your smartwatch, follow these steps:\n1. Log in to the CoCo App.\n2. Navigate to Settings.\n3. If an update is available, a red dot with new will appear next to your smartwatch icon.\n4. Click on it, and the update will start.\n5. Follow the on-screen instructions to complete the update.",
-        "tags": ["Software updates", "updates", "watch updates", "phone updates", "firmware", "operating system", "smartwatch", "smartphone", "download updates", "system upgrade"]
-    },
-    {
-        "prompt": "I can't get the ECT call to work when I push Call ECT or push the button on the side of the watch. It says it is not connected.",
-        "completion": "1. Have you received any text messages regarding the emergency request?\n2. If your answer to question 1 is no, could you please double-check whether your contact person has their smartwatch connected to their smartphone?\nAdditionally, here's a video explaining how ECT works and its prerequisites:\n\n: https://youtu.be/uvnyJ0GO0A0?si=fNTd0-ECJqv5_qj3",
-        "tags": ["ECT", "ECT call", "call not working", "connection issue", "connectivity", "error", "message", "emergency care team", "emergency contact", "emergency services", "emergency call", "SOS"]
-    },
-    {
-        "prompt": "What is Semcorel's contact information?",
-        "completion": "Their email is support@semcorel.com and their phone number is +1 (669) 221-5768. Their hours are Monday to Friday from 9 AM to 5 PM PST.",
-        "tags": ["contact information", "contact", "semcorel's contact information", "email", "phone number", "support", "tech support"]
-    },
     {
         "Prompts": "\"How do I pair watch with my phone?\"",
         "Completion": "\"1. Click on 'Settings' on the bottom right of the CoCo app. \n2. Press on the red 'Add Device' button. \n3. This will open a bluetooth connection screen, please select the appropriate watch model (CoCo BT1, CoCo WIFI Watch, Fitbit). \n4. The CoCo app will automatically search and connect to your smartwatch.\"",
@@ -212,7 +186,7 @@
     },
     {
         "Prompts": "\"Data is not in sync between the watch and app\"",
-        "Completion": "\"We understand that having the same data on the watch and the app is important. The data on the watch and the app syncs every 10 minutes. If you don't see them in sync after 10 minutes, could you please check if the watch is connected to its paired phone? If you swipe the watch face toward you, you can see the connection status, which looks like a chain link. If connected, it shows a green line in the middle of that chain link. You can also see the connection status in the app.\n\nIf they are not connected, to ensure a stable connection, we recommend keeping the smartphone within a 33 ft range of the CoCo smartwatch indoors, considering the surrounding materials. Bluetooth signals have limited reach, and obstacles like walls or electronic interference can disrupt the connection. However, if the watch disconnects from the phone, it will automatically reconnect when it comes back within range.\n\nIf they are within range and still not connected, please check whether the CoCo app has been closed by the phone\u2019s OS system. Additionally, please ensure the CoCo app has sufficient permissions to run in the background when your smartphone screen is off; it consumes negligible resources.\n\nThe watch itself can store 7 days of health and activity data, meaning if there is no connection for 7 days, there will be no data loss, but you cannot view the health data remotely.\"",
+        "Completion": "\"We understand that having the same data on the watch and the app is important. The data on the watch and the app syncs every 10 minutes. If you don't see them in sync after 10 minutes, could you please check if the watch is connected to its paired phone? If you swipe the watch face toward you, you can see the connection status, which looks like a chain link. If connected, it shows a green line in the middle of that chain link. You can also see the connection status in the app.\n\nIf they are not connected, to ensure a stable connection, we recommend keeping the smartphone within a 33 ft range of the CoCo smartwatch indoors, considering the surrounding materials. Bluetooth signals have limited reach, and obstacles like walls or electronic interference can disrupt the connection. However, if the watch disconnects from the phone, it will automatically reconnect when it comes back within range.\n\nIf they are within range and still not connected, please check whether the CoCo app has been closed by the phone's OS system. Additionally, please ensure the CoCo app has sufficient permissions to run in the background when your smartphone screen is off; it consumes negligible resources.\n\nThe watch itself can store 7 days of health and activity data, meaning if there is no connection for 7 days, there will be no data loss, but you cannot view the health data remotely.\"",
         "Tags": "[\"Data\", \"unsync\", \"unsyncronized\", \"watch\", \"app\"]"
     },
     {
@@ -222,7 +196,87 @@
     },
     {
         "Prompts": "\"How to sync phone contacts to smartwatch BT2 and BT2-Z\"",
-        "Completion": "\"Here are the steps to syncronize your phone contacts:\n\n1. Pair your CoCo smartwatch with your phone. If you have not, please follow the steps on how to pair your smartwatch with your phone (found in the given manual_.\n2. Go to your phone\u2019s 'Settings' -> 'Bluetooth', and tap your CoCo watch's name.\n3. On the details page, enable 'Sync Contacts'.\n4. Your phone\u2019s contacts will be automatically synced to your smartwatch.\n\nPlease note that CoCo emergency contacts need to be added manually through the CoCo app.\"",
+        "Completion": "\"Here are the steps to syncronize your phone contacts:\n\n1. Pair your CoCo smartwatch with your phone. If you have not, please follow the steps on how to pair your smartwatch with your phone (found in the given manual_.\n2. Go to your phone's 'Settings' -> 'Bluetooth', and tap your CoCo watch's name.\n3. On the details page, enable 'Sync Contacts'.\n4. Your phone's contacts will be automatically synced to your smartwatch.\n\nPlease note that CoCo emergency contacts need to be added manually through the CoCo app.\"",
         "Tags": "[\"sync,\" syncronize\", \"add\", \"contacts\", \"BT2\", \"BT2-Z\", \"smartwatch\"]"
+    },
+    {
+        "Prompts": "\"My watch is not getting any sound and my phone does not ring.\"",
+        "Completion": "1. Your phone is not in silent mode. Double-check the silent mode control button, which is the first button on the left side of your iPhone.\n2. Ensure that your smartwatch shows as connected.\n3. Swipe toward your hand if you wear it on your left wrist or toward your arm if you wear it on your right wrist. Swipe down to find \"Functions,\" click on it, and then click \"Find Phone.\" Your phone should make a sound.\n",
+        "Tags": "No sound, no ringing, phone not ringing, watch sound issue, connections, notification, smartwatch, smartphone, alert, audio, ringtone"
+    },
+    {
+        "Prompts": "\"How do I put 911 on CoCobtz smart watch?\"",
+        "Completion": "\"Use the dial pad on your smartwatch and dial 911\"",
+        "Tags": "[\"911\", \"emergency contact\", \"smartwatch setup\", \"SOS\", \"safety settings\", \"emergency call\", \"emergency services\"]"
+    },
+    {
+        "Prompts": "\"How does one find and download software updates for both the watch and cellular phone?\"",
+        "Completion": "\"iPhone: For the CoCo App, if there is a critical update, we will prompt you to update it when you access the app. Alternatively, you can check for updates in the App Store. Smartwatch: To check for updates on your smartwatch, follow these steps:\n1. Log in to the CoCo App.  \n2. Navigate to Settings.\n3. If an update is available, a red dot with new will appear next to your smartwatch icon.  \n4. Click on it, and the update will start.  \n5. Follow the on-screen instructions to complete the update.\"\n",
+        "Tags": "[\"Software updates\", \"updates\", \"watch updates\", \"phone updates\", \"firmware\", \"operating system\", \"smartwatch\", \"smartphone\", \"download updates\", \"system upgrade\"]"
+    },
+    {
+        "Prompts": "\"I can't get the ECT call to work when I push Call ECT or push the button on the side of the watch. It says it is not connected.\"",
+        "Completion": "1. Have you received any text messages regarding the emergency request?\n2. If your answer to question 1 is no, could you please double-check whether your contact person has their smartwatch connected to their smartphone?\nAdditionally, here's a video explaining how ECT works and its prerequisites:\n\n:https://youtu.be/uvnyJ0GO0A0?si=fNTd0-ECJqv5_qj3",
+        "Tags": "[\"ECT\", \"ECT call\", \"call not working\", \"connection issue\", \"connectivity\", \"error\" \"message\", \"emergency care team\", \"emergency contact\", \"emergency services\", \"emergency call\", \"SOS\"]"
+    },
+    {
+        "Prompts": "\"My watch is not getting any sound and my phone does not ring.\"",
+        "Completion": "1. Your phone is not in silent mode. Double-check the silent mode control button, which is the first button on the left side of your iPhone.\n2. Ensure that your smartwatch shows as connected.\n3. Swipe toward your hand if you wear it on your left wrist or toward your arm if you wear it on your right wrist. Swipe down to find \"Functions,\" click on it, and then click \"Find Phone.\" Your phone should make a sound.\n",
+        "Tags": "No sound, no ringing, phone not ringing, watch sound issue, connections, notification, smartwatch, smartphone, alert, audio, ringtone"
+    },
+    {
+        "Prompts": "\"How do I put 911 on CoCobtz smart watch?\"",
+        "Completion": "\"Use the dial pad on your smartwatch and dial 911\"",
+        "Tags": "[\"911\", \"emergency contact\", \"smartwatch setup\", \"SOS\", \"safety settings\", \"emergency call\", \"emergency services\"]"
+    },
+    {
+        "Prompts": "\"How does one find and download software updates for both the watch and cellular phone?\"",
+        "Completion": "\"iPhone: For the CoCo App, if there is a critical update, we will prompt you to update it when you access the app. Alternatively, you can check for updates in the App Store. Smartwatch: To check for updates on your smartwatch, follow these steps:\n1. Log in to the CoCo App.  \n2. Navigate to Settings.\n3. If an update is available, a red dot with new will appear next to your smartwatch icon.  \n4. Click on it, and the update will start.  \n5. Follow the on-screen instructions to complete the update.\"\n",
+        "Tags": "[\"Software updates\", \"updates\", \"watch updates\", \"phone updates\", \"firmware\", \"operating system\", \"smartwatch\", \"smartphone\", \"download updates\", \"system upgrade\"]"
+    },
+    {
+        "Prompts": "\"I can't get the ECT call to work when I push Call ECT or push the button on the side of the watch. It says it is not connected.\"",
+        "Completion": "1. Have you received any text messages regarding the emergency request?\n2. If your answer to question 1 is no, could you please double-check whether your contact person has their smartwatch connected to their smartphone?\nAdditionally, here's a video explaining how ECT works and its prerequisites:\n\n:https://youtu.be/uvnyJ0GO0A0?si=fNTd0-ECJqv5_qj3",
+        "Tags": "[\"ECT\", \"ECT call\", \"call not working\", \"connection issue\", \"connectivity\", \"error\" \"message\", \"emergency care team\", \"emergency contact\", \"emergency services\", \"emergency call\", \"SOS\"]"
+    },
+    {
+        "Prompts": "\"My watch is not getting any sound and my phone does not ring.\"",
+        "Completion": "1. Your phone is not in silent mode. Double-check the silent mode control button, which is the first button on the left side of your iPhone.\n2. Ensure that your smartwatch shows as connected.\n3. Swipe toward your hand if you wear it on your left wrist or toward your arm if you wear it on your right wrist. Swipe down to find \"Functions,\" click on it, and then click \"Find Phone.\" Your phone should make a sound.\n",
+        "Tags": "No sound, no ringing, phone not ringing, watch sound issue, connections, notification, smartwatch, smartphone, alert, audio, ringtone"
+    },
+    {
+        "Prompts": "\"How do I put 911 on CoCobtz smart watch?\"",
+        "Completion": "\"Use the dial pad on your smartwatch and dial 911\"",
+        "Tags": "[\"911\", \"emergency contact\", \"smartwatch setup\", \"SOS\", \"safety settings\", \"emergency call\", \"emergency services\"]"
+    },
+    {
+        "Prompts": "\"How does one find and download software updates for both the watch and cellular phone?\"",
+        "Completion": "\"iPhone: For the CoCo App, if there is a critical update, we will prompt you to update it when you access the app. Alternatively, you can check for updates in the App Store. Smartwatch: To check for updates on your smartwatch, follow these steps:\n1. Log in to the CoCo App.  \n2. Navigate to Settings.\n3. If an update is available, a red dot with new will appear next to your smartwatch icon.  \n4. Click on it, and the update will start.  \n5. Follow the on-screen instructions to complete the update.\"\n",
+        "Tags": "[\"Software updates\", \"updates\", \"watch updates\", \"phone updates\", \"firmware\", \"operating system\", \"smartwatch\", \"smartphone\", \"download updates\", \"system upgrade\"]"
+    },
+    {
+        "Prompts": "\"I can't get the ECT call to work when I push Call ECT or push the button on the side of the watch. It says it is not connected.\"",
+        "Completion": "1. Have you received any text messages regarding the emergency request?\n2. If your answer to question 1 is no, could you please double-check whether your contact person has their smartwatch connected to their smartphone?\nAdditionally, here's a video explaining how ECT works and its prerequisites:\n\n:https://youtu.be/uvnyJ0GO0A0?si=fNTd0-ECJqv5_qj3",
+        "Tags": "[\"ECT\", \"ECT call\", \"call not working\", \"connection issue\", \"connectivity\", \"error\" \"message\", \"emergency care team\", \"emergency contact\", \"emergency services\", \"emergency call\", \"SOS\"]"
+    },
+    {
+        "Prompts": "\"Who is SemCorel?\"",
+        "Completion": "\"Semcorel Inc. is a technology company specializing in healthcare and safety solutions for seniors, including the CoCo product line. Their offerings include smartwatches, mobile apps, and other devices aimed at monitoring health metrics such as heart rate, blood pressure, and location. These tools provide real-time health updates and allow caregivers and family members to stay connected, manage emergencies, and access important medical information remotely. Semcorel's solutions are primarily used in home care, assisted living, and personal emergency response services (PERS), making it easier for seniors to live independently with added safety measures.\nTheir flagship app, CoCo, works with the CoCo Watch and integrates with devices like Fitbit to enhance functionality for senior safety and communication, including an SOS button, medication reminders, and emergency notifications, tailored for senior independence and caregiver peace of mind.\"",
+        "Tags": "[\"who\", \"what\", \"semcorel\"]"
+    },
+    {
+        "Prompts": "How do I contact SemCorel?",
+        "Completion": "Semcorel's support helpline email is: support@semcorel.com\n\nAdditionally, you may call their phone number +1 (669) 221-5768\n\nSemcorel's hours of operation are Monday to Friday from 9 am to 5 pm PST.",
+        "Tags": "[contact, email, call, hours, hours of operation, semcorel, support]"
+    },
+    {
+        "Prompts": "What is Semcorel's phone number?",
+        "Completion": "Semcorel's support helpline email is: support@semcorel.com\n\nAdditionally, you may call their phone number +1 (669) 221-5768\n\nSemcorel's hours of operation are Monday to Friday from 9 am to 5 pm PST.",
+        "Tags": "[phone number, semcorel, help, support]"
+    },
+    {
+        "Prompts": "\"How do I test ECT permissions?\"",
+        "Completion": "\"To check and test (for identifying issues) in the permissions, please try the following steps:\nFor contacts:\n1. Open the CoCo App\n2. Log in with their own credentials: CoCo ID and password\n3. Keep the CoCo App open on its screen and wait there\nFor the CoCo watch user:",
+        "Tags": "[\"ECT\", \"ECT permissions\", \"Permissions\"]"
     }
 ]
