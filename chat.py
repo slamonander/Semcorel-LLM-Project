@@ -1,3 +1,7 @@
+from tts import speak
+from stt import listen_speech
+
+
 from langchain_ollama import OllamaLLM
 from langchain_core.prompts import ChatPromptTemplate
 # from reader import extract_text
@@ -29,19 +33,43 @@ chain = prompt | model
 
 # Function that handles the conversation between user and model
 def handle_conversation(faqs):
-    context = ""
+    # context = ""
+
     print("Welcome to the AI Chatbot, type exit to quit")
 
+
     while True:
-        user_input = input("You: ")
+        tts = input("If you would like TTS, type TTS.").strip().lower()
+        stt = input("Type T for text input or V for voice input: ").strip().lower()
+
+        if stt == 't':
+            user_input = input("You: ")
+        elif stt == 'v':
+            user_input = listen_speech()
+            if user_input is None:
+                continue
+        else:
+            print("Please type in 'T' for text and 'V' for voice.")
+            continue
+
+
         if user_input.lower() == "exit":
             break
+
 
         relevant_faqs = retrieve_faqs(user_input, faqs)
 
         result = chain.invoke({"faqs": relevant_faqs, "question": user_input}) # Clear this up
         print("Coco: ", result, "\n")
         # context += f"\nUser: {user_input}\nAI: {result}"
+
+        # If TTS is selected:
+        if tts == 'tts':
+            speak(result)
+
+
+
+
 
 
 # Function to access the JSON file containing all frequently asked questions and answers
@@ -57,25 +85,6 @@ def retrieve_faqs(question, faqs):
     return '\n'.join(relevant_faqs)
 
 
-# Testing function to see if the JSON file works
-# def test_json_loading(faqs):
-#     # Print the entire JSON data (be careful with large data)
-#     print("Loaded JSON Data:")
-#     print(json.dumps(faqs, indent=4))  # Pretty-print the JSON data
-
-#     # Check the type of the loaded data
-#     print("\nType of loaded data:", type(faqs))
-
-#     # Check the length (number of entries)
-#     print("Number of FAQs loaded:", len(faqs))
-
-#     # Check the structure of the first entry (if it exists)
-#     if faqs:
-#         print("\nFirst FAQ entry structure:")
-#         print("Prompt:", faqs[0].get("prompt"))
-#         print("Completion:", faqs[0].get("completion"))
-#         print("Tags:", faqs[0].get("tags"))
-
 
 if __name__ == "__main__":
     json_path = 'fineTune/data.json'
@@ -85,7 +94,5 @@ if __name__ == "__main__":
     handle_conversation(faqs)
 
 
-    # Testing call
-    # test_json_loading(faqs)
 
 
