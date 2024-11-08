@@ -24,6 +24,19 @@
 
 import speech_recognition as sr
 
+
+# Initialize the speech recognizer
+recognizer = sr.Recognizer()
+
+# Function to capture and transcribe speech
+def speech_to_text():
+    with sr.Microphone() as source:
+        print("Listening...")
+
+        # Adjustments for better audio capture
+        recognizer.adjust_for_ambient_noise(source, duration=0.5)
+
+
 # Initialize recognizer
 recognizer = sr.Recognizer()
 
