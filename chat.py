@@ -1,5 +1,5 @@
 from tts import speak
-from stt import listen_speech
+from stt import speech_to_text
 
 
 from langchain_ollama import OllamaLLM
@@ -45,7 +45,7 @@ def handle_conversation(faqs):
         if stt == 't':
             user_input = input("You: ")
         elif stt == 'v':
-            user_input = listen_speech()
+            user_input = speech_to_text()
             if user_input is None:
                 continue
         else:
