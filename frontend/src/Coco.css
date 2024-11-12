@@ -1,0 +1,44 @@
+/* src/Coco.css */
+.outline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white; /* White outline color */
+    padding: 20px; /* Adjust thickness of the outline */
+    border-radius: 50%; /* Makes the outline circular */
+    width: 200px; /* Width of the outline container */
+    height: 200px; /* Height of the outline container */
+}
+
+.coco {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    margin-top: 20px;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    position: relative;
+    gap: 20px;
+}
+
+.eye {
+    width: 50px;
+    height: 30px;
+    background-color: #5A9BFF;
+    border-radius: 50%;
+    animation: blink 4s infinite; /* Adjusted blink speed */
+    clip-path: ellipse(100% 50% at 50% 50%); /* Start as a full oval */
+}
+
+@keyframes blink {
+    0%, 100% {
+        transform: scaleY(1);
+        clip-path: ellipse(100% 50% at 50% 50%); /* Normal shape */
+    }
+    33%, 66% {
+        transform: scaleY(0.8);
+        clip-path: ellipse(100% 35% at 50% 35%); /* Slightly squish the upper part */
+    }
+}
