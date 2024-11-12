@@ -3,7 +3,10 @@ pip install flask, flask_cors, langchain_ollama, langchain.prompts, sentence_tra
 
 For frontend (if any updates are made to index.html or anything in the src folder):
 cd my-app
-npm run build //this will create a 'build' folder that runs the REACT .js and .css files in the src folder 
+npm run build //this will create a 'build' folder that runs the REACT .js and .css files in the src folder
+
+There is a node-modules folder in the frontend folder, I believe this is created when making the react app. Use this terminal command to create the react app if the node-modules folder causes errors when unzipped or if unzipping takes too long:
+npx create-react-app frontend
 
 To run the fully connected app:
 1. make the build folder if any changes are made
