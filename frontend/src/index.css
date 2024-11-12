@@ -1,0 +1,136 @@
+/* Global reset */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden; /* Prevent scrolling */
+}
+
+/* Container to fill the entire screen */
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distribute the space between elements */
+  align-items: center;
+  background: #fff;
+  position: relative;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* TEXT BUBBLE CSS */
+.header-bubble {
+  width: 100%;
+  max-width: 400px; /* Limit the width for large screens */
+  height: 200px; /* Adjust the height for better visibility */
+  background-color: #5A9BFF;
+  color: white;
+  padding: 30px 20px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  position: relative; /* Needed to position the tail relative to the bubble */
+  z-index: 10;
+}
+
+.header-bubble h1,
+.header-bubble .tagline {
+  margin: 0;
+  padding: 0;
+  color: #FFFFFF;
+  font-family: 'Inter', sans-serif;
+  text-align: center;
+}
+
+.tagline {
+  font-size: 22px;
+  margin-top: 8px;
+  color: #FFFFFF;
+}
+
+/* Add a triangular "tail" to the speech bubble */
+.header-bubble::after {
+  content: "";
+  position: absolute;
+  bottom: -30px; /* Position the tail below the bubble */
+  left: 50%;
+  transform: translateX(-50%) rotate(25deg); /* Center the tail and rotate */
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 50px solid #5A9BFF; /* Create the triangle effect */
+}
+
+/* NAVIGATION BUTTON CSS */
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  margin-bottom: 20px; /* Space below buttons */
+}
+
+.btn { /* Button styling */
+  height: 140px;
+  width: 140px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: black;
+  font-family: 'Roboto', sans-serif;
+  background-color: #CFE2FF;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  margin: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #849efc;
+}
+
+.icon {
+  font-size: 40px;
+  background-color: #fff;
+  color: black;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+  .header-bubble h1 {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    width: 120px;
+    height: 120px;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-bubble h1 {
+    font-size: 1.2rem;
+  }
+
+  .tagline {
+    font-size: 18px;
+  }
+
+  .btn {
+    width: 140px;
+    height: 140px;
+    font-size: 1.5rem;
+  }
+}
