@@ -1,0 +1,13 @@
+For app.py, copy and paste into library to install necessary libraries:
+pip install flask, flask_cors, langchain_ollama, langchain.prompts, sentence_transformers, torch
+
+For frontend (if any updates are made to index.html or anything in the src folder):
+cd my-app
+npm run build //this will create a 'build' folder that runs the REACT .js and .css files in the src folder 
+
+To run the fully connected app:
+1. make the build folder if any changes are made
+2. follow the next steps in command terminal
+
+cd backend
+python app.py
