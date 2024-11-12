@@ -1,0 +1,120 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #e2ebf0, #cfd9e2);
+    margin: 0;
+    flex-direction: column;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.chat-container {
+    width: 100%;
+    max-width: 600px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 2px solid #007bff;
+    height: 80vh;
+    max-height: 700px;
+}
+
+.chat-box {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-bottom: 15px;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 15px;
+    background: #f3f4f6;
+    max-height: calc(100% - 100px);
+}
+
+.chat-message {
+    padding: 15px;
+    border-radius: 25px;
+    margin: 10px 0;
+    max-width: 75%;
+    word-wrap: break-word;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.user-message {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: #fff;
+    align-self: flex-end;
+    border-bottom-right-radius: 5px;
+    animation: slide-in 0.5s ease-out;
+    text-align: right;
+}
+
+.bot-message {
+    background: #e0e0e0;
+    color: #333;
+    align-self: flex-start;
+    border-bottom-left-radius: 5px;
+    animation: slide-in 0.5s ease-out;
+    text-align: left;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"] {
+    flex-grow: 1;
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    margin-right: 10px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #007bff;
+    box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5);
+}
+
+button {
+    padding: 15px 25px;
+    font-size: 16px;
+    color: #fff;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+button:hover {
+    background-color: #004080;
+}
+
+@keyframes slide-in {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
