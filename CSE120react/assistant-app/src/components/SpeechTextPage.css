@@ -1,0 +1,61 @@
+/* SpeechTextPage.css */
+
+.container {
+  text-align: center;
+  margin-top: 50px;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+h1 {
+  font-size: 2.2em;
+  color: #4a90e2;
+}
+
+.back-button {
+  background-color: #ff6b6b;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  background-color: #ff4c4c;
+}
+
+.speech-button,
+.text-to-speech-button {
+  background-color: #4a90e2;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.speech-button:hover,
+.text-to-speech-button:hover {
+  background-color: #357ab8;
+}
+.transcript {
+  font-size: 1.1em;
+  color: #555;
+  margin-top: 15px;
+} 
+.text-area {
+  width: 100%;
+  max-width: 500px;
+  padding: 15px;
+  font-size: 1em;
+  border-radius: 8px;
+  border: 1px solid rgba(90, 155, 255, 1);
+  resize: vertical;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
