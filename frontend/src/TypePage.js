@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Coco from './Coco';
 import './TypePage.css';
-// import './CocoSmall.css';
+import './CocoSmall.css';
 
 const TypePage = () => {
   const [userInput, setUserInput] = useState('');
