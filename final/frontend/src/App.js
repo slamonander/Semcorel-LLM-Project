@@ -33,10 +33,10 @@ function App() {
               <span className="material-icons icon">mic</span><br />Speak
             </button>
             <button className="btn" onClick={() => navigate('/type')}>
-              <span className="material-icons icon">keyboard</span><br />Type
+              Ignore
             </button>
             <button className="btn" onClick={() => navigate('/test')}>
-              CSS testing
+              <span className="material-icons icon">keyboard</span><br />Type
             </button>
           </div>
         } />
