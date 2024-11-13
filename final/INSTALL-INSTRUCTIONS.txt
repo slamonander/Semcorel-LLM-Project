@@ -1,0 +1,10 @@
+INSTALL ALL LIBRARIES FOR BACKEND:
+pip install flask flask_cors langchain_ollama langchain.prompts sentence_transformers torch
+
+GO TO FRONTEND FOLDER, WRITE IN TERMINAL:
+
+npm install
+npm run build
+
+GO BACK TO BACKEND FOLDER:
+python3 app.py
