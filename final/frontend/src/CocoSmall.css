@@ -1,0 +1,31 @@
+.coco-small {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    width: 140px; /* Width of the Coco circle */
+    height: 140px; /* Height of the Coco circle */
+    border-radius: 50%; /* Make Coco circular */
+    position: relative;
+    gap: 20px;
+}
+
+.eye {
+    width: 40px;
+    height: 30px;
+    background-color: #5A9BFF;
+    border-radius: 50%;
+    animation: blink 4s infinite; /* Adjusted blink speed */
+    clip-path: ellipse(100% 50% at 50% 50%); /* Start as a full oval */
+}
+
+@keyframes blink {
+    0%, 100% {
+        transform: scaleY(1);
+        clip-path: ellipse(100% 50% at 50% 50%); /* Normal shape */
+    }
+    33%, 66% {
+        transform: scaleY(0.8);
+        clip-path: ellipse(100% 35% at 50% 35%); /* Slightly squish the upper part */
+    }
+}
