@@ -4,7 +4,7 @@ import Coco from './Coco';
 import './TypePage.css';
 // import './CocoSmall.css';
 
-const Test = () => {
+const TypePage = () => {
   const [userInput, setUserInput] = useState('');
   const [conversationHistory, setConversationHistory] = useState([]);
   const [messages, setMessages] = useState([]);
@@ -104,4 +104,4 @@ const Test = () => {
   );
 };
 
-export default Test;
+export default TypePage;
