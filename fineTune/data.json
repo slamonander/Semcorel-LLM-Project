@@ -1,34 +1,477 @@
-{
-    "prompt": "My watch is not getting any sound and my phone does not ring.",
-    "completion": "1. Your phone is not in silent mode. Double-check the silent mode control button, which is the first button on the left side of your iPhone. 2. Ensure that your smartwatch shows as connected. 3. Swipe toward your hand if you wear it on your left wrist or toward your arm if you wear it on your right wrist. Swipe down to find Functions, click on it, and then click Find Phone. Your phone should make a sound.",
-    "tags": ["No sound", "no ringing", "phone not ringing", "watch sound issue", "connections", "notification", "smartwatch", "alert", "audio", "ringtone"]
-}
-
-{
-    "prompt": "How do I put 911 on CoCobtz smart watch?",
-    "completion": "Use the dial pad on your smartwatch and dial 911",
-    "tags": ["911", "emergency contact", "smartwatch setup", "SOS", "safety settings", "emergency call", "emergency services"]
-}
-
-
-{
-    "prompt": "How does one find and download software updates for both the watch and cellular phone?",
-    "completion": "iPhone: For the CoCo App, if there is a critical update, we will prompt you to update it when you access the app. Alternatively, you can check for updates in the App Store. Smartwatch: To check for updates on your smartwatch, follow these steps:
-        1. Log in to the CoCo App.  
-        2. Navigate to Settings.
-        3. If an update is available, a red dot with new will appear next to your smartwatch icon.  
-        4. Click on it, and the update will start.  
-        5. Follow the on-screen instructions to complete the update.",
-    "tags": ["Software updates", "updates", "watch updates", "phone updates", "firmware", "operating system", "smartwatch", "smartphone", "download updates", "system upgrade"]
-
-}
-
-{
-    "prompt": "I can't get the ECT call to work when I push Call ECT or push the button on the side of the watch. It says it is not connected.",
-    "completion": "1. Have you received any text messages regarding the emergency request?
-                2. If your answer to question 1 is no, could you please double-check whether your contact person has their smartwatch connected to their smartphone?
-                Additionally, here's a video explaining how ECT works and its prerequisites:
-
-                :https://youtu.be/uvnyJ0GO0A0?si=fNTd0-ECJqv5_qj3",
-    "tags": ["ECT", "ECT call", "call not working", "connection issue", "connectivity", "error" "message", "emergency care team", "emergency contact", "emergency services", "emergency call", "SOS"]
-}
+[
+    {
+        "prompt": "\"How do I pair watch with my phone?\"",
+        "completion": "\"1. Click on 'Settings' on the bottom right of the CoCo app. \n2. Press on the red 'Add Device' button. \n3. This will open a bluetooth connection screen, please select the appropriate watch model (CoCo BT1, CoCo WIFI Watch, Fitbit). \n4. The CoCo app will automatically search and connect to your smartwatch.\"",
+        "tags": "[\"pair\", \"connect\", \"watch\", \"smartwatch\", \"phone\", \"smartphone\"]"
+    },
+    {
+        "prompt": "\"What is the difference between free version and premium subscription?\"",
+        "completion": "\"The Premium Subscription includes additional features such as video calling, unlimited contact list, location sharing, and irregularity detection which provides alerts to your Emergency Care Team (ECT) contacts at the first sign of trouble with your health monitoring.\n\nYou can start a FREE 21 day trial on us to experiece premium services above, after the 21 days you may continue your subscription for $19.80 a month or 66 cents a day.\"",
+        "tags": "[\"free version\", \"premium version\", \"premium\", \"subscription\"]"
+    },
+    {
+        "prompt": "\"How do I add a contact on CoCo App?\"",
+        "completion": "\"1. Click on 'Settings' on the bottom right of the CoCo app.\n2. Click on the 'Contacts' tab in the middle of the screen.\n3. Click on the '+' on the top right corner (the default free version only allows one contact. If you prefer to add multiple contacts please consider to upgrading to the premium subscription service)\n4. Fill out your contact's information (phone number, emergency contact [yes or no] relationship, viewing permissions) and send the invitation for them to join your Emergency Care Team (ECT).\n5. The invited contact must also have the CoCo app installed, they will receive the invitation on the 'Carees' page. They should click 'Accept', afterwards they will be able to receive messages and emergency calls from you.\"",
+        "tags": "[\"add\", \"contact\", \"CoCo App\"]"
+    },
+    {
+        "prompt": "\"How could I receive SMS on CoCo smartwatch?\"",
+        "completion": "\"1. For iPhone open 'Settings' on phone, find 'Notifications' then click 'Show Previews', choose 'Always' or 'Unlock'. \n2. Go back to the 'Settings' page and find 'Messages' then click 'Allow Notifications' and select all mode of ALERTS\n3. Go back to 'Settings' once more and click 'Bluetooth', please fine the 'CoCo BT1' or the respective model you connected and click the '!' on the right side, turn on 'Share System Notifications\"",
+        "tags": "[\"receive SMS\", \"SMS\", \"add SMS\", \"CoCo smartwatch\", \"watch\"]"
+    },
+    {
+        "prompt": "\"How to calling ECT?\"",
+        "completion": "\"ECT is your Emergency Care Team who are the contacts you connected to the app.\n1. On your watch, press 'Call ECT' or long press the watch crown down for 3 seconds.\n2. CoCo smart watch will automatically call the contact you added.\n3. Your contact will be sent a 'ECT' video call where the contact can check wearer's health data and location for quick response.\"",
+        "tags": "[\"call\", \"calling\", \"call ECT\", \"ECT\"]"
+    },
+    {
+        "prompt": "\"How to set up BT2-Z watch?\"",
+        "completion": "\"Thank you for purchasing the CoCo Smartwatch BT2-Z. There should be a \"Get Started\" video listed in the user manual sent to you. But here is some initial steps to get started with your new smart watch!\"\n1. Charge Your Watch: Connect the charging cable to the smartwatch and plug it into a power source. Allow the watch to charge fully before first use.\n2. Pair Your Device: Open the CoCo app and follow the first-time user steps to set up a basic profile, add your emergency contacts, and pair your BT2-Z with your smartphone. This will sync your language and time format from your smartphone to your device.\n3. Explore Features: Once paired, take some time to explore the various features of your BT2-Z, such as health monitoring, Emergency Care Team (ECT), Medication Reminder, and customizable watch faces.\"",
+        "tags": "[\"set up\", \"BT2-Z\", \"bt2z\", \"watch\", \"smartwatch\", \"coco watch\"]"
+    },
+    {
+        "prompt": "\"How to set up BT2 watch?\"",
+        "completion": "\"Thank you for purchasing the CoCo Smartwatch BT2. There should be a \"Get Started\" video listed in the user manual sent to you. But here is some initial steps to get started with your new smart watch!\"\n1. Charge Your Watch: Connect the charging cable to the smartwatch and plug it into a power source. Allow the watch to charge fully before first use.\n2. Pair Your Device: Open the CoCo app and follow the first-time user steps to set up a basic profile, add your emergency contacts, and pair your BT2-Z with your smartphone. This will sync your language and time format from your smartphone to your device.\n3. Explore Features: Once paired, take some time to explore the various features of your BT2-Z, such as health monitoring, Emergency Care Team (ECT), Medication Reminder, and customizable watch faces.\"",
+        "tags": "[\"set up\", \"BT2, \"bt2\", \"watch\", \"smartwatch\", \"coco watch\"]"
+    },
+    {
+        "prompt": "\"How to set up BT1 watch?\"",
+        "completion": "\"Thank you for purchasing the CoCo Smartwatch BT1. There should be a \"Get Started\" video listed in the user manual sent to you. But here is some initial steps to get started with your new smart watch!\"\n1. Charge Your Watch: Connect the charging cable to the smartwatch and plug it into a power source. Allow the watch to charge fully before first use.\n2. Pair Your Device: Open the CoCo app and follow the first-time user steps to set up a basic profile, add your emergency contacts, and pair your BT2-Z with your smartphone. This will sync your language and time format from your smartphone to your device.\n3. Explore Features: Once paired, take some time to explore the various features of your BT2-Z, such as health monitoring, Emergency Care Team (ECT), Medication Reminder, and customizable watch faces.\"",
+        "tags": "[\"set up\", \"BT1\", \"bt1\", \"watch\", \"smartwatch\", \"coco watch\"]"
+    },
+    {
+        "prompt": "\"How to update CoCo app?\"",
+        "completion": "\"For the CoCo App, if there is a critical update, we will prompt you to update it when you access the app. Alternatively, you can check for updates in the App Store. To check for updates on your smartwatch, follow these steps:\n1. Log in to the CoCo App. \n2. Navigate to \"Settings.\" \n3. If an update is available, a red dot with \"new\" will appear next to your smartwatch icon. \n4. Click on it, and the update will start. \n5. Follow the on-screen instructions to complete the update.\"",
+        "tags": "[\"update\", \"coco app\"]"
+    },
+    {
+        "prompt": "\"How do I manage my medication?\"",
+        "completion": "\"For medication management, please follow these steps. After you are done with adding, deleting, or modifying medications, please allow 10 minutes for the changes to sync with your smartwatch:\n\n1. Make sure that your smartwatch is connected to your smartphone. If not, it will take longer for your medication data to sync with your smartwatch.\n2. Navigate to 'Settings' on the CoCo app.\n3. Click the 'Medication' button, which is the middle purple button under your smartwatch row.\n4. On the 'Medications' detail page:\n- 'Delete': Click the edit icon at the top right after the \"Medications\" header. You will see a minus '-' sign next to the medications. Click it to delete a medication, then click the check mark to save the changes.\n- 'Change': Click the medication row itself to edit each item. Please make sure to click 'Done' after finishing the changes.\n- 'Add': Click the plus '+' sign and follow the on-screen instructions.\"",
+        "tags": "[\"manage\", \"management\", \"add medicine\", \"medicine\", \"medication\"]"
+    },
+    {
+        "prompt": "\"How do I find phone and find device for BT2?\"",
+        "completion": "\"On the smartwatch is a feature for 'Find phone' and there is an equivalent 'Find Device/Watch' feature on your phone.\nFor 'Find Phone', please double-check the following:\n1. Ensure your phone is not on silent mode. this is the sliding button on the top left of an iPhone. If you see a red mark, this means your phone is on silent mode.\n2. Check if your smartwatch shows as connected\n3. On your smartwatch's screen, swipe moving your finger from left to right. This will bring you to a settings page, swipe down to find 'Functions'. Click on it and then click 'Find Phone' Your phone should make a sound.\n\nFor 'Find Device/Watch' these steps work in the opposite direction. The first two steps are the same.\n3. Go to the CoCo app on your phone, navigate to 'Settings', and click 'Find Device.' Your CoCo watch should make a sound.\"",
+        "tags": "[\"find phone\", \"find watch\", \"find device\", \"search\"]"
+    },
+    {
+        "prompt": "\"How to turn off phone call?\"",
+        "completion": "\"If you experience an accidental incoming phone call, you can turn it off with the following steps:\n1. Turn on your watch face by either lifting your arm to light it up or pressing down on the crown button.\n2. Swipe towards yourself if you wear it on your left arm, or in the opposite direction if you wear it on your right arm.\n3. Click the 'phone' icon\n4. In the phone settings, swipe all the way down until you see 'Switch'. If it is on, turn it off\"\n\nThis will prevent any phone calls from coming through on your watch.",
+        "tags": "[\"accident call\", \"turn off call\", \"phone call\", \"call on watch\"]"
+    },
+    {
+        "prompt": "\"How does my contact know they are invited?\"",
+        "completion": "\"When you add a contact on the CoCo App, CoCo will send a SMS (text) invitation to that contact's phone number and instructions on how they can help you by prompting them to download the app. If that contact is alreay a CoCo App user, they will get the invitation as a notification on their CoCo app as well.\"",
+        "tags": "[\"contact invite\", \"invitation\", \"contact\"]"
+    },
+    {
+        "prompt": "\"How do I know fall detection is on?\"",
+        "completion": "\"Fall detection is disabled by default. You need to manually enable it using the following steps:\n1. Ensure that your CoCo watch is paired with your smartphone and connected.\n2. Navigate to 'Settings' on the CoCo app\n3. Click on 'Fall Detection' to go to its configuration page\n4. Activate it\nThis will activate the feature on your smartwatch.\nNOTE: Please be aware that currently, fall detection only works for serious falls to avoid false alarms. SemCorel is planning to add options to adjust the sensitivity settings on the future\"",
+        "tags": "[\"Fall detection\", \"on\", \"activation', \"activate']"
+    },
+    {
+        "prompt": "\"What is fall detection?\"",
+        "completion": "\"When your smartwatch detects a fall, it will start a 20-second countdown. If the countdown is not cancelled before it reaches 0, it will send an SMS (text) and initiate a video call (through push notification, so notification permissions must be granted to the CoCo app on the ECT contact's device) with your added contacts.\"",
+        "tags": "[\"what\", \"fall detection\"]"
+    },
+    {
+        "prompt": "\"How do I change my medical conditions?\"",
+        "completion": "\"To update your medical conditions, please follow these steps:\n1. Navigate to 'Settings' on the CoCo app\n2. Click on 'Profile'\n3. Tap on 'Medical Conditions', this will take you to a page where you can add, delete, and edit your conditions\"",
+        "tags": "[\"change\", \"medical conditions\", \"conditions\", \"medical\"]"
+    },
+    {
+        "prompt": "\"How to disable phone call to smart watch\"",
+        "completion": "\"To stop the phone ring on your watch, please follow these steps:\n1. On the watch face, swipe down.\n2. You will see 4 icons, click on the phone icon.\n3. Disable \"BT switch\"\nThis will prevent your smartwatch from ringing when your phone does\"",
+        "tags": "[\"disable\", \"phone call\", \"call\", \"watch\", \"smart watch\", \"smartwatch\", \"ring\"]"
+    },
+    {
+        "prompt": "\"How to sync phone's contact to BT2 on iPhone?\"",
+        "completion": "\"To get your contacts into your watch, please follow these steps:\n1. Go to your iPhone's settings.\n2. Click on 'Bluetooth'.\n3. Click on the 'i' next to CoCo BT2 (ID-xxx) or your respective CoCo device model\n4. Click 'Sync Contacts'. You can also choose to sync only your favorites or recent contacts to your smartwatch.\"",
+        "tags": "[\"sync,\" syncronize\", \"add\", \"contacts\", \"BT2\", \"iPhone\"]"
+    },
+    {
+        "prompt": "\"Whats the difference between phone contacts and ECT contacts?\"",
+        "completion": "\"Sorry for the confusion regarding 'Contacts' on the smartwatch and ECT (Emergency Contact Team). On the smartwatch, 'Contacts' refers to your phone's contacts. You can sync your phone's contacts to the smartwatch through your phone's settings. ECT contact is added through the CoCo app and will message and call an assigned individual during an emergency.\" ",
+        "tags": "[\"difference\", \"phone contacts\", \"ECT contacts\"]"
+    },
+    {
+        "prompt": "\"How to call ECT?\"",
+        "completion": "\"Manual calling: The customer can initiate an ECT call by pressing the ECT Call button on the watch face for 3 seconds, pressing the ECT button on the side of the smartwatch for 3 seconds, or via the CoCo app in the emergency tab.\n\nAutomatic calling: CoCo will automatically initiate an ECT call when it detects an emergency such as a call (if the call request is not canceled after a 20-second countdown), a health emegency (for premium customers only), or being out of a designated safe zone for too long (for premium customers only).\"",
+        "tags": "[\"call\", \"calling\", \"call ECT\", \"ECT\", \"ECT call initiation\", \"initiate\"]"
+    },
+    {
+        "prompt": "\"How to cancel account?\"",
+        "completion": "\"To cancel your subscription, please log into you account at the following link and proceed with the cancellation:\n\nhttps://www.semcorel.com/account\"",
+        "tags": "[\"cancel\", \"cancel account\", \"account\", \"subscription\", \"cancel subscription\"]"
+    },
+    {
+        "prompt": "\"What do the abbreviations stand for?\"",
+        "completion": "\"Here's what the abbreviations stand for on your CoCo smartwatch:\n\n1. SPO2: Blood Oxygen Saturation - It measures the percentage of oxygen in your blood\n2. BPM: Beats Per Minute - This refers to your heart rate\n3. ECT: Emergency Care Team - The group of people you designate to be notified in case of an emergency\"",
+        "tags": "[\"abbreviations\", \"stand for\", \"meaning\", \"on CoCo app\"]"
+    },
+    {
+        "prompt": "\"How to manage CoCo contacts?\"",
+        "completion": "\"To manage your contacts, please follow these steps in the CoCo app, either by yourself or through any of your contacts who have admin permissions to assist you remotely:\n\n1. Log into the CoCo App.\n2. Navigate to 'Settings.'\n3. Tap \"Contacts\" to access the Contact Details page.\n4. Tap the pen-like icon at the top right of the screen.\n5. Under each contact, you will see a red 'Delete' button; tapping 'Delete' will remove that contact.\n6. To add more contacts, tap the '+' icon at the top right corner of the screen and then follow the instructions provided.\"\n",
+        "tags": "[\"manage\", \"manage contacts\", \"coco contacts\", \"contacts\"]"
+    },
+    {
+        "prompt": "\"How to add CoCo emergency contacts?\"",
+        "completion": "\"To add contacts, please follow these steps in the CoCo App:\n\n1. Navigate to 'Settings.' within the CoCo app\n2. Tap \"Contacts\" to access the Contact Details page.\n3. To add more contacts, tap the '+' icon at the top right corner of the screen and then follow the instructions provided.\"",
+        "tags": "[\"add\", \"contact\", \"emergency\", \"emergency contact\", \"coco app\"]"
+    },
+    {
+        "prompt": "\"How to make ECT work or How can I get help when I have an emergency?\"",
+        "completion": "To ensure you can alert someone in case of an emergency, you simply need to add a few contacts. Below are the steps for adding them, along with a video explaining how the Emergency Contact Team (ECT) feature works.\n\nPlease follow these instructions in the CoCo App to set up your ECT contacts:\n\n1. Go to 'Settings.' within the CoCo app  \n2. Tap 'Contacts' to view the Contact Details page.  \n3. To include additional contacts, tap the '+' symbol in the top right corner and follow the prompts.\n\nHere's a link explaining how ECT functions: (or search 'How ECT works Coco' on YouTube)\nhttps://www.youtube.com/watch?v=dYOdLjn9Ksc\n",
+        "tags": "[\"ECT\", \"ECT work\", \"help\", \"emergency\"]"
+    },
+    {
+        "prompt": "\"I'm not getting my sleep time\"",
+        "completion": "\"First, please make sure you are wearing the watch correctly by referring to the manual you should have received with your purchase. Secondly, the sleep data will appear after you wake up and take a few steps, as that is how the watch identifies that you are awake.\"",
+        "tags": "[\"sleep time\", \"sleep\", \"sleep recording\", \"not recording\", \"not getting\"]"
+    },
+    {
+        "prompt": "\"BT2 is not getting weather information\"",
+        "completion": "\"The CoCo smartwatch utilizes the location of its paired smartphone to update its weather information. Please grant the CoCo App permission to access your phone's location and reconnect with your CoCo smartwatch if you would like to receive the updated weather immediately. Alternatively, you can wait for the CoCo app to sync automatically. CoCo updates its weather information every hour automatically.\"",
+        "tags": "[\"BT2\", \"weather information\", \"weather\", \"not getting\"]"
+    },
+    {
+        "prompt": "\"BT2 is not receiving phone calls\"",
+        "completion": "\"If you're not receiving calls normally, it likely means the CoCo watch doesn't have the necessary permissions. Please check two settings on your phone:\n1. Go to 'Settings' -> 'Bluetooth', tap your CoCo watch's name 'CoCo BT2 (ID-xxx)', and ensure the following permissions are granted. If you want the CoCo watch to display your contact's name, please also enable 'Contacts'\n2. Necessary Permissions: Location: Always, Bluetooth, Microphone, Camera, Notifications: Banners, Sounds, Badges, Background App Refresh, Cellular Data.\"",
+        "tags": "[\"BT2\", \"phone calls\", \"not receiving\"]"
+    },
+    {
+        "prompt": "\"How to reconnect smartwatch on a new phone\"",
+        "completion": "\"Before connecting it to your new phone, please ensure that it's completely disconnected from your old phone:\n\n1. Log in to the CoCo App on your old phone.\n2. Navigate to 'Settings.' in the CoCo App\n3. Click on your smartwatch.\n4. Click 'Remove Device.'\n5. Go to your old phone's Settings.\n6. Tap on 'Bluetooth' and check if your smartwatch is connected. If so, remove it.\n\nAfterward, try reconnecting it to your new phone. Please ensure that the Bluetooth on your new phone is turned on.\"",
+        "tags": "[\"connect\", \"reconnect\", \"watch\", \"new phone\", \"disconect old phone\"]"
+    },
+    {
+        "prompt": "\"BT2 does not reconnect after disconnecting with iPhone\"",
+        "completion": "\"We understand that connecting the watch with your phone is important. Could you please check a few things to diagnose the issue?\n\n1. Please double-check whether Bluetooth is enabled on your iPhone. Go to your phone's settings and verify whether 'Bluetooth' is set to 'On.' If it's off, please turn on Bluetooth and reconnect your watch in the CoCo App. If it was previously connected, remove the connection and reconnect.\n\n2. If Bluetooth is enabled on your phone, tap 'Bluetooth' to see if you can find 'CoCo BT2 (ID-xxx)' listed there (xxx could be different for each watch). If you find it, remove it, then return to the CoCo app and reconnect your watch.\n\n3. If the issue persists, please reboot your phone and repeat either step 1 or 2.\n\nNormally, the CoCo watch should automatically reconnect after being disconnected due to reasons such as low battery or being out of Bluetooth range.\"",
+        "tags": "[\"BT2\", \"does not reconnect\", \"disconnecting\", \"iPhone\"]"
+    },
+    {
+        "prompt": "\"How to change personal information?\"",
+        "completion": "\"If you'd like to change your general information, such as your name, email, phone number, or address, please follow these steps:\n1. Navigate to 'Settings' in the CoCo App.\n2. Click anywhere on the top of the Settings page, such as your photo or name, or the '>' sign.\n3. You will then see the 'CoCo ID' page; click on the row you'd like to change.\n4. After entering the desired information, please click 'OK' to save it.\n\nIf you'd like to change your personal information, such as height, weight, or daily schedule, please follow these steps:\n1. Navigate to 'Settings' in the CoCo App.\n2. Click 'Profile' in the middle of that page, the first of those three icons.\n3. You will then see the 'Profile' page; click on the row you'd like to change.\n4. If it directs you to a detailed page, after making changes, please click 'Done' at the top right corner of the page.\"\n",
+        "tags": "[\"change\", \"personal info\", \"personal information\", \"update info\"]"
+    },
+    {
+        "prompt": "\"How to change user address?\"",
+        "completion": "\"You can change your address on your CoCo ID page by following these steps:\n1. Navigate to 'Settings' in the CoCo App.  \n2. Click your photo or name at the top of the page to access the CoCo ID page.  \n3. Click 'Address.'  \n4. After entering your address, click 'Done' to save your information.\"",
+        "tags": "[\"change\", \"user address\", \"address\"]"
+    },
+    {
+        "prompt": "\"BT2 does not reconnect after disconnecting with android phone\"",
+        "completion": "\"We understand that connecting the watch with your phone is important. Could you please check a few things to diagnose the issue?\n\n1. Please double-check whether Bluetooth is enabled on your android phone. Go to your phone's settings and verify whether 'Bluetooth' is set to 'On.' If it's off, please turn on Bluetooth and reconnect your watch in the CoCo App. If it was previously connected, remove the connection and reconnect.\n\n2. If Bluetooth is enabled on your phone, tap 'Bluetooth' to see if you can find 'CoCo BT2 (ID-xxx)' listed there (xxx could be different for each watch). If you find it, remove it, then return to the CoCo app and reconnect your watch.\n\n3. If the issue persists, please reboot your phone and repeat either step 1 or 2.\n\nNormally, the CoCo watch should automatically reconnect after being disconnected due to reasons such as low battery or being out of Bluetooth range.\"",
+        "tags": "[\"BT2\", \"does not reconnect\", \"disconnecting\", \"android\"]"
+    },
+    {
+        "prompt": "\"BT2 contact limit\"",
+        "completion": "\"We understand that having all contact information accessible on the watch is convenient. However, due to storage limitations, the BT2 can currently save a maximum of 75 contacts. We will try to increase this capacity in our future models.\"",
+        "tags": "[\"BT2\", \"contact limit\", \"max contacts\"]"
+    },
+    {
+        "prompt": "\"Disconnected warning\"",
+        "completion": "\"It is crucial for the CoCo smartwatch to maintain a stable connection with the outside world. To address this disconnection warning, ensure your smartphone remains within a 33 ft range of your CoCo smartwatch, taking into account surrounding materials, as Bluetooth signals have limited reach and obstacles like walls or electronic interference can disrupt the connection. Additionally, please make sure to have the latest CoCo application installed and attempt to reconnect to check if the stability improves. If the issue persists, please feel free to reach out for further assistance.\"",
+        "tags": "[\"disconnected\", \"warning\", \"disconnected warning\"]"
+    },
+    {
+        "prompt": "\"BT2 bluetooth connection\"",
+        "completion": "\"BT2 is equipped with two Bluetooth chips: one supporting data transfer via BLE 5.2 and the other supporting audio transfer via BLE 3.0. BLE 5.2 can theoretically support a range of up to 240 meters (800 feet) under ideal conditions with no obstructions, while the typical range for Bluetooth 3.0 devices is around 10 meters (33 feet). However, typical indoor environments may significantly reduce these ranges.\n\n In our tests, ensuring that your smartphone remains within a 30-foot range of your CoCo smartwatch will help maintain stable connectivity. This takes into account surrounding materials, as Bluetooth signals are limited in reach and can be disrupted by obstacles like walls or electronic interference. The CoCo BT2 smartwatch can store up to 7 days of health and activity data on the watch if it has been disconnected from its paired smartphone. The CoCo App will automatically reconnect the CoCo smartwatch if it comes back into range.\"",
+        "tags": "[\"bluetooth range\", \"BT2\", \"storage\"]"
+    },
+    {
+        "prompt": "\"BT2 does not stay connected to user\"",
+        "completion": "\"For staying connected, we normally recommend keeping the smartphone within a 33 ft range of the CoCo smartwatch indoors to ensure a stable connection, considering the surrounding materials. Bluetooth signals have limited reach, and obstacles like walls or electronic interference can disrupt the connection. However, if the watch disconnects from the phone, it will automatically reconnect when it comes back within range.\n\nAdditionally, please ensure the CoCo app has sufficient permissions to run in the background when your smartphone screen is off; it consumes negligible resources. Sometimes, restarting your smartphone and reopening the CoCo App can fix this issue.\n\nThe watch itself can store 7 days of health and activity data, meaning if there is no connection for 7 days, there will be no data loss, but you cannot view the health data remotely.\"",
+        "tags": "[\"BT2\", \"disconnect\", \"disconnected\", \"user\", \"does not stay connected\"]"
+    },
+    {
+        "prompt": "\"Data is not in sync between the watch and app\"",
+        "completion": "\"We understand that having the same data on the watch and the app is important. The data on the watch and the app syncs every 10 minutes. If you don't see them in sync after 10 minutes, could you please check if the watch is connected to its paired phone? If you swipe the watch face toward you, you can see the connection status, which looks like a chain link. If connected, it shows a green line in the middle of that chain link. You can also see the connection status in the app.\n\nIf they are not connected, to ensure a stable connection, we recommend keeping the smartphone within a 33 ft range of the CoCo smartwatch indoors, considering the surrounding materials. Bluetooth signals have limited reach, and obstacles like walls or electronic interference can disrupt the connection. However, if the watch disconnects from the phone, it will automatically reconnect when it comes back within range.\n\nIf they are within range and still not connected, please check whether the CoCo app has been closed by the phone\u2019s OS system. Additionally, please ensure the CoCo app has sufficient permissions to run in the background when your smartphone screen is off; it consumes negligible resources.\n\nThe watch itself can store 7 days of health and activity data, meaning if there is no connection for 7 days, there will be no data loss, but you cannot view the health data remotely.\"",
+        "tags": "[\"Data\", \"unsync\", \"unsyncronized\", \"watch\", \"app\"]"
+    },
+    {
+        "prompt": "\"How to turn on notifications on android?\"",
+        "completion": "\"Please follow the steps below to enable notifications on your smartphone:\n\n1. Go to the 'Settings' app on your android\n2. Click on 'Notifications.'\n3. Scroll to the bottom of the page and click 'See all.' By default, it only shows the most recently sent.\n4. In the second section of that page, expand 'Most recent' and click 'All.'\n   You can find the CoCo app in that list.\"",
+        "tags": "[\"turn on\", \"add\", \"notifications\", \"android\", \"android phone\"]"
+    },
+    {
+        "prompt": "\"How to sync phone contacts to smartwatch BT2 and BT2-Z\"",
+        "completion": "\"Here are the steps to syncronize your phone contacts:\n\n1. Pair your CoCo smartwatch with your phone. If you have not, please follow the steps on how to pair your smartwatch with your phone (found in the given manual_.\n2. Go to your phone\u2019s 'Settings' -> 'Bluetooth', and tap your CoCo watch's name.\n3. On the details page, enable 'Sync Contacts'.\n4. Your phone\u2019s contacts will be automatically synced to your smartwatch.\n\nPlease note that CoCo emergency contacts need to be added manually through the CoCo app.\"",
+        "tags": "[\"sync,\" syncronize\", \"add\", \"contacts\", \"BT2\", \"BT2-Z\", \"smartwatch\"]"
+    },
+    {
+        "prompt": "\"My watch is not getting any sound and my phone does not ring.\"",
+        "completion": "1. Your phone is not in silent mode. Double-check the silent mode control button, which is the first button on the left side of your iPhone.\n2. Ensure that your smartwatch shows as connected.\n3. Swipe toward your hand if you wear it on your left wrist or toward your arm if you wear it on your right wrist. Swipe down to find \"Functions,\" click on it, and then click \"Find Phone.\" Your phone should make a sound.\n",
+        "tags": "No sound, no ringing, phone not ringing, watch sound issue, connections, notification, smartwatch, smartphone, alert, audio, ringtone"
+    },
+    {
+        "prompt": "\"How do I put 911 on CoCobtz smart watch?\"",
+        "completion": "\"Use the dial pad on your smartwatch and dial 911\"",
+        "tags": "[\"911\", \"emergency contact\", \"smartwatch setup\", \"SOS\", \"safety settings\", \"emergency call\", \"emergency services\"]"
+    },
+    {
+        "prompt": "\"How does one find and download software updates for both the watch and cellular phone?\"",
+        "completion": "\"iPhone: For the CoCo App, if there is a critical update, we will prompt you to update it when you access the app. Alternatively, you can check for updates in the App Store. Smartwatch: To check for updates on your smartwatch, follow these steps:\n1. Log in to the CoCo App.  \n2. Navigate to Settings.\n3. If an update is available, a red dot with new will appear next to your smartwatch icon.  \n4. Click on it, and the update will start.  \n5. Follow the on-screen instructions to complete the update.\"\n",
+        "tags": "[\"Software updates\", \"updates\", \"watch updates\", \"phone updates\", \"firmware\", \"operating system\", \"smartwatch\", \"smartphone\", \"download updates\", \"system upgrade\"]"
+    },
+    {
+        "prompt": "\"I can't get the ECT call to work when I push Call ECT or push the button on the side of the watch. It says it is not connected.\"",
+        "completion": "1. Have you received any text messages regarding the emergency request?\n2. If your answer to question 1 is no, could you please double-check whether your contact person has their smartwatch connected to their smartphone?\nAdditionally, here's a video explaining how ECT works and its prerequisites:\n\n:https://youtu.be/uvnyJ0GO0A0?si=fNTd0-ECJqv5_qj3",
+        "tags": "[\"ECT\", \"ECT call\", \"call not working\", \"connection issue\", \"connectivity\", \"error\" \"message\", \"emergency care team\", \"emergency contact\", \"emergency services\", \"emergency call\", \"SOS\"]"
+    },
+    {
+        "prompt": "\"My watch is not getting any sound and my phone does not ring.\"",
+        "completion": "1. Your phone is not in silent mode. Double-check the silent mode control button, which is the first button on the left side of your iPhone.\n2. Ensure that your smartwatch shows as connected.\n3. Swipe toward your hand if you wear it on your left wrist or toward your arm if you wear it on your right wrist. Swipe down to find \"Functions,\" click on it, and then click \"Find Phone.\" Your phone should make a sound.\n",
+        "tags": "[\"No sound\", \"no ringing\", \"phone not ringing\", \"watch sound issue\", \"connections\", \"notification\", \"smartwatch\", \"smartphone\", \"alert\", \"audio\", \"ringtone\"]"
+    },
+    {
+        "prompt": "\"Who is SemCorel?\"",
+        "completion": "\"Semcorel Inc. is a technology company specializing in healthcare and safety solutions for seniors, including the CoCo product line. Their offerings include smartwatches, mobile apps, and other devices aimed at monitoring health metrics such as heart rate, blood pressure, and location. These tools provide real-time health updates and allow caregivers and family members to stay connected, manage emergencies, and access important medical information remotely. Semcorel\u2019s solutions are primarily used in home care, assisted living, and personal emergency response services (PERS), making it easier for seniors to live independently with added safety measures.\nTheir flagship app, CoCo, works with the CoCo Watch and integrates with devices like Fitbit to enhance functionality for senior safety and communication, including an SOS button, medication reminders, and emergency notifications, tailored for senior independence and caregiver peace of mind.\"",
+        "tags": "[\"who\", \"what\", \"semcorel\"]"
+    },
+    {
+        "prompt": "\u201cHow do I contact SemCorel?\u201d",
+        "completion": "\u201cSemcorel\u2019s support helpline email is: support@semcorel.com\n\nAdditionally, you may call their phone number +1 (669) 221-5768\n\nSemcorel\u2019s hours of operation are Monday to Friday from 9 am to 5 pm PST.\u201d",
+        "tags": "[\u201ccontact\u201d, \u201cemail\u201d, \u201ccall\u201d, \u201chours\u201d, \u201chours of operation\u201d, \u201csemcorel\u201d, \u201csupport\u201d]"
+    },
+    {
+        "prompt": "\u201cWhat is Semcorel\u2019s phone number?\u201d",
+        "completion": "\u201cSemcorel\u2019s support helpline email is: support@semcorel.com\n\nAdditionally, you may call their phone number +1 (669) 221-5768\n\nSemcorel\u2019s hours of operation are Monday to Friday from 9 am to 5 pm PST.\u201d",
+        "tags": "[\u201cphone number\u201d, \u201csemcorel\u201d, \u201chelp\u201d, \u201csupport\u201d]"
+    },
+    {
+        "prompt": "\"How do I test ECT permissions?\"",
+        "completion": "\"To check and test (for identifying issues) in the permissions, please try the following steps:\nFor contacts:\n1. Open the CoCo App\n2. Log in with their own credentials: CoCo ID and password\n3. Keep the CoCo App open on its screen and wait there\nFor the CoCo watch user:\n1. On the CoCo App, go to the 'Emergency' tab\n2. Click the 'Care Team' Button\nNow, please check whether all contacts can receive the video call. This process may request some permissions; if so, please grant them. If this works, please end the call. (Otherwise, you will nee to wait 15 minutes to conduct another test)\"",
+        "tags": "[\"ECT\", \"ECT permissions\", \"Permissions\"]"
+    },
+    {
+        "prompt": "\"BT2-Z no call button on watch face\"",
+        "completion": "\"Thank you for reaching out. We understand that accessing the ECT (Emergency Care Team) button is crucial in case of an emergency. There are two ways to initiate an ECT call on the CoCo smartwatch:\n1. The CoCo smartwatch has a dedicated physical button on the side of the watch face (oval-shaped button). Simply press down for 3 seconds to initiate a call.\n2. Alternatively, turn on the watch and press the 'Call ECT' button on the watch face. This also requires a long press for 3 seconds.\"",
+        "tags": "[\"BT2-Z\", \"call button\", \"call\", \"watch face\"]"
+    },
+    {
+        "prompt": "\"How to push ECT button\"",
+        "completion": "\"Thank you for reaching out. We understand that accessing the ECT (Emergency Care Team) button is crucial in case of an emergency. There are two ways to initiate an ECT call on the CoCo smartwatch:\n1. The CoCo smartwatch has a dedicated physical button on the side of the watch face (oval-shaped button). Simply press down for 3 seconds to initiate a call.\n2. Alternatively, turn on the watch and press the 'Call ECT' button on the watch face. This also requires a long press for 3 seconds.\"",
+        "tags": "[\"ECT\", \"button\", \"push\", \"emergency care team\", \"call\"]"
+    },
+    {
+        "prompt": "\"BT2 how to connect with smartphone\"",
+        "completion": "\"Here are the steps to connect the device with your smartphone:\n1. Please double-check whether Bluetooth is enabled on your Android phone. Go to your phone's settings and verify that 'Bluetooth' is set to 'On.' If it's off, please turn on Bluetooth.\n2. Proceed to log into the CoCo app and navigate to 'Settings' within the app.\n3. Click the red button labeled 'Connect Device' if no device has been connected yet\n4. Select BT2 or your watch's respective model\n5. You will see a spinning radar screen and your device will be listed there.\n6. Click the blue 'Connect' button on the list\n7. Your device will be connect. If there is a new update, the app will prompt you to update your watch in this screen. Otherwise, the screen will return to the Settings page automatically after the connection is finished.\"",
+        "tags": "[\"BT2\", \"how to connect\", \"connect\", \"smart phone\", \"smartphone\", \"android\"]"
+    },
+    {
+        "prompt": "\"What is the voice assistant for BT2 and BT2-Z\"",
+        "completion": "\"The watch uses the AI voice assistance on its paired smartphone and does not have its own trigger word. Once the watch is in voice assistance mode, it passes everything you say to the paired phone. Below is a video showing how the voice assitance works: https://youtu.be/hvY9ohKigME?si=kNrBLE9NaxoxUy4k \"",
+        "tags": "[\"voice assistant\", \"voice assistance\", \"BT2\", \"BT2-Z\"]"
+    },
+    {
+        "prompt": "\"Can CoCo watch measure blood pressure?\"",
+        "completion": "\"Thank you for your inquiry. At SemCorel, we understand that monitoring blood pressure consistently is important. Unfortunately, we regret to inform you that the CoCo smartwatch does not provide an accurate blood pressure monitoring function at this point. In fact, according to our knowledge, currently, there's no smartwatch that can precisly measure blood pressure accurately and comfortably.\"",
+        "tags": "[\"measure,\", \"record\", \"blood pressure\"]"
+    },
+    {
+        "prompt": "\"How to test blood oxygen on BT1\"",
+        "completion": "\"For blood oxygen testing, BT1 only supports manual initiation. Please use the following steps on CoCo BT1:\n1. Swipe to the left on the CoCo BT1 watch face.\n2. Click on the 'Health' button.\n3. Click on 'Oxygen'\nThis will start the test.\"",
+        "tags": "[\"BT1\", \"blood oxygen\", \"test\"]"
+    },
+    {
+        "prompt": "\"BT1 disconnected issue\"",
+        "completion": "\"When CoCo BT1 shows 'Disconnected', it might mean two things:\n1. It has become disconnected from its paired smartphone.\n2. Your smartphone is not connected to the outside world through either cellular data or Wi-Fi.\nTo avoid this issue, please keep your smartwatch within a 30 ft range of your smartphone and ensure your smartphone is online. If they become disconnected and are within range, CoCo BT1 will automatically attempt reconnection with its paired smartphone. To expedite the reconnection process, you can open the CoCo App, go to the CoCo BT1 details page and the watch will forcibly reconnect immediately.\"",
+        "tags": "[\"BT1\", \"disconnected\", \"disconnect\", \"issue\"]"
+    },
+    {
+        "prompt": "\"BT2 cannot make phone calls\"",
+        "completion": "\"If you cannot make a phone call, here are some common issues and troubleshooting steps:\n1. Connection: ensure that your watch is properly connected to your smartphone. Sometimes the connection might be lost or not established correctly.\n2. Permissions: check if you have granted all necessary permissions to the CoCo app for making calls through the watch.\n3. Battery Levels: Both devices should have adequate battery power. Low battery levels might prevent certain functions.\n4. Volume and Sound Settings: check the sound settings on both your watch and phone. Ensure that the volume is up and that the sound is not directed to an unintended output.\"",
+        "tags": "[\"BT2\", \"cannot\", \"can't\", \"phone calls\", \"call\"]"
+    },
+    {
+        "prompt": "\"Update failed because of disruption in the middle\"",
+        "completion": "\"Please try reconnecting the watch with your smartphone to reinitiate the update. We understand that the watch face may be black, but don't worry about it as long as you are sure that it is charged.\n1. Open the CoCo app on your smartphone.\n2. Go to 'Settings' within the CoCo app.\n3. Click 'Add Device.'\n4. Select your smartwatch type, for example: BT1.\n5. In the search list, it will show a unique name, something like 'OTA', etc. Click 'Connect.'\nThis will re-pair the connection and begin the upgrade again. Let the update finish and your watch should return to normal.\"",
+        "tags": "[\"update fail\", \"update failed\", \"disruption\", \"interruption\"]"
+    },
+    {
+        "prompt": "\"Where to find BT2-Z breathing\"",
+        "completion": "\"You can find the respiration feature on the CoCo BT2-Z watch (or your respective model):\n1. Turn on your watch screen.\n2. Option 1: Swipe the watch screen from left to right and find the 'Breath' icon.\n3. Option 2: Swipe from right to left, 8 times\"",
+        "tags": "[\"BT2-Z\", \"breathing\", \"respiration\", \"respiration feature\", \"find\"]"
+    },
+    {
+        "prompt": "\"Video call does not work\"",
+        "completion": "\"SemCorel apologizes for the inconvenience regarding your video call issue. Regular video calls are only available for premium users. However, video calls for ECT (Emergency Care Team) are available to everyone. Please ensure that you have granted the CoCo app video call permissions, which are normally requested when you use it for the first time. You may have accidentally declined them. To check and test this, please ask your ECT contact to initiate an ECT call from their CoCo app:\n1. Go to 'Emergency' in the CoCo app.\n2. Click 'Care Team.'\nIf the call requires specific permissions, it will prompt you with 'allow' or 'deny.' Please grant all the requested permissions and attempt another call from your own watch or phone.\"",
+        "tags": "[\"video call\", \"not working\", \"does not\", \"work\"]"
+    },
+    {
+        "prompt": "\"What features does the premium subscription have?\"",
+        "completion": "\"All the watch features, such as fall detection, health data monitoring, etc., are free. Most of the CoCo services (such as Emergency Care Team calling) are free as well. However, there are advantages to becoming a CoCo premium member, such as a lifetime warranty for CoCo devices, unliminted emergency contacts, faster technical support, etc. We provide a free 21-day trial which can be canceled anytime before those 21 days without any charges.\" ",
+        "tags": "[\"features\", \"premium\", \"subscription\"]"
+    },
+    {
+        "prompt": "\"No health data for contact\"",
+        "completion": "\"We understand the important of remotely monitoring the health of your loved one. Could you please check the following two items?\n1. Confirm your loved one has been consistently wearing the smartwatch.\n2. If yes, please ensure that the smartwatch is within a 30 ft range of the user's smart phone. Although it's not necessary for the smartwatch to be constantly within this range (CoCo watch can store up to 7 days of health datae), it does need to be within this range periodically. This allows the smartwatch to automatically reconnect with its paired smartphone and send the sotred data for your remote viewing.\"",
+        "tags": "[\"No health data\", \"no health report\", \"contact\", \"user\"]"
+    },
+    {
+        "prompt": "\"BT1 does not work\"",
+        "completion": "\"Sorry for this inconvenience. But do not worry, CoCo will fix this for you. Firstly, is your BT1 watch fully charged? Please refer to this tutorial viedo to ensure you've followed the initial setup steps: https://youtu.be/mdQVL_zkD3Y .\nIf the above steps do not work for you, please contact the SemCorel contact line for further assistance: support@semcorel.com \"",
+        "tags": "[\"BT1\", \"does not work\", \"not working\"]"
+    },
+    {
+        "prompt": "\"How to change CoCo time format?\"",
+        "completion": "\"The CoCo watch automatically syncs its languag and time with tis connected smartphone. Please ensure that your smartphone connected with the CoCo watch has your prefered time format.\"",
+        "tags": "[\"change\", \"time format\", \"time zone\", \"time\"]"
+    },
+    {
+        "prompt": "\"Cannot talk through BT2 watch\"",
+        "completion": "\"To resolve this issue, please follow these steps:\n1. In your phone's 'Settings', navigate to 'Connections', and then click on 'Bluetooth.'\n2. You should see CoCo BT2(xxxx) listed there. Click on the 'icon' located at the rightmost side of it, this goes to the 'Paired Devices' page.\n3. Check whether you have allowed 'Calls' and 'Audio' and try speaking on the watch again.\n\nAdditionally, this could be a sound setting issue on your watch. Please refer to the following video for more details:\nhttps://www.youtube.com/watch?v=BsQW1Ssf1cU \"",
+        "tags": "[\"Cannot talk\", \"can't talk\", \"BT2\", \"watch\"]"
+    },
+    {
+        "prompt": "\"How to change CoCo smartwatch language\"",
+        "completion": "\"The CoCo watch sutomatically syncs its language and time with the connected smartphone, regardless of the defaul language. The CoCo smartwatch BT2 and BT2-Z support 18 different languages. Please ensure that the smartphone connected to the CoCo watch has your preferred language and time settings. If it does, try reconnecting the CoCo watch to see if this resolves the issue.\"",
+        "tags": "[\"change\", \"smartwatch\", \"smart watch\", \"watch\", \"language\"]"
+    },
+    {
+        "prompt": "\"How to switch CoCo to daylight saving time?\"",
+        "completion": "\"The CoCo watch sutomatically syncs its language and time with the connected smartphone. Please ensure that the smartphone connected to the CoCo watch is set to Daylight Saving Time. The change in time should sync automatically. If it does not, please try reconnecting the CoCo watch to see if this resolves the issue.\"",
+        "tags": "[\"switch\", \"change\", \"CoCo\", \"daylight saving time\"]"
+    },
+    {
+        "prompt": "\"How to change CoCo BT2 language\"",
+        "completion": "\"The CoCo watch sutomatically syncs its language and time with the connected smartphone, regardless of the defaul language. Please ensure that the smartphone connected to the CoCo watch has your preferred language and time settings. If it does, try reconnecting the CoCo watch to see if this resolves the issue. Below is a video demonstrating this:\nhttps://youtu.be/Y6ZlCAyPRaI \"",
+        "tags": "[\"change\", \"smartwatch\", \"smart watch\", \"watch\", \"BT2\", \"language\"]"
+    },
+    {
+        "prompt": "\"How do I wear the watch correctly?\"",
+        "completion": "\"To properly wear the device on your wrist, fasten about half an inch or a finger width away from your wrist bone.\"",
+        "tags": "[\"how\", \"wear\", \"watch\", \"smartwatch\", \"smart watch\", \"correctly\", \"properly\"]"
+    },
+    {
+        "prompt": "\"How to set up direct 911 call?\"",
+        "completion": "\"To call 911, you can use the dial pad on your smartwatch and manuall dial 9-1-1.\nPlease note that currently, the CoCo watch does not automatically call 911. CoCo handles emergencies by maximizing support from family, friends, and caregivers. When the system detects an emegency, it initiates an ECT (Emergency Care Team) call. This sends both a text message and video call, broadcasting your live detection and vital data to all your ECT contacts. They can help you call 911.\"",
+        "tags": "[\"Set up\", \"direct\", \"call\", \"directly\", \"911\"]"
+    },
+    {
+        "prompt": "\"ECT call cannot talk through watch\"",
+        "completion": "\"When you make a call from the watch, either by long pressing the \"Call ECT\" button or holding down the long button on the side of the watch, here is what is expected:\n1. SMS messages and a video conference call will be sent to all the contacts' smartphones through the CoCo App. The contacts need to 'Accept' the call to join the video conference.\n2. From the watch user's side, it will display who is in the call and their distance from the user; at the same time, it will continuously take vital data and location information to broadcast to all contacts in that conference.\n3. The watch user cannot speak through the watch (we plan to improve this feature in the future)\n\nHere is a video on the ECT call process:\nhttps://youtu.be/uvnyJ0GO0A0 \"",
+        "tags": "[\"ECT call\", \"no audio\", \"cannot talk\", \"through\", \"on\", \"watch\"]"
+    },
+    {
+        "prompt": "\"How do I change my ECT person?\"",
+        "completion": "\"Please follow the following steps inside CoCo App:\n1. Click 'Settings' at the bottom right of CoCo App.\n2. Click 'Contacts' button.\n3. On the 'Contacts' page, click the 'Edit' button, which is looks like a pen on the right side of the 'Contacts' title\n4. Click 'Delete' for the contacts you want to change/remove.\n5. After that, add the new contact you'd like to add.\"\n",
+        "tags": "[\"change\", \"edit\", \"ECT person\", \"ECT\", \"ECT contact\"]"
+    },
+    {
+        "prompt": "\"How do I erase my data from my watch?\"",
+        "completion": "\"To erase the data from the watch, please go to 'Setting' and 'Reset' on your watch. This will reset the watch to its manufacturer mode.\"",
+        "tags": "[\"erase\", \"data\", \"watch\", \"smartwatch\", \"smart watch\"]"
+    },
+    {
+        "prompt": "\"Fall detection does not work\"",
+        "completion": "\"Fall detection is disabled by default. You need to manually enable it using the following steps:\n1. Ensure that your CoCo watch is paired with your smartphone and connected.\n2. Navigate to 'Settings' on the CoCo app\n3. Click on 'Fall Detection' to go to its configuration page\n4. Activate it\nThis will activate the feature on your smartwatch.\nNOTE: Please be aware that currently, fall detection only works for serious falls to avoid false alarms. SemCorel is planning to add options to adjust the sensitivity settings on the future\"",
+        "tags": "[\"fall detection\", \"does not\", \"doesn't\", \"work\"]"
+    },
+    {
+        "prompt": "\"Watch is not recording my sleep time\"",
+        "completion": "\"Sorry for this inconvenience. Your sleep time should be displayed on both your CoCo smartwatch and your CoCo app after you begin moving after waking up. Please give the watch a few minutes to recognize that you are up. Additionally, please ensure that your smart watch is worn correctly as indicated in the manual (should rest about half an inch / finger's width away from the wrist bone) and is connected constantly to your smartphone.\"",
+        "tags": "[\"watch\", \"smartwatch\", \"smart watch\", \"not recording\", \"not getting\", \"sleep time\", \"sleep\"]"
+    },
+    {
+        "prompt": "\"No messages or notifications received for BT2\"",
+        "completion": "\"The reason you may not be receiving messages could be due to notifications not being enabled. Please follow these steps to turn on notifications from the CoCo App. Before proceeding, ensure that your CoCo smartwatch is connected to your smartphone via the CoCo App:\n\n1. Navigate to 'Settings' inside the CoCo App.\n2. Select 'Notifications.'\n3. Enable the specific notifications you wish to receive on your watch, in your case, SMS.\n\nAllow a few minutes for the CoCo App to push the configuration to your smartwatch. Any incoming phone calls or SMS messages will be displayed on your CoCo smartwatch, even if your phone is turned off.\"",
+        "tags": "[\"no notifications\", \"no messages\", \"received\", \"BT2\"]"
+    },
+    {
+        "prompt": "\"How to enable phone call for BT2?\"",
+        "completion": "\"To enable phone calls, please follow these steps:\n1. Go to your smartwatch.\n2. From the watch face, swipe down.\n3. You will see a phone icon; click it.\n4. Then click 'BT switch' and enable it.\"",
+        "tags": "[\"enable\", \"call\", \"BT2\"]"
+    },
+    {
+        "prompt": "\"How to change watch face for BT2?\"",
+        "completion": "\"To change the watch face to one of the six default options follow these steps:\n1. When the CoCo watch screen is on and showing the main watch face, rotate the crown button (located on the side of the watch). This will change the watch face. Stop when you find the one you like and push the crown button to confirm your choice.\n2. If you'd like to choose from one of the hundreds of available watch faces online, please prompt 'how to customize CoCo watch face?\"",
+        "tags": "[\"change\", \"watch face\", \"watchface\", \"display\", \"BT2\"]"
+    },
+    {
+        "prompt": "\"How to customize CoCo watch face?\"",
+        "completion": "\"If you'd like to choose from one of the hundreds of available watch faces online, please follow these steps (make sure your smartwatch is connected to your smartphone):\n1. Log into the CoCo App.\n2. Navigate to 'Settings' in the CoCo App.\n3. Select 'Watch Face' and pick the one you like.\n4. For the CoCo BT2 watch (or your respective model), follow the on-screen prompt to download and install the custom watch face.\"",
+        "tags": "[\"customize\", \"CoCo\", \"watch face\"]"
+    },
+    {
+        "prompt": "\"The app says that I'm connected to the phone and watch. But, I don't get the readings on the phone that I get on the watch. Where I can find what is normal, not normal, and what the abbreviation stands for?\"",
+        "completion": "\"The data recorded on the watch and the app syncs every 10 minutes. For the watch to send the health data to your smart phone, they must be within a 30 ft range of one another.\n\nAs for the abbreviations, here are what they stand for:\n1. SPO2: Blood Oxygen Saturation - It measures the percentage of oxygen in your blood\n2. BPM: Beats Per Minute - This refers to your heart rate\n3. ECT: Emergency Care Team - The group of people you designate to be notified in case of an emergency\"",
+        "tags": "[\"readings\", \"data sync issues\", \"watch readings\", \"phone watch connection\", \"health data\", \"app sync\", \"abbreviation\", \"normal readings\", \"abnormal readings\", \"error\", \"health\"]"
+    },
+    {
+        "prompt": "\"What are normal and not normal (abnormal) health data readings?\"",
+        "completion": "\"We suggest checking in with your primary care physician to establish your personal 'normal' health readings as this data varies from person to person, such as heart rate (BPM) and blood oxygen saturation (SPO2). This is because fitness level, medication, and medical conditions can affect these values.\"",
+        "tags": "[\"normal, \"not normal\", \"abnormal\", \"health data\", \"health\", \"health readings\", \"readings\"]"
+    },
+    {
+        "prompt": "\"How do I turn off my watch?\"",
+        "completion": "\"To turn off the device, swipe down on the watch face creen an select the 'Power' function. Then press the power button.\"",
+        "tags": "[\"turn off\", \"power off\", \"watch\", \"smartwatch\", \"smart watch\"]"
+    },
+    {
+        "prompt": "\"How do I set an exercise target?\"",
+        "completion": "\"1. To select an exercise, tap the 'Sports' icon on the watch face and select the type of exercise you want (ex: walk, run, cycle, etc).\n2. To set a target for mileage, time, or calories, tap the type and set a goal. The exercise will start recording your progress within 3 seconds.\n3. To stop recording an exercise temporarily, tap the pause icon in the upper right corner. To continue, tap the continue icon on the upper right corner. To stop the recording, tap the red stop icon in the upper left corner.\n4. If the recording time is too short, the watch screen will indicate 'Too little data to be saved.'\n5. If the recording is saved, the watch screen will show the result.\"",
+        "tags": "[\"set\", \"exercise\", \"fitness\", \"target\"]"
+    },
+    {
+        "prompt": "\"How do I measure my heart rate?\"",
+        "completion": "\"To measure your heart rate using your CoCo watch, please follow these steps:\n1. From the first menu page on the watch, tap 'Health.' The screen will show '--BPM'. After 2 seconds, the heart rate measurement will begin.\n2. The data will show directly on the screen when the heart rate measurement is complete and will continue until you cancel.\n3. If you want to view your heart rate history, tap the clipboard icon on the top right corner of the heart rate page to display your real-time heart rate.",
+        "tags": "[\"how\", \"measure\", \"check\", \"heart rate\", \"bpm\", \"beats per minute\"]"
+    },
+    {
+        "prompt": "\"How do I measure my blood oxygen level?\"",
+        "completion": "\"To measure your blood oxygen level using your CoCo watch, please follow these steps:\n1. From the first menu page on the watch, tap 'Health.' The screen will show '--'. After 2 seconds, the blood oxygen measurement will begin.\n2. The data will show directly on the screen when the blood oxygen measurement is complete and will continue until you cancel.\n3. If you wish to stop the measurement, please swipe to the right and return to the previous page.\n4. If you want to view your heart rate history, tap the clipboard icon on the top right corner of the blood oxygen page to display your real-time blood oxygen level.\n\nNOTE: Blood Oxygen measurements are not intended for medical use, including self-diagnosis or consultation with a doctor, and are only designed for general fitness and wellness purposes.\"",
+        "tags": "[\"how\", \"measure\", \"check\", \"blood oxygen\", \"level\", \"levels\"]"
+    },
+    {
+        "prompt": "\"How do I measure my body temperature?\"",
+        "completion": "\"To measure your heart rate using your CoCo watch, please follow these steps:\n1. From the third menu page on the watch, tap 'Temperature.'\n2. Please wear the watch for more than 15 minutes for the measurement. If less than 15 minutes, the measurement will fail.\n3. Tap the checkmark to start the measurement and tap 'x' to return to the menu page.",
+        "tags": "[\"how\", \"measure\", \"check\", \"temperature\", \"body temperature\"]"
+    },
+    {
+        "prompt": "\"How do I get medication reminders?\"",
+        "completion": "\"CoCo smart watches support medication reminders which are synchronized with the settings in the CoCo Mobile App. When the time comes, the watch screen will show the medication details. Tapping next will display the remaining reminders. Press the crown button (side button) once to return to the main watch screen.\n\nAll the messages and reminders you receive are kept in the Messages box.\"",
+        "tags": "[\"how\", \"get\", \"check\", \"medication\", \"reminder\", \"reminders\", \"notifications\"]"
+    },
+    {
+        "prompt": "\"What is the warranty?",
+        "completion": "\"This product is warranted by the manufacturer for 1 year from the date of purchase. This warranty does not cover damages arising from accidental damage, misuse, or abnormal wear and tear. This warranty is only available to the original purchaser of the product.\"",
+        "tags": "[\"warranty\", \"watch\", \"CoCo\"]"
+    },
+    {
+        "prompt": "\"What are the specifications of my BT1 CoCo watch?\"",
+        "completion": "\"These are the specifications for the BT1 CoCo smart watch model:\nDimension: 1.4 x 1.6 x 0.4 inches\nWaterproof level: IP68\nBattery: 160mAh Large capacity battery\nNormal work time: up to 5 days\nSports Mode: Walk, Run, Cycle, Hike, Swim\nApp Compatible with: Android OS 5.1 or above, iOS 9.0 or above\"",
+        "tags": "[\"specifications\", \"BT1\", \"CoCo watch\", \"dimension\", \"waterproof level\", \"battery\", \"work time\", \"app compatibility\"]"
+    },
+    {
+        "prompt": "\"How to clean CoCo watch?\"",
+        "completion": "\"To clean the CoCo watch, please use a soft cloth. Do not use soap, shower gel, or other cleaning solutions.\"",
+        "tags": "[\"clean\", \"CoCo watch\", \"smart watch\", \"smartwatch\", \"watch\"]"
+    },
+    {
+        "prompt": "\"What functions does the CoCo BT2 smartwatch have?",
+        "completion": "\"The CoCo BT2 has many functionalities, such as:\n1. Training: Supports 100+ sports modes (ex: walking, running, cycling, badminton, etc). More detailed information analysis and data records can be viewed in the 'CoCo' App on your smartphone.\n2. Status: Record the number of steps, distance, and calories for the day.\n3. Call ECT (Emergency Care Team)\n4. Phone: you can input a phone number on the keypad to make a phone call. Additionally, call logs and contacts can be synced from your phone\n5. Measure your heart rate, sleep, respiration rate, and blood oxygen levels\n6. Check the weather\n7. Fall detection\n8. Many other functions such as: music control, alarm clock, games, stopwatch, timer, find phone, and flashlight.\"",
+        "tags": "[\"functions\", \"CoCo BT2\", \"BT2\", \"smartwatch\", \"watch\"]"
+    },
+    {
+        "prompt": "\"What is the BT2 warranty?\"",
+        "completion": "\"The CoCo BT2 is warranted by the manufacturer for 1 year from the date of purchase. While, the battery and charging cable have a warranty period of six months.This warranty does not cover damages arising from accidental damage, misuse, or abnormal wear and tear. This warranty is only available to the original purchaser of the product.\n\nThe following reasons are NOT covered under the free warranty service:\n1. Any attempt to assemble or disassemble to CoCo BT2 by yourself.\n2. Damage caused by drops.\n3. All damages caused by human error or any third-party faults, as well as inappropriate use (such as water damage, external force causing breakage, or scratches during use)\"",
+        "tags": "[\"BT2 warranty\"]"
+    },
+    {
+        "prompt": "\"What functions does the CoCo BT2-Z smartwatch have?",
+        "completion": "\"The CoCo BT2 has many functionalities, such as:\n1. Training: Supports 109 sports modes (ex: walking, running, cycling, badminton, etc). More detailed information analysis and data records can be viewed in the 'CoCo' App on your smartphone.\n2. Status: Record the number of steps, distance, and calories for the day.\n3. Call ECT (Emergency Care Team)\n4. Phone: you can input a phone number on the keypad to make a phone call. Additionally, call logs and contacts can be synced from your phone\n5. Measure your heart rate, sleep, respiration rate, and blood oxygen levels\n6. Check the weather\n7. Fall detection\n8. Many other functions such as: music control, alarm clock, games, stopwatch, timer, find phone, and flashlight.\"",
+        "tags": "[\"functions\", \"CoCo BT2-Z\", \"BT2-Z\", \"smartwatch\", \"watch\"]"
+    },
+    {
+        "prompt": "\"What is the BT2-Z warranty?\"",
+        "completion": "\"The CoCo BT2-Z is warranted by the manufacturer for 1 year from the date of purchase. While, the battery and charging cable have a warranty period of six months.This warranty does not cover damages arising from accidental damage, misuse, or abnormal wear and tear. This warranty is only available to the original purchaser of the product.\n\nThe following reasons are NOT covered under the free warranty service:\n1. Any attempt to assemble or disassemble to CoCo BT2-Z by yourself.\n2. Damage caused by drops.\n3. All damages caused by human error or any third-party faults, as well as inappropriate use (such as water damage, external force causing breakage, or scratches during use)\"",
+        "tags": "[\"BT2-Z warranty\"]"
+    },
+    {
+        "prompt": "\"How do I charge my BT2-Z watch?\"",
+        "completion": "\"To charge your BT2-Z watch (or respective model), attach the charging cable to the charging port, ensuring that the metal pins are fully connected. Please use a USB adapter with a 5V output and at least 0.5A current rating or higher.\"",
+        "tags": "[\"how\", \"charge\", \"BT2-Z\", \"watch\", \"smart watch\", \"smartwatch\"]"
+    }
+]

@@ -1,0 +1,147 @@
+[
+    {
+        "prompt": "My watch is not getting any sound and my phone does not ring.",
+        "completion": "1. Your phone is not in silent mode. Double-check the silent mode control button, which is the first button on the left side of your iPhone. 2. Ensure that your smartwatch shows as connected. 3. Swipe toward your hand if you wear it on your left wrist or toward your arm if you wear it on your right wrist. Swipe down to find Functions, click on it, and then click Find Phone. Your phone should make a sound.",
+        "tags": ["No sound", "no ringing", "phone not ringing", "watch sound issue", "connections", "notification", "smartwatch", "alert", "audio", "ringtone"]
+    },
+    {
+        "prompt": "How do I put 911 on CoCobtz smart watch?",
+        "completion": "Use the dial pad on your smartwatch and dial 911",
+        "tags": ["911", "emergency contact", "smartwatch setup", "SOS", "safety settings", "emergency call", "emergency services"]
+    },
+    {
+        "prompt": "How does one find and download software updates for both the watch and cellular phone?",
+        "completion": "iPhone: For the CoCo App, if there is a critical update, we will prompt you to update it when you access the app. Alternatively, you can check for updates in the App Store.\n\nSmartwatch: To check for updates on your smartwatch, follow these steps:\n1. Log in to the CoCo App.\n2. Navigate to Settings.\n3. If an update is available, a red dot with 'new' will appear next to your smartwatch icon.\n4. Click on it, and the update will start.\n5. Follow the on-screen instructions to complete the update.",
+        "tags": ["Software updates", "updates", "watch updates", "phone updates", "firmware", "operating system", "smartwatch", "smartphone", "download updates", "system upgrade"]
+    },
+    {
+        "prompt": "I can't get the ECT call to work when I push Call ECT or push the button on the side of the watch. It says it is not connected.",
+        "completion": "1. Have you received any text messages regarding the emergency request?\n2. If your answer to question 1 is no, please double-check whether your contact person has their smartwatch connected to their smartphone.\n\nAdditionally, here's a video explaining how ECT works and its prerequisites:\n\nhttps://youtu.be/uvnyJ0GO0A0",
+        "tags": ["ECT", "ECT call", "call not working", "connection issue", "connectivity", "error", "message", "emergency care team", "emergency contact", "emergency services", "emergency call", "SOS"]
+    },
+    {
+        "prompt": "My watch is not getting any sound and my phone does not ring.",
+        "completion": "1. Your phone is not in silent mode. Double-check the silent mode control button, which is the first button on the left side of your iPhone. 2. Ensure that your smartwatch shows as connected. 3. Swipe toward your hand if you wear it on your left wrist or toward your arm if you wear it on your right wrist. Swipe down to find Functions, click on it, and then click Find Phone. Your phone should make a sound.",
+        "tags": ["No sound", "no ringing", "phone not ringing", "watch sound issue", "connections", "notification", "smartwatch", "alert", "audio", "ringtone"]
+    },
+    {
+        "prompt": "How do I put 911 on CoCobtz smart watch?",
+        "completion": "Use the dial pad on your smartwatch and dial 911",
+        "tags": ["911", "emergency contact", "smartwatch setup", "SOS", "safety settings", "emergency call", "emergency services"]
+    },
+    {
+        "prompt": "How does one find and download software updates for both the watch and cellular phone?",
+        "completion": "iPhone: For the CoCo App, if there is a critical update, we will prompt you to update it when you access the app. Alternatively, you can check for updates in the App Store.\n\nSmartwatch: To check for updates on your smartwatch, follow these steps:\n1. Log in to the CoCo App.\n2. Navigate to Settings.\n3. If an update is available, a red dot with 'new' will appear next to your smartwatch icon.\n4. Click on it, and the update will start.\n5. Follow the on-screen instructions to complete the update.",
+        "tags": ["Software updates", "updates", "watch updates", "phone updates", "firmware", "operating system", "smartwatch", "smartphone", "download updates", "system upgrade"]
+    },
+    {
+        "prompt": "I can't get the ECT call to work when I push Call ECT or push the button on the side of the watch. It says it is not connected.",
+        "completion": "1. Have you received any text messages regarding the emergency request?\n2. If your answer to question 1 is no, please double-check whether your contact person has their smartwatch connected to their smartphone.\n\nAdditionally, here's a video explaining how ECT works and its prerequisites:\n\nhttps://youtu.be/uvnyJ0GO0A0",
+        "tags": ["ECT", "ECT call", "call not working", "connection issue", "connectivity", "error", "message", "emergency care team", "emergency contact", "emergency services", "emergency call", "SOS"]
+    },
+    {
+        "prompt": "How do I charge my new BT2-Z smartwatch for the first time?",
+        "completion": "To charge your BT2-Z smartwatch, connect the charging cable to the smartwatch and plug it into a power source. Allow the watch to charge fully before first use.",
+        "tags": ["setup", "charging", "first time", "smartwatch"]
+    },
+    {
+        "prompt": "How do I download the CoCo App for my new smartwatch?",
+        "completion": "Download the CoCo app from the Apple App Store or Google Play Store by searching 'CoCo Semcorel.' The app will assist you in setting up and managing your smartwatch.",
+        "tags": ["app download", "smartwatch setup", "CoCo App", "app installation"]
+    },
+    {
+        "prompt": "How do I pair my BT2-Z smartwatch with my smartphone?",
+        "completion": "Open the CoCo app and follow the first-time user steps to set up a basic profile, add your emergency contacts, and pair your BT2-Z with your smartphone. This will sync your language and time format from your smartphone to your device.",
+        "tags": ["pairing", "smartwatch", "smartphone", "CoCo app", "setup"]
+    },
+    {
+        "prompt": "What features can I explore on my new BT2-Z smartwatch after pairing?",
+        "completion": "Once your BT2-Z is paired, explore features such as health monitoring, Emergency Care Team (ECT), Medication Reminder, and customizable watch faces.",
+        "tags": ["features", "health monitoring", "ECT", "medication reminder", "customizable watch faces", "smartwatch"]
+    },
+    {
+        "prompt": "How do I sync my phone's contacts to my BT2 smartwatch?",
+        "completion": "Go to your iPhone's Settings, click 'Bluetooth,' click the 'i' next to CoCo BT2, and then select 'Sync Contacts.' You can choose to sync all contacts or only favorites or recent contacts to your smartwatch.",
+        "tags": ["sync contacts", "smartwatch", "iPhone", "BT2"]
+    },
+    {
+        "prompt": "How can I activate fall detection on my CoCo smartwatch?",
+        "completion": "To activate fall detection, log in to the CoCo app, navigate to 'Settings,' click on 'Fall Detection,' and activate it. This will push the configuration to your smartwatch. Please note that fall detection currently only works for serious falls to avoid false alarms.",
+        "tags": ["fall detection", "smartwatch", "settings", "activation"]
+    },
+    {
+        "prompt": "How do I ensure my CoCo smartwatch's software is up to date?",
+        "completion": "To check for updates on your smartwatch, log in to the CoCo App, navigate to 'Settings,' and if an update is available, a notification will appear next to your smartwatch icon. Click on it to start the update and follow the on-screen instructions.",
+        "tags": ["software updates", "smartwatch", "CoCo App", "firmware"]
+    },
+    {
+        "prompt": "How do I manage medication reminders on my CoCo smartwatch?",
+        "completion": "To manage medication reminders, make sure your smartwatch is connected to your smartphone. Log in to the CoCo app, navigate to 'Settings,' click the 'Medication' button, and choose to add, delete, or modify medications. Allow 10 minutes for the changes to sync with your smartwatch.",
+        "tags": ["medication management", "reminders", "CoCo app", "smartwatch"]
+    },
+    {
+        "prompt": "How can I find my phone using my CoCo smartwatch?",
+        "completion": "To use the 'Find Phone' feature, ensure your phone is not in silent mode and your smartwatch shows as connected. Swipe toward your hand, swipe down to find 'Functions,' click on it, and then click 'Find Phone.' Your phone should make a sound.",
+        "tags": ["find phone", "smartwatch", "CoCo", "features"]
+    },
+    {
+        "prompt": "What steps should I follow to add emergency contacts in my CoCo smartwatch?",
+        "completion": "To add emergency contacts, log into the CoCo App, navigate to 'Settings,' tap 'Contacts,' and then tap the '+' icon at the top right corner. Follow the on-screen instructions to add more contacts.",
+        "tags": ["emergency contacts", "CoCo app", "smartwatch", "settings"]
+    },
+    {
+        "prompt": "How can I disable phone calls on my CoCo smartwatch?",
+        "completion": "To disable phone calls on your CoCo smartwatch, swipe down on the watch face, click the phone icon, and then disable the 'BT switch.' This will prevent your smartwatch from ringing when your phone does.",
+        "tags": ["disable phone calls", "smartwatch", "settings", "CoCo"]
+    },
+    {
+        "prompt": "How do I activate the ECT feature on my CoCo smartwatch?",
+        "completion": "Activate the ECT feature by pressing the ECT Call button on the watch face or the ECT button on the side of the smartwatch for 3 seconds. You can also activate it via the CoCo app in the emergency tab. The watch will initiate the call after a 20-second countdown unless canceled.",
+        "tags": ["ECT", "emergency", "smartwatch", "activation"]
+    },
+    {
+        "prompt": "How do I change the personal information in my CoCo app?",
+        "completion": "To change personal information, log into the CoCo App, navigate to 'Settings,' click 'Profile,' and then make changes to details like your height, weight, or daily schedule. Confirm the changes by clicking 'Done' on the detailed page.",
+        "tags": ["change personal information", "CoCo app", "settings", "profile"]
+    },
+    {
+        "prompt": "How do I connect my BT2 smartwatch with a new phone?",
+        "completion": "To connect your BT2 smartwatch with a new phone, first ensure it's disconnected from your old phone by removing the device in the CoCo App settings. Then, turn on Bluetooth on your new phone, log in to the CoCo App, navigate to 'Settings,' and click 'Connect Device.'",
+        "tags": ["connect new phone", "smartwatch", "CoCo app", "BT2"]
+    },
+    {
+        "prompt": "How can I view my smartwatch's battery level and ensure it is charging correctly?",
+        "completion": "To view your smartwatch's battery level, activate the watch face and look for the battery icon, which displays the current charge percentage. To ensure it charges correctly, connect the charger properly to the smartwatch and verify that the charging symbol appears on the screen.",
+        "tags": ["battery level", "charging", "smartwatch", "CoCo"]
+    },
+    {
+        "prompt": "What is the procedure for adding a new device in the CoCo App?",
+        "completion": "To add a new device in the CoCo App, open the app, navigate to 'Settings,' and select 'Add Device.' Follow the on-screen prompts to select your smartwatch model and complete the pairing process to connect the new device.",
+        "tags": ["add device", "CoCo App", "smartwatch", "pairing"]
+    },
+    {
+        "prompt": "How do I handle notifications not appearing on my BT2 smartwatch?",
+        "completion": "If notifications are not appearing on your BT2 smartwatch, ensure that notifications are enabled in the CoCo App under 'Settings.' Also, check that your smartwatch is connected to your smartphone and that you have granted the necessary permissions for notifications.",
+        "tags": ["notifications", "BT2 smartwatch", "troubleshooting", "CoCo App"]
+    },
+    {
+        "prompt": "How do I change the language settings on my CoCo smartwatch?",
+        "completion": "To change the language settings on your CoCo smartwatch, ensure it is synced with your smartphone. The smartwatch language settings will automatically update to match the language set on your smartphone. If changes are not reflected, try reconnecting the devices.",
+        "tags": ["language settings", "smartwatch", "sync", "CoCo"]
+    },
+    {
+        "prompt": "How can I troubleshoot connection issues with my CoCo smartwatch?",
+        "completion": "To troubleshoot connection issues with your CoCo smartwatch, ensure your smartphone's Bluetooth is on and within range. Restart both your smartphone and smartwatch. If the issue persists, check the CoCo App for any settings that may prevent a stable connection.",
+        "tags": ["connection issues", "troubleshooting", "CoCo smartwatch", "Bluetooth"]
+    },
+    {
+        "prompt": "How do I manage software updates on my CoCo smartwatch?",
+        "completion": "Manage software updates on your CoCo smartwatch by accessing the CoCo App, navigating to 'Settings,' and checking for updates. If an update is available, a notification will appear. Tap on it to start the update process and follow the on-screen instructions.",
+        "tags": ["software updates", "smartwatch", "CoCo App", "manage updates"]
+    },
+    {
+        "prompt": "How can I adjust the brightness on my CoCo smartwatch?",
+        "completion": "To adjust the brightness on your CoCo smartwatch, swipe down on the watch face to access the quick settings. Look for the brightness icon, tap it, and adjust the slider to set your preferred brightness level.",
+        "tags": ["brightness", "adjustment", "CoCo smartwatch", "settings"]
+    }
+]
