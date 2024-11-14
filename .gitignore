@@ -1,0 +1,14 @@
+# Ignore all virtual environment files and libraries
+env/
+*.dylib
+*.so
+*.dll
+*.lib
+__pycache__/
+
+# Ignore site-packages folder (if using virtual environment)
+webViewer/env/lib/
+
+# Ignore Python cache files
+*.pyc
+*.pyo

@@ -220,7 +220,9 @@ import WebKit
 
 struct ContentView: View {
     var body: some View {
-        URLWebView(urlString: "http://10.33.35.62:8080/")
+//        URLWebView(urlString: "http://192.168.1.119:8080/")
+        URLWebView(urlString: "http://10.34.3.151:8080/")
+
             .edgesIgnoringSafeArea(.all) // Expands the WebView to fill the screen
     }
 }
@@ -234,9 +236,10 @@ struct URLWebView: UIViewRepresentable {
         // Enable JavaScript and media playback
         webView.configuration.preferences.javaScriptEnabled = true
         webView.configuration.mediaTypesRequiringUserActionForPlayback = []
-
-        // Navigation delegate can be set if needed
+        
+        // Set the navigation delegate and scroll view delegate
         webView.navigationDelegate = context.coordinator
+        webView.scrollView.delegate = context.coordinator
 
         return webView
     }
@@ -248,15 +251,21 @@ struct URLWebView: UIViewRepresentable {
         }
     }
 
-    // Coordinator to handle navigation actions if necessary
+    // Coordinator to handle navigation and scroll view actions
     func makeCoordinator() -> Coordinator {
         Coordinator()
     }
 
-    class Coordinator: NSObject, WKNavigationDelegate {
+    class Coordinator: NSObject, WKNavigationDelegate, UIScrollViewDelegate {
         // Implement navigation delegate methods if needed
         func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
             print("WebView navigation failed with error: \(error.localizedDescription)")
+        }
+        
+        // Implement UIScrollViewDelegate method to prevent zooming
+        func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+            // Returning nil prevents zooming
+            return nil
         }
     }
 }

@@ -7,7 +7,7 @@ from sentence_transformers import SentenceTransformer
 import torch
 
 app = Flask(__name__, static_folder='../frontend/build/static', template_folder='../frontend/build')
-CORS(app)  # Allow all origins for testing 
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 def load_faqs(json_path):
     with open(json_path, 'r', encoding='utf-8') as f:
@@ -43,7 +43,7 @@ Answer (provide a brief and clear response):
 """
 
 # Create the model and prompt
-model = OllamaLLM(model="llama3.2")
+model = OllamaLLM(model="llama3.1")
 prompt = ChatPromptTemplate.from_template(template)
 
 # Function to retrieve the most relevant FAQs

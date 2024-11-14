@@ -1,3 +1,4 @@
+// src/TypePage.js
 import React, { useState } from 'react';
 import Coco from './Coco';
 import './TypePage.css';
@@ -33,8 +34,8 @@ const TypePage = () => {
         history: JSON.stringify(conversationHistory),
       };
 
-      // Send message to the server
-      const response = await fetch('http://localhost:8080/submit', { // Specify full URL
+      // Send message to the server using a relative URL
+      const response = await fetch('/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

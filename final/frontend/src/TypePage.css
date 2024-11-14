@@ -20,7 +20,7 @@ body {
     position: relative; /* Keeps other positioned elements in context */
     height: 100vh; /* Full viewport height */
     width: 100vw; /* Full viewport width */
-  }
+}
 
 .chat-container {
     width: 100%;
@@ -112,6 +112,7 @@ button {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
+
 button:hover {
     background-color: #004080;
 }

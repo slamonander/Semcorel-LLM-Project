@@ -1,3 +1,4 @@
+// src/Test.js
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Coco from './Coco';
@@ -35,8 +36,8 @@ const Test = () => {
         history: JSON.stringify(conversationHistory),
       };
 
-      // Send message to the server
-      const response = await fetch('http://localhost:8080/submit', { // Specify full URL
+      // Send message to the server using a relative URL
+      const response = await fetch('/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -66,17 +67,17 @@ const Test = () => {
 
   return (
     <div className="main-container">
-        <div className="triangle-container">
-          <svg className="triangle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
-            <path className="wave" d="M 0,100 Q 20,75 45,85 T 100,15 L 100,0 L 0,0 Z" fill="#5A9BFF" transform="skewY(-25)"/>
-          </svg>
-                <button className="btn-invis" onClick={() => navigate('/')}>
-                <span className="material-icons invis">arrow_back_ios</span>
-                </button>
-            <div className="coco-container">
-                <Coco className="coco-small" />
-            </div>
+      <div className="triangle-container">
+        <svg className="triangle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <path className="wave" d="M 0,100 Q 20,75 45,85 T 100,15 L 100,0 L 0,0 Z" fill="#5A9BFF" transform="skewY(-25)" />
+        </svg>
+        <button className="btn-invis" onClick={() => navigate('/')}>
+          <span className="material-icons invis">arrow_back_ios</span>
+        </button>
+        <div className="coco-container">
+          <Coco className="coco-small" />
         </div>
+      </div>
 
       {/* Chat container */}
       <div className="chat-container">
@@ -96,7 +97,7 @@ const Test = () => {
             placeholder="Type a message..."
           />
           <button onClick={sendMessage}>
-          <span className="material-icons icon-send">send</span>
+            <span className="material-icons icon-send">send</span>
           </button>
         </div>
       </div>
@@ -105,3 +106,4 @@ const Test = () => {
 };
 
 export default Test;
+
