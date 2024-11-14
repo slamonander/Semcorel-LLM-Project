@@ -1,41 +1,41 @@
 html, body {
-  margin: 0;
-  padding: 0;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden; /* Prevent scrolling */
-}
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden; /* Prevent scrolling */
+  }
 
 /* main-container ensures everything is positioned and stacked vertically */
 .main-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
-  margin: 0;
-  background-color: white;
-}
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    background-color: white;
+  }
 
-/* Container for positioning */
+  /* Container for positioning */
 .triangle-container {
-  position: relative;
-  width: 100vw; /* Full width */
-  height: 40vh; /* Reduced height to make it smaller */
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-
-/* Triangle shape */
-.triangle {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw; /* Adjust width to desired size */
-  height: 150px; /* Reduced height to make it smaller */
-  overflow: hidden;
+    position: relative;
+    width: 100vw; /* Full width */
+    height: 100vh; /* Full height */
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  
+  /* Triangle shape */
+  .triangle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 140vw; /* Adjust width to desired size */
+    height: 220px; /* Adjust height as needed */
+    overflow: hidden;
 }
 
 @keyframes waveAnimation {
@@ -53,82 +53,84 @@ html, body {
 .wave {
   animation: waveAnimation 8s ease-in-out infinite;
 }
-
-/* Chat box container */
-.chat-container {
-  width: 90%;
-  max-width: 600px;
-  background: #ffffff;
-  padding: 5px;
-  border-radius: 20px;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  height: 170vh; /* Adjusted height */
-  max-height: 500px; /* Adjusted max-height */
-  margin-top: -30px; /* Moved chat box container up */
-  position: relative;
-}
-
-.input-container {
-  margin-top: 0; /* Adjust or remove as needed */
-  margin-bottom: 5px;
-  padding-top: 5px; /* Adjust if padding exists */
-}
-
-.btn-invis {
-  position: absolute;
-  top: 20px;
-  left: 5px;
-  background-color: transparent;
-  color: white;
-  border: none;
-  cursor: pointer;
-  z-index: 2;
-}
-
-.invis {
-  font-size: 2rem;
-}
-
-.icon-send {
-  display: inline-block; /* Ensure the element can be transformed */
-  transform: rotate(-45deg); /* Rotate the icon by 45 degrees (you can change this value) */
-}
-
-/* Coco styles */
-.coco-small {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  top: 50px; /* Adjust as needed */
-  left: 200px; /* Adjust as needed */
-  background-color: black;
-  width: 100px; /* Reduced size to make it smaller */
-  height: 100px; /* Reduced size to make it smaller */
-  border-radius: 50%;
-  gap: 20px;
-  outline: 20px solid white;
-}
-
-.eye {
-  width: 30px; /* Reduced size to make it smaller */
-  height: 20px; /* Reduced size to make it smaller */
-  margin-bottom: 5px;
-  background-color: #5A9BFF;
-  border-radius: 50%;
-  animation: blink 3s infinite;
-  clip-path: ellipse(100% 50% at 50% 50%);
-}
-
-@keyframes blink {
-  0%, 100% {
-    transform: scaleY(1);
-    clip-path: ellipse(100% 50% at 50% 50%); /* Normal eye shape */
+  
+  /* Chat box container */
+  .chat-container {
+    width: 90%;
+    max-width: 600px;
+    background: #ffffff;
+    padding: 5px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: 220vh;
+    max-height: 700px;
+    margin-top: 10px;
+    position: relative;
   }
-  50%, 60% {
-    transform: scaleY(0.8);
-    /* Create crescent shape: cut the bottom half to create a crescent */
-    clip-path: ellipse(100% 35% at 50% 35%);
+
+  .input-container {
+    margin-top: 0; /* Adjust or remove as needed */
+    margin-bottom: 25px; /* Increase this value as needed */
+    padding-top: 5px;
+}
+
+  .btn-invis {
+    position: absolute;
+    top: 20px;
+    left: 5px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    z-index: 2;
   }
-} 
+
+  .invis{
+    font-size: 2rem;
+  }
+
+  .icon-send {
+    display: inline-block; /* Ensure the element can be transformed */
+    transform: rotate(-45deg); /* Rotate the icon by 45 degrees (you can change this value) */
+  }
+  
+  /* Coco styles */
+  .coco-small {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50px; /* Adjust as needed */
+    left: 200px; /* Adjust as needed */
+    background-color: black;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    gap: 20px;
+    outline: 20px solid white;
+    /* margin-bottom: 20px; */
+  }
+  
+  .eye {
+    width: 40px;
+    height: 30px;
+    margin-bottom: 5px;
+    background-color: #5A9BFF;
+    border-radius: 50%;
+    animation: blink 3s infinite;
+    clip-path: ellipse(100% 50% at 50% 50%);
+  }
+  
+  @keyframes blink {
+    0%, 100% {
+      transform: scaleY(1);
+      clip-path: ellipse(100% 50% at 50% 50%); /* Normal eye shape */
+    }
+    50%, 60% {
+      transform: scaleY(0.8);
+      /* Create crescent shape: cut the bottom half to create a crescent */
+      clip-path: ellipse(100% 35% at 50% 35%); 
+    }
+  }
+  

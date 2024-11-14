@@ -93,6 +93,17 @@ html, body {
   transition: background-color 0.3s ease;
 }
 
+.btn-error{
+  width: 1px;           /* Set width to 1 pixel */
+  height: 1px;          /* Set height to 1 pixel */
+  padding: 0;           /* Remove padding */
+  margin: 0;            /* Remove margin */
+  border: none;         /* Remove border */
+  background: none;     /* Remove background color */
+  color: transparent;   /* Make text invisible */
+  overflow: hidden;     /* Hide overflow */
+}
+
 .btn:hover {
   background-color: #849efc;
 }

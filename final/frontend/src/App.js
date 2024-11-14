@@ -1,11 +1,13 @@
 // src/App.js
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation, useNavigate } from 'react-router-dom';
+import Greeting from "./Greeting";
 import SpeakPage from './SpeakPage';
 import TypePage from './TypePage';
 import Coco from './Coco';
 import Test from './Test';
 import './index.css';
+import './Test.css';
 import './Coco.css';
 
 function App() {
@@ -16,10 +18,7 @@ function App() {
     <div className="container">
       {/* Conditionally render Header only on the home page */}
       {location.pathname === '/' && (
-        <header className="header-bubble">
-          <h1>Hello</h1>
-          <center><p className="tagline">How can I help you today?</p></center>
-        </header>
+        <Greeting />
       )}
       {/* Add Circle component here */}
       {location.pathname === '/' && (
@@ -32,8 +31,7 @@ function App() {
             <button className="btn" onClick={() => navigate('/speak')}>
               <span className="material-icons icon">mic</span><br />Speak
             </button>
-            <button className="btn" onClick={() => navigate('/type')}>
-              Ignore
+            <button className="btn-error" onClick={() => navigate('/type')}>
             </button>
             <button className="btn" onClick={() => navigate('/test')}>
               <span className="material-icons icon">keyboard</span><br />Type
