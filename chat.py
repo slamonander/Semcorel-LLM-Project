@@ -33,13 +33,15 @@ chain = prompt | model
 
 # Function that handles the conversation between user and model
 def handle_conversation(faqs):
-    # context = ""
+    print("Welcome to SemCorel's chatbot, type exit to quit.")
+    text_to_speech = False
 
-    print("Welcome to the AI Chatbot, type exit to quit")
-
+    # Ask if the user wants TTS only once before the loop
+    tts_option_yes_no = input("If you would like TTS, type yes: ").strip().lower()
+    if tts_option_yes_no == 'yes':
+        text_to_speech = True
 
     while True:
-        tts = input("If you would like TTS, type TTS.").strip().lower()
         stt = input("Type T for text input or V for voice input: ").strip().lower()
 
         if stt == 't':
@@ -48,26 +50,24 @@ def handle_conversation(faqs):
             user_input = speech_to_text()
             if user_input is None:
                 continue
+        elif stt == 'exit':
+            break
         else:
-            print("Please type in 'T' for text and 'V' for voice.")
+            print("Please type in 'T' for text and 'V' for voice: " )
             continue
 
-
-        if user_input.lower() == "exit":
+        if user_input.lower() == 'exit':
             break
 
-
+        # Retrieve FAQs based on the user input
         relevant_faqs = retrieve_faqs(user_input, faqs)
-
         result = chain.invoke({"faqs": relevant_faqs, "question": user_input}) # Clear this up
         print("Coco: ", result, "\n")
-        # context += f"\nUser: {user_input}\nAI: {result}"
 
-        # If TTS is selected:
-        if tts == 'tts':
+
+        # if TTS was selected
+        if text_to_speech:
             speak(result)
-
-
 
 
 
@@ -79,8 +79,8 @@ def retrieve_faqs(question, faqs):
 
     # Search through JSON data
     for faq in faqs:
-        if any(keyword in faq['Prompts'].lower() for keyword in keywords):
-            relevant_faqs.append("Question: {faq['Prompts']}\nAnswer: {faq['Completion']}")
+        if any(keyword in faq['prompt'].lower() for keyword in keywords):
+            relevant_faqs.append("Question: {faq['prompt']}\nAnswer: {faq['completion']}")
     
     return '\n'.join(relevant_faqs)
 

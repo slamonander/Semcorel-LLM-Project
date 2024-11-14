@@ -13,14 +13,14 @@ def speech_to_text():
         recognizer.energy_threshold = 300 # Use values 300-400 for quieter environments
 
         # Thresholds for longer audio inputs
-        recognizer.pause_threshold = 1.5
+        recognizer.pause_threshold = 0.5
         recognizer.phrase_time_limit = 15
 
-        audio = recognizer.listen(source, timeout = 7) # Times out if no speech detected in 7 seconds.
+        audio = recognizer.listen(source, timeout = 2) # Times out if no speech detected in 2 seconds.
 
         try:
             # Use Google Web Speech API for recognizing speech
-            text = recognizer.recognize_google_cloud(audio)
+            text = recognizer.recognize_google(audio)
             print("You: ", text)
             return text
         
@@ -34,5 +34,3 @@ def speech_to_text():
 
 
 
-# Run the test
-speech_to_text()
