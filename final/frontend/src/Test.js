@@ -1,8 +1,8 @@
+// src/Test.js
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Coco from './Coco';
 import './Test.css';
-// import './CocoSmall.css';
 
 const Test = () => {
   const [userInput, setUserInput] = useState('');
@@ -65,7 +65,7 @@ const Test = () => {
   };
 
   return (
-    <div className="main-container">
+    <div className="container">
         <div className="triangle-container">
           <svg className="triangle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
             <path className="wave" d="M 0,100 Q 20,75 45,85 T 100,15 L 100,0 L 0,0 Z" fill="#5A9BFF" transform="skewY(-25)"/>

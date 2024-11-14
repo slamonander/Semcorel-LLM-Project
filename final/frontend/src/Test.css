@@ -34,7 +34,7 @@ html, body {
     top: 0;
     left: 0;
     width: 140vw; /* Adjust width to desired size */
-    height: 250px; /* Adjust height as needed */
+    height: 220px; /* Adjust height as needed */
     overflow: hidden;
 }
 
@@ -66,14 +66,14 @@ html, body {
     overflow: hidden;
     height: 220vh;
     max-height: 700px;
-    margin-top: 20px;
+    margin-top: 10px;
     position: relative;
   }
 
   .input-container {
     margin-top: 0; /* Adjust or remove as needed */
-    margin-bottom: 5px;
-    padding-top: 5px; /* Adjust if padding exists */
+    margin-bottom: 25px; /* Increase this value as needed */
+    padding-top: 5px;
 }
 
   .btn-invis {

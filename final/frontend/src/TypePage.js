@@ -1,3 +1,4 @@
+// src/TypePage.js
 import React, { useState } from 'react';
 import Coco from './Coco';
 import './TypePage.css';

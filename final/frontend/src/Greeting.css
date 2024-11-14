@@ -1,0 +1,40 @@
+/* src/components/Greeting.css */
+.greeting-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 20px;
+  }
+  .speech-bubble {
+    background-color: #A0C4FF; /* Matches the blue in your Figma */
+    border-radius: 30px;
+    padding: 20px;
+    width: 80%;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 24px; /* Larger font size to match Figma */
+    position: relative;
+  } 
+  
+  .speech-bubble:after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 20px;
+    border-style: solid;
+    border-color: #A0C4FF transparent transparent transparent; /* Tail for speech bubble */
+  }
+  
+  .speech-bubble h1 {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  .speech-bubble p {
+    margin: 10px 0 0;
+    font-size: 18px; /* Smaller subtitle font */
+  }

@@ -1,7 +1,7 @@
 // src/CoCo.js
 import React from 'react';
 import './Coco.css';
-// import './CocoSmall.css'; // Import alternate style
+import './CocoSmall.css'; // Import alternate style
 
 const Coco = ({ className }) => {
   return (
