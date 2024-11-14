@@ -72,13 +72,13 @@ html, body {
 
   .input-container {
     margin-top: 0; /* Adjust or remove as needed */
-    margin-bottom: 25px; /* Increase this value as needed */
+    margin-bottom: 80px;
     padding-top: 5px;
 }
 
   .btn-invis {
     position: absolute;
-    top: 20px;
+    top: 40px;
     left: 5px;
     background-color: transparent;
     color: white;
@@ -133,4 +133,47 @@ html, body {
       clip-path: ellipse(100% 35% at 50% 35%); 
     }
   }
+
+/* Container for loading dots */
+.loading-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  gap: 5px;
+}
+
+.loading-dots span {
+  animation: typingEffect 1.5s infinite steps(1, end);
+  opacity: 0;
+}
+
+/* Typing effect keyframes */
+@keyframes typingEffect {
+  0% {
+    opacity: 0;
+  }
+  33% {
+    opacity: 1;
+  }
+  66% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.loading-dots span:nth-child(1) {
+  animation-delay: 0s; /* First dot appears instantly */
+}
+
+.loading-dots span:nth-child(2) {
+  animation-delay: 0.5s; /* Delay second dot */
+}
+
+.loading-dots span:nth-child(3) {
+  animation-delay: 1s; /* Delay third dot */
+}
   
