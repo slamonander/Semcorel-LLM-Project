@@ -6,9 +6,11 @@ from langchain.prompts import ChatPromptTemplate
 from sentence_transformers import SentenceTransformer
 import torch
 
+# Flask application setup
 app = Flask(__name__, static_folder='../frontend/build/static', template_folder='../frontend/build')
 CORS(app, resources={r"/*": {"origins": "*"}})
 
+# Loading the data from the JSON file
 def load_faqs(json_path):
     with open(json_path, 'r', encoding='utf-8') as f:
         return json.load(f)
