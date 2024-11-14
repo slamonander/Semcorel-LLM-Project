@@ -329,10 +329,10 @@ struct URLWebView: UIViewRepresentable {
         }
         
         // Implement UIScrollViewDelegate method to prevent zooming
-        func viewForZooming(in scrollView: UIScrollView) -> UIView? {
-            // Returning nil prevents zooming
-            return nil
-        }
+//        func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+//            // Returning nil prevents zooming
+//            return nil
+//        }
         
         // Implement the method to handle media capture permission requests
         func webView(_ webView: WKWebView,

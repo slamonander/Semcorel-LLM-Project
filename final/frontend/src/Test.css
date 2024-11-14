@@ -1,138 +1,138 @@
 html, body {
-    margin: 0;
-    padding: 0;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden; /* Prevent scrolling */
-  }
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden; /* Prevent scrolling */
+}
 
 /* main-container ensures everything is positioned and stacked vertically */
 .main-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
-    background-color: white;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  background-color: white;
+}
 
-  /* Container for positioning */
+/* Container for positioning */
 .triangle-container {
-    position: relative;
-    width: 100vw; /* Full width */
-    height: 100vh; /* Full height */
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-  }
-  
-  /* Triangle shape */
-  .triangle {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 140vw; /* Adjust width to desired size */
-    height: 220px; /* Adjust height as needed */
-    overflow: hidden;
+  position: relative;
+  width: 100vw; /* Full width */
+  height: 100vh; /* Full height */
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+/* Triangle shape */
+.triangle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 140vw; /* Adjust width to desired size */
+  height: 220px; /* Adjust height as needed */
+  overflow: hidden;
 }
 
 @keyframes waveAnimation {
   0% {
-    d: path('M 0,100 Q 20,75 45,85 T 100,15 L 100,0 L 0,0 Z'); /* Starting position */
+      d: path('M 0,100 Q 20,75 45,85 T 100,15 L 100,0 L 0,0 Z'); /* Starting position */
   }
   50% {
-    d: path('M -50,100 Q 20,60 50,85 T 150,25 L 150,0 L -50,0 Z'); /* More movement at bottom-left */
+      d: path('M -50,100 Q 20,60 50,85 T 150,25 L 150,0 L -50,0 Z'); /* More movement at bottom-left */
   }
   100% {
-    d: path('M 0,100 Q 20,75 45,85 T 100,15 L 100,0 L 0,0 Z'); /* Reset to start */
+      d: path('M 0,100 Q 20,75 45,85 T 100,15 L 100,0 L 0,0 Z'); /* Reset to start */
   }
 }
 
 .wave {
   animation: waveAnimation 8s ease-in-out infinite;
 }
-  
-  /* Chat box container */
-  .chat-container {
-    width: 90%;
-    max-width: 600px;
-    background: #ffffff;
-    padding: 5px;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    height: 220vh;
-    max-height: 700px;
-    margin-top: 10px;
-    position: relative;
-  }
 
-  .input-container {
-    margin-top: 0; /* Adjust or remove as needed */
-    margin-bottom: 80px;
-    padding-top: 5px;
+/* Chat box container */
+.chat-container {
+  width: 90%;
+  max-width: 600px;
+  background: #ffffff;
+  padding: 5px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 220vh;
+  max-height: 700px;
+  margin-top: 10px;
+  position: relative;
 }
 
-  .btn-invis {
-    position: absolute;
-    top: 100px;
-    left: 5px;
-    background-color: transparent;
-    color: white;
-    border: none;
-    cursor: pointer;
-    z-index: 2;
-  }
+.input-container {
+  margin-top: 0; /* Adjust or remove as needed */
+  margin-bottom: 80px;
+  padding-top: 5px;
+}
 
-  .invis{
-    font-size: 2rem;
-  }
+.btn-invis {
+  position: absolute;
+  top: 100px;
+  left: 5px;
+  background-color: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+}
 
-  .icon-send {
-    display: inline-block; /* Ensure the element can be transformed */
-    transform: rotate(-45deg); /* Rotate the icon by 45 degrees (you can change this value) */
-  }
-  
-  /* Coco styles */
-  .coco-small {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 50px; /* Adjust as needed */
-    left: 200px; /* Adjust as needed */
-    background-color: black;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    gap: 20px;
-    outline: 20px solid white;
-    /* margin-bottom: 20px; */
-  }
-  
-  .eye {
-    width: 40px;
-    height: 30px;
-    margin-bottom: 5px;
-    background-color: #5A9BFF;
-    border-radius: 50%;
-    animation: blink 3s infinite;
-    clip-path: ellipse(100% 50% at 50% 50%);
-  }
-  
-  @keyframes blink {
-    0%, 100% {
+.invis {
+  font-size: 2rem;
+}
+
+.icon-send {
+  display: inline-block; /* Ensure the element can be transformed */
+  transform: rotate(-45deg); /* Rotate the icon by 45 degrees (you can change this value) */
+}
+
+/* Coco styles */
+.coco-small {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50px; /* Adjust as needed */
+  left: 200px; /* Adjust as needed */
+  background-color: black;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  gap: 20px;
+  outline: 20px solid white;
+  /* margin-bottom: 20px; */
+}
+
+.eye {
+  width: 40px;
+  height: 30px;
+  margin-bottom: 5px;
+  background-color: #5A9BFF;
+  border-radius: 50%;
+  animation: blink 3s infinite;
+  clip-path: ellipse(100% 50% at 50% 50%);
+}
+
+@keyframes blink {
+  0%, 100% {
       transform: scaleY(1);
       clip-path: ellipse(100% 50% at 50% 50%); /* Normal eye shape */
-    }
-    50%, 60% {
+  }
+  50%, 60% {
       transform: scaleY(0.8);
       /* Create crescent shape: cut the bottom half to create a crescent */
-      clip-path: ellipse(100% 35% at 50% 35%); 
-    }
+      clip-path: ellipse(100% 35% at 50% 35%);
   }
+}
 
 /* Container for loading dots */
 .loading-dots {
@@ -152,16 +152,16 @@ html, body {
 /* Typing effect keyframes */
 @keyframes typingEffect {
   0% {
-    opacity: 0;
+      opacity: 0;
   }
   33% {
-    opacity: 1;
+      opacity: 1;
   }
   66% {
-    opacity: 1;
+      opacity: 1;
   }
   100% {
-    opacity: 0;
+      opacity: 0;
   }
 }
 
@@ -176,4 +176,3 @@ html, body {
 .loading-dots span:nth-child(3) {
   animation-delay: 1s; /* Delay third dot */
 }
-
