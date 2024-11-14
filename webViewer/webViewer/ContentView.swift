@@ -215,15 +215,80 @@
 
 
 
+//import SwiftUI
+//import WebKit
+//
+//struct ContentView: View {
+//    var body: some View {
+////        URLWebView(urlString: "http://192.168.1.119:8080/")
+//        URLWebView(urlString: "http://10.34.3.151:8080/")
+//
+//            .edgesIgnoringSafeArea(.all) // Expands the WebView to fill the screen
+//    }
+//}
+//
+//struct URLWebView: UIViewRepresentable {
+//    let urlString: String
+//
+//    func makeUIView(context: Context) -> WKWebView {
+//        let webView = WKWebView()
+//        
+//        // Enable JavaScript and media playback
+//        webView.configuration.preferences.javaScriptEnabled = true
+//        webView.configuration.mediaTypesRequiringUserActionForPlayback = []
+//        
+//        // Set the navigation delegate and scroll view delegate
+//        webView.navigationDelegate = context.coordinator
+//        webView.scrollView.delegate = context.coordinator
+//
+//        return webView
+//    }
+//
+//    func updateUIView(_ webView: WKWebView, context: Context) {
+//        if let url = URL(string: urlString) {
+//            let request = URLRequest(url: url)
+//            webView.load(request)
+//        }
+//    }
+//
+//    // Coordinator to handle navigation and scroll view actions
+//    func makeCoordinator() -> Coordinator {
+//        Coordinator()
+//    }
+//
+//    class Coordinator: NSObject, WKNavigationDelegate, UIScrollViewDelegate {
+//        // Implement navigation delegate methods if needed
+//        func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+//            print("WebView navigation failed with error: \(error.localizedDescription)")
+//        }
+//        
+//        // Implement UIScrollViewDelegate method to prevent zooming
+//        func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+//            // Returning nil prevents zooming
+//            return nil
+//        }
+//    }
+//}
+
+
 import SwiftUI
 import WebKit
+import AVFoundation // Import AVFoundation to request microphone permission
 
 struct ContentView: View {
     var body: some View {
-//        URLWebView(urlString: "http://192.168.1.119:8080/")
         URLWebView(urlString: "http://10.34.3.151:8080/")
-
-            .edgesIgnoringSafeArea(.all) // Expands the WebView to fill the screen
+            .edgesIgnoringSafeArea(.all)
+            .onAppear {
+                // Request microphone permission when the view appears
+                AVAudioSession.sharedInstance().requestRecordPermission { granted in
+                    if granted {
+                        print("Microphone permission granted")
+                    } else {
+                        print("Microphone permission denied")
+                    }
+                }
+            }
     }
 }
 
@@ -237,9 +302,10 @@ struct URLWebView: UIViewRepresentable {
         webView.configuration.preferences.javaScriptEnabled = true
         webView.configuration.mediaTypesRequiringUserActionForPlayback = []
         
-        // Set the navigation delegate and scroll view delegate
+        // Set the navigation delegate, scroll view delegate, and UI delegate
         webView.navigationDelegate = context.coordinator
         webView.scrollView.delegate = context.coordinator
+        webView.uiDelegate = context.coordinator // Set the UI delegate
 
         return webView
     }
@@ -251,12 +317,12 @@ struct URLWebView: UIViewRepresentable {
         }
     }
 
-    // Coordinator to handle navigation and scroll view actions
+    // Coordinator to handle navigation, scroll view, and UI actions
     func makeCoordinator() -> Coordinator {
         Coordinator()
     }
 
-    class Coordinator: NSObject, WKNavigationDelegate, UIScrollViewDelegate {
+    class Coordinator: NSObject, WKNavigationDelegate, UIScrollViewDelegate, WKUIDelegate {
         // Implement navigation delegate methods if needed
         func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
             print("WebView navigation failed with error: \(error.localizedDescription)")
@@ -266,6 +332,19 @@ struct URLWebView: UIViewRepresentable {
         func viewForZooming(in scrollView: UIScrollView) -> UIView? {
             // Returning nil prevents zooming
             return nil
+        }
+        
+        // Implement the method to handle media capture permission requests
+        func webView(_ webView: WKWebView,
+                     requestMediaCapturePermissionFor origin: WKSecurityOrigin,
+                     initiatedByFrame frame: WKFrameInfo,
+                     type: WKMediaCaptureType,
+                     decisionHandler: @escaping (WKPermissionDecision) -> Void) {
+            if type == .microphone {
+                decisionHandler(.grant) // Grant microphone access
+            } else {
+                decisionHandler(.deny) // Deny other types of media capture
+            }
         }
     }
 }
