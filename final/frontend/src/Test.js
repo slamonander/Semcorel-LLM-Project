@@ -36,7 +36,7 @@ const Test = () => {
       };
 
       // Send message to the server
-      const response = await fetch('http://localhost:8080/submit', { // Specify full URL
+      const response = await fetch('/submit', { // Specify full URL
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
