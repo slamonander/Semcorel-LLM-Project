@@ -78,7 +78,7 @@ html, body {
 
   .btn-invis {
     position: absolute;
-    top: 40px;
+    top: 100px;
     left: 5px;
     background-color: transparent;
     color: white;

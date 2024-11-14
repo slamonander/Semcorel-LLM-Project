@@ -108,7 +108,7 @@ button {
     color: #fff;
     background: #5A9BFF;
     border: none;
-    border-radius: 15px;
+    border-radius: 30px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
