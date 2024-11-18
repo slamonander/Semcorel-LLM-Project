@@ -10,7 +10,7 @@ frontend_directory = '/frontend/final'
 
 def run_npm(command, cwd):
     try: 
-        print(f"Running command: {command} in {cwd}")
+        print(f"Running command: {command} in {cwd}, please wait.")
         result = subprocess.run(command, shell=True, cwd=cwd, check=True, text=True, capture_output=True)
         print(f"Output:\n{result.stdout}")
 
@@ -21,9 +21,10 @@ def run_npm(command, cwd):
         print(f"Error Output: {e.stderr}")
 
 def main():
-    run_npm('npm install', frontend_directory)
-    run_npm('npm run build', frontend_directory)
-    run_npm('npm start', frontend_directory)
+    run_npm('npm install', 'final/frontend')
+    run_npm('npm run build', 'final/frontend')
+    run_npm('python app.py', 'final/backend') # Starts up the actual application
+    # run_npm('npm start', 'final/frontend') # This starts up the testing React website
 
 if __name__ == '__main__':
     main()
