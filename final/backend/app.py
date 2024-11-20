@@ -45,7 +45,9 @@ Answer (provide a brief and clear response):
 """
 
 # Create the model and prompt
-model = OllamaLLM(model="llama3.2-vision")
+# model = OllamaLLM(model="llama3.2-vision")
+model = OllamaLLM(model="llama3.2")
+
 prompt = ChatPromptTemplate.from_template(template)
 
 # Function to retrieve the most relevant FAQs
