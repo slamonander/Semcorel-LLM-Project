@@ -3,7 +3,7 @@ html, body {
   padding: 0;
   width: 100vw;
   height: 100vh;
-  overflow: hidden; /* Prevent scrolling */
+  overflow: hidden; /* Prevent scrolling do hidden */
 }
 
 /* main-container ensures everything is positioned and stacked vertically */
@@ -34,7 +34,7 @@ html, body {
   top: 0;
   left: 0;
   width: 140vw; /* Adjust width to desired size */
-  height: 220px; /* Adjust height as needed */
+  height: 240px; /* Adjust height as needed */
   overflow: hidden;
 }
 
