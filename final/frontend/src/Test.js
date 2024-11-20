@@ -8,6 +8,7 @@ const Test = () => {
   const [userInput, setUserInput] = useState('');
   const [conversationHistory, setConversationHistory] = useState([]);
   const [messages, setMessages] = useState([]);
+  const [fontSize, setFontSize] = useState(19); // Default font size
   const navigate = useNavigate();
 
   const addMessage = (content, className) => {
@@ -36,7 +37,7 @@ const Test = () => {
       };
 
       // Send message to the server
-      const response = await fetch('/submit', { // Specify full URL
+      const response = await fetch('http://localhost:8080/submit', { // Specify full URL
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -64,6 +65,10 @@ const Test = () => {
     }
   };
 
+  const changeFontSize = (adjustment) => {
+    setFontSize((prevSize) => Math.max(12, Math.min(36, prevSize + adjustment))); // Restrict between 12px and 36px
+  };
+
   return (
     <div className="container">
         <div className="triangle-container">
@@ -78,11 +83,20 @@ const Test = () => {
             </div>
         </div>
 
+        <div className="font-size-buttons">
+        <button onClick={() => changeFontSize(-2)}>A-</button>
+        <button onClick={() => changeFontSize(2)}>A+</button>
+        </div>
+
       {/* Chat container */}
       <div className="chat-container">
         <div id="chat-box" className="chat-box">
           {messages.map((msg, index) => (
-            <div key={index} className={`chat-message ${msg.className}`}>
+            <div
+              key={index}
+              className={`chat-message ${msg.className}`}
+              style={{ fontSize: `${fontSize}px` }} // Apply font size here
+            >
               {msg.content}
             </div>
           ))}
