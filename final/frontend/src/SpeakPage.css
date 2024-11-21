@@ -1,4 +1,4 @@
-/* SpeechTextPage.css */
+/* SpeechTextPage.css
 
 .speak-container {
     text-align: center;
@@ -58,4 +58,229 @@
     resize: vertical;
     margin-top: 15px;
     margin-bottom: 15px;
+  } */
+
+  /* src/SpeakPage.css */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  margin: 5%;
+  background-color: white;
+}
+
+.triangle-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  margin-top: 5%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.triangle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 140vw;
+  height: 220px;
+  overflow: hidden;
+}
+
+@keyframes waveAnimation {
+0% {
+  d: path('M 0,100 Q 20,75 45,85 T 100,15 L 100,0 L 0,0 Z');
+}
+50% {
+  d: path('M -50,100 Q 20,60 50,85 T 150,25 L 150,0 L -50,0 Z');
+}
+100% {
+  d: path('M 0,100 Q 20,75 45,85 T 100,15 L 100,0 L 0,0 Z');
+}
+}
+
+.wave {
+animation: waveAnimation 8s ease-in-out infinite;
+}
+
+.chat-container {
+  width: 90%;
+  max-width: 600px;
+  background: #ffffff;
+  padding: 5px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 220vh;
+  max-height: 700px;
+  margin-top: 10px;
+  position: relative;
+}
+
+.input-container {
+  margin-top: 0;
+  margin-bottom: 60px;
+  padding-top: 5px;
+}
+
+.btn-invis {
+  position: absolute;
+  top: 40px;
+  left: 5px;
+  background-color: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.invis{
+  font-size: 2rem;
+}
+
+.coco-small {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50px;
+  left: 200px;
+  background-color: black;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  gap: 20px;
+  outline: 20px solid white;
+}
+
+.eye {
+  width: 40px;
+  height: 30px;
+  margin-bottom: 5px;
+  background-color: #5A9BFF;
+  border-radius: 50%;
+  animation: blink 3s infinite;
+  clip-path: ellipse(100% 50% at 50% 50%);
+}
+
+@keyframes blink {
+  0%, 100% {
+      transform: scaleY(1);
+      clip-path: ellipse(100% 50% at 50% 50%);
   }
+  50%, 60% {
+      transform: scaleY(0.8);
+      clip-path: ellipse(100% 35% at 50% 35%);
+  }
+}
+
+.font-size-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.font-size-buttons button {
+  padding: 10px 15px;
+  font-size: 16px;
+  background-color: #5A9BFF;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.font-size-buttons button:hover {
+  background-color: #004080;
+}
+
+.chat-box {
+  flex-grow: 1;
+  overflow-y: auto;
+  margin-bottom: 15px;
+  padding-right: 10px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #90acd6;
+  border-radius: 10px;
+  padding: 15px;
+  background: #CFE2FF;
+  max-height: calc(100% - 100px);
+}
+
+.chat-message {
+  padding: 15px;
+  border-radius: 25px;
+  margin: 10px 0;
+  max-width: 75%;
+  word-wrap: break-word;
+  display: inline-block;
+  font-size: 18px;
+}
+
+.user-message {
+  background: #5A9BFF;
+  color: #fff;
+  align-self: flex-end;
+  border-bottom-right-radius: 5px;
+  animation: slide-in 0.5s ease-out;
+  text-align: right;
+}
+
+.bot-message {
+  background: #FFFFFF;
+  color: #333;
+  align-self: flex-start;
+  border-bottom-left-radius: 5px;
+  animation: slide-in 0.5s ease-out;
+  text-align: left;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background: #ffffff;
+}
+
+.speech-button {
+  padding: 15px 25px;
+  font-size: 16px;
+  color: #fff;
+  background: #5A9BFF;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.speech-button:hover {
+  background-color: #004080;
+}
+
+@keyframes slide-in {
+  0% {
+      transform: translateY(30px);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
