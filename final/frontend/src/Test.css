@@ -3,7 +3,7 @@ html, body {
     padding: 0;
     width: 100vw;
     height: 100vh;
-    overflow: auto; /* Prevent scrolling */
+    overflow: hidden; /* Prevent scrolling */
   }
 
 /* main-container ensures everything is positioned and stacked vertically */
@@ -14,7 +14,7 @@ html, body {
     align-items: center;
     width: 100vw;
     height: 100vh;
-    margin: 5%;
+    margin: 0;
     background-color: white;
   }
 
@@ -23,7 +23,6 @@ html, body {
     position: relative;
     width: 100vw; /* Full width */
     height: 100vh; /* Full height */
-    margin-top: 5%;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -54,6 +53,33 @@ html, body {
 .wave {
   animation: waveAnimation 8s ease-in-out infinite;
 }
+
+.font-size-buttons button {
+  display: inline-flex; /* For consistent centering */
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #5A9BFF;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  height: auto; /* Ensure full clickable area */
+}
+
+.font-size-buttons button:hover {
+  background-color: #004080;
+}
+
+.font-size-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
   
   /* Chat box container */
   .chat-container {
@@ -73,7 +99,7 @@ html, body {
 
   .input-container {
     margin-top: 0; /* Adjust or remove as needed */
-    margin-bottom: 60px; /* Increase this value as needed */
+    margin-bottom: 80px;
     padding-top: 5px;
 }
 
@@ -135,115 +161,31 @@ html, body {
     }
   }
 
-  .font-size-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-  }
-  
-  .font-size-buttons button {
-    padding: 10px 15px;
-    font-size: 16px;
-    background-color: #5A9BFF;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .font-size-buttons button:hover {
-    background-color: #004080;
-  }
-
-  .chat-box {
-    flex-grow: 1;
-    overflow-y: auto;
-    margin-bottom: 15px;
-    padding-right: 10px;
-    display: flex;
-    flex-direction: column;
-    border: 1px solid #90acd6;
-    border-radius: 10px;
-    padding: 15px;
-    background: #CFE2FF;
-    max-height: calc(100% - 100px);
-}
-
-.chat-message {
-    padding: 15px;
-    border-radius: 25px;
-    margin: 10px 0;
-    max-width: 75%;
-    word-wrap: break-word;
+  .typing-animation span {
     display: inline-block;
-    font-size: 18px;
-}
-
-.user-message {
-    background: #5A9BFF;
-    color: #fff;
-    align-self: flex-end;
-    border-bottom-right-radius: 5px;
-    animation: slide-in 0.5s ease-out;
-    text-align: right;
-}
-
-.bot-message {
-    background: #FFFFFF;
-    color: #333;
-    align-self: flex-start;
-    border-bottom-left-radius: 5px;
-    animation: slide-in 0.5s ease-out;
-    text-align: left;
-}
-
-.input-container {
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-    padding: 10px;
-    border-radius: 10px;
-    background: #ffffff;
-}
-
-input[type="text"] {
-    flex-grow: 1;
-    padding: 15px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 15px;
-    margin-right: 10px;
-    outline: none;
-    transition: all 0.3s ease;
-}
-
-input[type="text"]:focus {
-    border-color: #5A9BFF;
-}
-
-button {
-    padding: 15px 25px;
-    font-size: 16px;
-    color: #fff;
-    background: #5A9BFF;
-    border: none;
-    border-radius: 15px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-button:hover {
-    background-color: #004080;
-}
-
-@keyframes slide-in {
-    0% {
-        transform: translateY(30px);
-        opacity: 0;
+    animation: typing-blink 1.5s infinite;
+  }
+  
+  .typing-animation span:nth-child(1) {
+    animation-delay: 0s;
+  }
+  
+  .typing-animation span:nth-child(2) {
+    animation-delay: 0.3s;
+  }
+  
+  .typing-animation span:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+  
+  @keyframes typing-blink {
+    0%, 20% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
     }
     100% {
-        transform: translateY(0);
-        opacity: 1;
+      opacity: 0;
     }
-}
-  
+  }

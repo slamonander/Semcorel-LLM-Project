@@ -1,4 +1,3 @@
-// src/Test.js
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Coco from './Coco';
@@ -8,6 +7,7 @@ const Test = () => {
   const [userInput, setUserInput] = useState('');
   const [conversationHistory, setConversationHistory] = useState([]);
   const [messages, setMessages] = useState([]);
+  const [isTyping, setIsTyping] = useState(false);
   const [fontSize, setFontSize] = useState(19); // Default font size
   const navigate = useNavigate();
 
@@ -30,6 +30,8 @@ const Test = () => {
     setUserInput('');
 
     try {
+      setIsTyping(true); // Show typing animation
+
       // Prepare JSON data
       const payload = {
         userInput: userInput,
@@ -37,7 +39,7 @@ const Test = () => {
       };
 
       // Send message to the server
-      const response = await fetch('http://localhost:8080/submit', { // Specify full URL
+      const response = await fetch('/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -47,6 +49,8 @@ const Test = () => {
 
       const data = await response.json();
 
+      setIsTyping(false); // Hide typing animation
+
       // Display bot response
       addMessage(data.response, 'bot-message');
       setConversationHistory((prevHistory) => [
@@ -55,6 +59,7 @@ const Test = () => {
       ]);
     } catch (error) {
       console.error('Error:', error);
+      setIsTyping(false); // Hide typing animation
       addMessage('An error occurred while sending your message.', 'bot-message');
     }
   };
@@ -71,35 +76,38 @@ const Test = () => {
 
   return (
     <div className="container">
-        <div className="triangle-container">
-          <svg className="triangle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
-            <path className="wave" d="M 0,100 Q 20,75 45,85 T 100,15 L 100,0 L 0,0 Z" fill="#5A9BFF" transform="skewY(-25)"/>
-          </svg>
-                <button className="btn-invis" onClick={() => navigate('/')}>
-                <span className="material-icons invis">arrow_back_ios</span>
-                </button>
-            <div className="coco-container">
-                <Coco className="coco-small" />
-            </div>
+      <div className="triangle-container">
+        <svg className="triangle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <path className="wave" d="M 0,100 Q 20,75 45,85 T 100,15 L 100,0 L 0,0 Z" fill="#5A9BFF" transform="skewY(-25)" />
+        </svg>
+        <button className="btn-invis" onClick={() => navigate('/')}>
+          <span className="material-icons invis">arrow_back_ios</span>
+        </button>
+        <div className="coco-container">
+          <Coco className="coco-small" />
         </div>
+      </div>
 
-        <div className="font-size-buttons">
+      <div className="font-size-buttons">
         <button onClick={() => changeFontSize(-2)}>A-</button>
         <button onClick={() => changeFontSize(2)}>A+</button>
-        </div>
+      </div>
 
       {/* Chat container */}
       <div className="chat-container">
         <div id="chat-box" className="chat-box">
           {messages.map((msg, index) => (
-            <div
-              key={index}
-              className={`chat-message ${msg.className}`}
-              style={{ fontSize: `${fontSize}px` }} // Apply font size here
-            >
-              {msg.content}
-            </div>
+            <div key={index} className={`chat-message ${msg.className}`} style={{ fontSize: `${fontSize}px` }}> 
+            {msg.content}
+          </div>
           ))}
+          {isTyping && (
+            <div className="chat-message bot-message typing-animation">
+              <span>.</span>
+              <span>.</span>
+              <span>.</span>
+            </div>
+          )}
         </div>
         <div className="input-container">
           <input
@@ -110,7 +118,7 @@ const Test = () => {
             placeholder="Type a message..."
           />
           <button onClick={sendMessage}>
-          <span className="material-icons icon-send">send</span>
+            <span className="material-icons icon-send">send</span>
           </button>
         </div>
       </div>
