@@ -1,0 +1,10 @@
+/* src/App.css */
+.App {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f0f4f8; /* Light background to match Figma */
+  min-height: 100vh;
+  padding-top: 10px;
+}
