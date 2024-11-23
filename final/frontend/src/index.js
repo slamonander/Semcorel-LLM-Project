@@ -9,3 +9,9 @@ root.render(
     <App />
   </React.StrictMode>
 );
+
+// Adding Monserrat font from Google
+const link = document.createElement('link');
+link.href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap";
+link.rel="stylesheet";
+document.head.appendChild(link);
