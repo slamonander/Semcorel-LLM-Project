@@ -3,22 +3,86 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    padding-top: 20px;
-  }
-  .speech-bubble {
-    background-color: #A0C4FF; /* Matches the blue in your Figma */
-    border-radius: 30px;
-    padding: 20px;
     width: 80%;
+    padding-top: 15vw;
+  }
+
+  /* The logo in the top left corner */
+
+  .logo-header {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    font-family: 'Montserrat', serif;
+    font-size: 7px;
+    font-weight: 900;
+    margin: 0;
+    z-index: 1000;
+    animation: slide-in 2s ease-out forwards;
+  }
+
+  /* The greeting message */
+
+  .speech-bubble {
+    padding: 3%;
+    width: 80%;
+    max-width: 600px;
     text-align: center;
-    color: white;
-    font-weight: bold;
-    font-size: 24px; /* Larger font size to match Figma */
+    color: black;
+    font-family: 'Montserrat', serif;
+    font-size: 1.5rem; /* Larger font size to match Figma */
+    font-weight: 600;
     position: relative;
+    z-index: 1;
   } 
+
+  /* the little circles */
+
+  .speech-bubble::before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+    background-color: #5596ff;
+    opacity: 15%;
+    width: 470px;
+    height: 470px;
+    border-radius: 50%;
+    z-index: -1;
+    animation: expand-shrink 3s ease-in-out; /* Apply the animation */
+  }
+
+  @media (min-width: 768px) {
+    .speech-bubble {
+      font-size: 2rem; /* Increase font size for larger screens */
+      padding: 40px; /* Add more padding for better spacing */
+      width: 70%;
+    }
+  }
   
-  .speech-bubble:after {
+  /* Media query for smaller screens (mobile) */
+  @media (max-width: 480px) {
+    .speech-bubble {
+      font-size: 1.2rem; /* Decrease font size for smaller screens */
+      padding: 20px; /* Reduce padding to fit smaller screens */
+      width: 95%; /* Maximize width usage */
+    }
+  }
+
+  div.speech-bubble h1 {
+    position: relative;
+    color: black;
+    font-size: 4rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin: 0;
+    animation: slide-in 2s ease-out forwards;
+  }
+  
+  /* Speech bubble's tail */
+
+ /* .speech-bubble:after {
     content: '';
     position: absolute;
     bottom: -20px;
@@ -26,15 +90,69 @@
     transform: translateX(-50%);
     border-width: 20px;
     border-style: solid;
-    border-color: #A0C4FF transparent transparent transparent; /* Tail for speech bubble */
-  }
-  
-  .speech-bubble h1 {
-    margin: 0;
-    font-size: 24px;
-  }
+    border-color: #A0C4FF transparent transparent transparent; Tail for speech bubble
+  } */
   
   .speech-bubble p {
+    opacity: 0;
     margin: 10px 0 0;
-    font-size: 18px; /* Smaller subtitle font */
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 2.5s;
   }
+  
+  .speech-bubble #exclamation-mark {
+    opacity: 0;
+    color: #5596ff;
+    animation: fadeIn 0.8s ease-in-out forwards;
+    animation-delay: 2s;
+  }
+
+
+  /* Animations */
+  
+  @keyframes slide-in {
+    0% {
+      left: -100%;
+    } 100% {
+      left: 20px;
+    }
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  } to {
+      opacity: 1;
+  }
+}
+
+@keyframes expand-shrink {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1); /* Original size */
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.5); /* Expand to 1.5x */
+  }
+}
+
+
+
+  /* Old code */
+ /* .greeting-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 20px;
+  }
+  .speech-bubble {
+    background-color: #A0C4FF; Matches the blue in your Figma
+    border-radius: 30px;
+    padding: 20px;
+    width: 80%;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 24px; Larger font size to match Figma
+    position: relative;
+  } */
