@@ -9,6 +9,7 @@ import Test from './Test';
 import './index.css';
 import './Test.css';
 import './Coco.css';
+import Avatar from './Avatar';
 
 function App() {
   const location = useLocation();
@@ -22,7 +23,7 @@ function App() {
       )}
       {/* Add Circle component here */}
       {location.pathname === '/' && (
-          <Coco className="coco" />
+          <Avatar/>
         )}
 
       <Routes>

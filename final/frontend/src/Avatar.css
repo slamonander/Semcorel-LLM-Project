@@ -7,41 +7,46 @@
   }
   
   .face-icon {
-    width: 100px;
-    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: black;
+    margin-top: 20px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     position: relative;
+    gap: 20px;
+  }
+
+
+.avatar-eye {
+    width: 50px;
+    height: 30px;
+    background-color: #5A9BFF;
+    border-radius: 50%;
+    animation: blink 4s infinite; /* Adjusted blink speed */
+    clip-path: ellipse(100% 50% at 50% 50%); /* Start as a full oval */
+}
+
+@keyframes blink {
+    0%, 100% {
+        transform: scaleY(1);
+        clip-path: ellipse(100% 50% at 50% 50%); /* Normal shape */
+    }
+    33%, 66% {
+        transform: scaleY(0.8);
+        clip-path: ellipse(100% 35% at 50% 35%); /* Slightly squish the upper part */
+    }
+}
+
+.centered-container {
     display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .avatar-eye {
-    width: 30px; /* Increased width */
-    height: 30px; /* Increased height */
-    background-color: rgba(90, 155, 255, 1);
-    border-radius: 5cm;
-    position: absolute;
-  }
-  
-  .left-avatar {
-    left: 13px; /* Adjusted positioning to keep eyes centered */
-    top: 35px; /* Adjusted to match new size */
-    animation: blink 1.5s infinite; /* Blink animation */
-  }
-  
-  .right-avatar {
-    right: 13px; /* Adjusted positioning to keep eyes centered */
-    top: 35px; /* Adjusted to match new size */
-    animation: blink 1.5s infinite; /* Blink animation */
-  }
-  /* Blink animation to make the eyes "close" */
-  @keyframes blink {
-    100%, 60%, 0%{
-      height: 25px; /* Adjusted to match new eye size */
-    }
-    75% {
-      height: 5px; /* Adjusted to match new eye size */
-    }
+    justify-content: center; /* Centers horizontally */
+    align-items: center;     /* Centers vertically */
+    height: 100vh;           /* Makes the container take up full screen height */
+    width: 100vw;            /* Makes the container take up full screen width */
+    position: absolute;      /* Ensures it takes up the full viewport */
+    top: 0;
+    left: 0;
   }
