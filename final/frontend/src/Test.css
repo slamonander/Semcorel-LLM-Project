@@ -14,15 +14,18 @@ html, body {
     align-items: center;
     width: 100vw;
     height: 100vh;
-    margin: 0;
+    margin: 5%; /* This adds a margin around the entire application to hopefully stop the scroll error*/
     background-color: white;
   }
 
-  /* Container for positioning */
+/* HEADER CSS (WAVE ANIMATION, COCO AVATAR, BACK BTN (INVIS BTN), FONT BTNS*/
+  /* Container for positioning wave animation*/
 .triangle-container {
     position: relative;
     width: 100vw; /* Full width */
-    height: 100vh; /* Full height */
+    height: 300px; 
+    margin-top: 5%;
+    margin-bottom: 5px;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -34,7 +37,7 @@ html, body {
     top: 0;
     left: 0;
     width: 140vw; /* Adjust width to desired size */
-    height: 220px; /* Adjust height as needed */
+    height: 175px; /* Adjust height as needed */
     overflow: hidden;
 }
 
@@ -54,94 +57,25 @@ html, body {
   animation: waveAnimation 8s ease-in-out infinite;
 }
 
-.font-size-buttons button {
-  display: inline-flex; /* For consistent centering */
-  align-items: center;
-  justify-content: center;
-  padding: 10px 20px;
-  font-size: 16px;
-  line-height: 1.5;
-  background-color: #5A9BFF;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  height: auto; /* Ensure full clickable area */
-}
-
-.font-size-buttons button:hover {
-  background-color: #004080;
-}
-
-.font-size-buttons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-  
-  /* Chat box container */
-  .chat-container {
-    width: 90%;
-    max-width: 600px;
-    background: #ffffff;
-    padding: 5px;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    height: 220vh;
-    max-height: 700px;
-    margin-top: 10px;
-    position: relative;
-  }
-
-  .input-container {
-    margin-top: 0; /* Adjust or remove as needed */
-    margin-bottom: 80px;
-    padding-top: 5px;
-}
-
-  .btn-invis {
-    position: absolute;
-    top: 40px;
-    left: 5px;
-    background-color: transparent;
-    color: white;
-    border: none;
-    cursor: pointer;
-    z-index: 2;
-  }
-
-  .invis{
-    font-size: 2rem;
-  }
-
-  .icon-send {
-    display: inline-block; /* Ensure the element can be transformed */
-    transform: rotate(-45deg); /* Rotate the icon by 45 degrees (you can change this value) */
-  }
-  
   /* Coco styles */
   .coco-small {
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 50px; /* Adjust as needed */
-    left: 200px; /* Adjust as needed */
+    top: 10px; /* Adjust as needed */
+    left: 230px; /* Adjust as needed */
     background-color: black;
-    width: 150px;
-    height: 150px;
+    width: 125px;
+    height: 125px;
     border-radius: 50%;
     gap: 20px;
-    outline: 20px solid white;
-    /* margin-bottom: 20px; */
+    outline: 12px solid white;
+    margin-bottom: 10px;
   }
   
   .eye {
-    width: 40px;
-    height: 30px;
+    width: 35px;
+    height: 25px;
     margin-bottom: 5px;
     background-color: #5A9BFF;
     border-radius: 50%;
@@ -160,6 +94,145 @@ html, body {
       clip-path: ellipse(100% 35% at 50% 35%); 
     }
   }
+
+.btn-invis { /*BACK BUTTON*/
+  position: absolute;
+  top: 40px;
+  left: 5px;
+  background-color: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.invis{
+  font-size: 2rem;
+}
+
+.font-size-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.font-size-buttons button {
+  padding: 10px 15px;
+  font-size: 16px;
+  background-color: #5A9BFF;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  /* align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  font-size: 16px;
+  line-height: 1.5; */
+  height: auto; /* Ensure full clickable area */
+}
+
+
+/* LLM RESPONSE BOX */
+  /* Chat box container */
+  .chat-container {
+    width: 90%;
+    max-width: 600px;
+    background: #ffffff;
+    padding: 5px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: 220vh;
+    max-height: 700px;
+    margin-top: 10px;
+    position: relative;
+  }
+
+  .chat-box {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #90acd6;
+    border-radius: 10px;
+    padding: 15px;
+    background: #CFE2FF;
+    max-height: calc(100% - 50px);
+}
+
+.chat-message {
+  padding: 15px;
+  border-radius: 25px;
+  margin: 10px 0;
+  max-width: 75%;
+  word-wrap: break-word;
+  display: inline-block;
+  font-size: 18px;
+}
+
+.user-message {
+  background: #5A9BFF;
+  color: #fff;
+  align-self: flex-end;
+  border-bottom-right-radius: 5px;
+  animation: slide-in 0.5s ease-out;
+  text-align: right;
+}
+
+.bot-message {
+  background: #FFFFFF;
+  color: #333;
+  align-self: flex-start;
+  border-bottom-left-radius: 5px;
+  animation: slide-in 0.5s ease-out;
+  text-align: left;
+}
+
+  .input-container {
+    margin-top: 0;
+    margin-bottom: 60px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    background: #ffffff;
+}
+
+input[type="text"] {
+  flex-grow: 1;
+  padding: 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  margin-right: 10px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #5A9BFF;
+}
+
+@keyframes slide-in {
+  0% {
+      transform: translateY(30px);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+  .icon-send {
+    display: inline-block; /* Ensure the element can be transformed */
+    transform: rotate(-45deg); /* Rotate the icon by 45 degrees (you can change this value) */
+  }
+
 
   .typing-animation span {
     display: inline-block;
