@@ -4,7 +4,7 @@ html, body {
   padding: 0;
   width: 100vw;
   height: 100vh;
-  overflow: auto; /* Prevent scrolling */
+  overflow: hidden; /* Prevent scrolling */
 }
 
 /* Container to fill the entire screen */
@@ -44,7 +44,7 @@ html, body {
   margin: 0;
   padding: 0;
   color: #FFFFFF;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Montserrat', serif;
   text-align: center;
 }
 
@@ -74,18 +74,20 @@ html, body {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  margin-top: 30px;
-  margin-bottom: 20px; /* Space below buttons */
+  margin-top: 7%;
+  margin-bottom: 30%; /* Space below buttons */
+  padding: 10px;
 }
 
 .btn { /* Button styling */
   height: 140px;
   width: 140px;
   font-size: 1.1rem;
-  font-weight: 500;
-  color: black;
-  font-family: 'Roboto', sans-serif;
-  background-color: #CFE2FF;
+  font-weight: 600;
+  color: white;
+  font-family: 'Montserrat', serif;
+  letter-spacing: 3;
+  background-color: #73a0fb;
   border: none;
   border-radius: 20px;
   cursor: pointer;
@@ -105,16 +107,21 @@ html, body {
 }
 
 .btn:hover {
-  background-color: #849efc;
+  background-color: #a7bef4;
 }
 
 .icon {
   font-size: 40px;
-  background-color: #fff;
-  color: black;
+  color: white;
   padding: 10px;
   border-radius: 8px;
   margin-bottom: 8px;
+  transition: transform 0.2s ease;
+  display: inline-block;
+}
+
+.btn:hover .icon {
+  transform: rotate(-15deg);
 }
 
 /* Responsive Media Queries */
@@ -124,8 +131,8 @@ html, body {
   }
 
   .btn {
-    width: 120px;
-    height: 120px;
+    width: 160px;
+    height: 160px;
     font-size: 1.5rem;
   }
 }

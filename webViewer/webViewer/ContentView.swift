@@ -277,7 +277,7 @@ import AVFoundation // Import AVFoundation to request microphone permission
 
 struct ContentView: View {
     var body: some View {
-        URLWebView(urlString: "http://192.168.1.119:8080/")
+        URLWebView(urlString: "http://10.0.0.14:8080/")
             .edgesIgnoringSafeArea(.all)
             .onAppear {
                 // Request microphone permission when the view appears
