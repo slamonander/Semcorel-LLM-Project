@@ -8,18 +8,18 @@ body {
     background: linear-gradient(135deg, #e2ebf0, #cfd9e2);
     margin: 0;
     flex-direction: column;
-    padding: 0 15px;
+    padding: 0;
     box-sizing: border-box;
 }
 
 .main-container {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Align items to the start (left) */
-    align-items: flex-start; /* Align items to the top */
-    position: relative; /* Keeps other positioned elements in context */
-    height: 100vh; /* Full viewport height */
-    width: 100vw; /* Full viewport width */
+    justify-content: flex-start;
+    align-items: center;
+    height: calc(100vh - 100px); /* Reduced height by 50px */
+    width: 100vw;
+    position: relative;
 }
 
 .chat-container {
@@ -30,10 +30,10 @@ body {
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
-    height: 80vh;
-    max-height: 700px;
+    height: 100%;
+    max-height: calc(100% - 20px); /* Accounts for padding and avoids overflow */
     position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .chat-box {
@@ -47,7 +47,6 @@ body {
     border-radius: 10px;
     padding: 15px;
     background: #CFE2FF;
-    max-height: calc(100% - 100px);
 }
 
 .chat-message {
@@ -81,10 +80,10 @@ body {
 .input-container {
     display: flex;
     align-items: center;
-    margin-top: 10px;
     padding: 10px;
     border-radius: 10px;
     background: #ffffff;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
 }
 
 input[type="text"] {

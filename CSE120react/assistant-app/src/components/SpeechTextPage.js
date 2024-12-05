@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./SpeechTextPage.css"; // Import the CSS file here
 import Avatar from "../components/Avatar";
@@ -7,7 +7,22 @@ function SpeechTextPage() {
   const [transcript, setTranscript] = useState("");
   const [textInput, setTextInput] = useState("");
   const [isListening, setIsListening] = useState(false);
+  const [voices, setVoices] = useState([]);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    // Load available voices and update state
+    const loadVoices = () => {
+      const availableVoices = window.speechSynthesis.getVoices();
+      setVoices(availableVoices);
+    };
+
+    loadVoices();
+
+    if (typeof window.speechSynthesis !== "undefined") {
+      window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+  }, []);
 
   // Function for handling Speech-to-Text
   const handleSpeechToText = () => {
@@ -43,7 +58,16 @@ function SpeechTextPage() {
     }
 
     const utterance = new SpeechSynthesisUtterance(textInput);
-    utterance.lang = "en-US";
+    utterance.lang = "en-GB"; // Set language to British English
+
+    // Set voice to 'Daniel' for iOS or fallback to the default voice
+    const selectedVoice = voices.find((voice) => voice.name === "Daniel");
+    if (selectedVoice) {
+      utterance.voice = selectedVoice;
+    } else {
+      console.warn("Voice 'Daniel' not found. Using default voice.");
+    }
+
     window.speechSynthesis.speak(utterance);
   };
 
@@ -70,7 +94,7 @@ function SpeechTextPage() {
         </button>
         <p className="transcript">Transcript: {transcript}</p>
       </div>
- 
+
       {/* Text-to-Speech Section */}
       <div style={{ margin: "20px 0" }}>
         <textarea

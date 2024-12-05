@@ -273,11 +273,11 @@
 
 import SwiftUI
 import WebKit
-import AVFoundation // Import AVFoundation to request microphone permission
+import AVFoundation // Import AVFoundation to request microphone permission and use TTS
 
 struct ContentView: View {
     var body: some View {
-        URLWebView(urlString: "http://10.0.0.14:8080/")
+        URLWebView(urlString: "http://10.34.3.151:8080/")
             .edgesIgnoringSafeArea(.all)
             .onAppear {
                 // Request microphone permission when the view appears
@@ -288,8 +288,19 @@ struct ContentView: View {
                         print("Microphone permission denied")
                     }
                 }
+                // Example usage of speech synthesis
+                speakText("Hello! This is Daniel's voice speaking.")
             }
     }
+}
+
+func speakText(_ text: String) {
+    let utterance = AVSpeechUtterance(string: text)
+    utterance.voice = AVSpeechSynthesisVoice(identifier: "com.apple.ttsbundle.Daniel-compact") // Set the voice to 'Daniel'
+    utterance.rate = AVSpeechUtteranceDefaultSpeechRate // Set speech rate
+
+    let synthesizer = AVSpeechSynthesizer()
+    synthesizer.speak(utterance)
 }
 
 struct URLWebView: UIViewRepresentable {
@@ -330,8 +341,7 @@ struct URLWebView: UIViewRepresentable {
         
         // Implement UIScrollViewDelegate method to prevent zooming
 //        func viewForZooming(in scrollView: UIScrollView) -> UIView? {
-//            // Returning nil prevents zooming
-//            return nil
+//            return nil // enables scrolling
 //        }
         
         // Implement the method to handle media capture permission requests
