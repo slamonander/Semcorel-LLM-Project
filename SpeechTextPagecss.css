@@ -1,0 +1,151 @@
+/* SpeechTextPage.css */
+
+body {
+  background-color: #f0f4f8;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #d7e4ff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.2em;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.back-button {
+  background-color: #ff6b6b;
+  color: white;
+  padding: 10px 15px;
+ 
+  border: none;
+  border-radius: 5px;  
+  font-size: 1em;
+  margin-right: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #ff4c4c;
+}
+
+/* Button styles */
+.speech-button,
+.text-to-speech-button {
+  background-color: #4a90e2;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.speech-button:hover,
+.text-to-speech-button:hover {
+  background-color: #357ab8;
+}
+
+.language-select {
+  padding: 10px;
+  font-size: 1em;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.language-select:hover {
+  border-color: #888;
+}
+
+label {
+  display: inline-block;
+  font-size: 1.1em;
+  color: #666;
+  margin: 15px 0;
+}
+
+.transcript,
+.language-detected,
+.translated-text {
+  font-size: 1.1em;
+  color: #555;
+  margin-top: 15px;
+  padding: 10px;
+  background: #f7faff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.translation {
+  color: blue;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+.text-area {
+  width: 100%;
+  max-width: 500px;
+  padding: 15px;
+  font-size: 1em;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  resize: vertical;
+  margin: 15px 0;
+}
+
+.transcript,
+.language-detected,
+.translated-text,
+.text-area {
+  text-align: left;
+}
+
+/* Avatar Styling */
+.avatar-container {
+  margin: 20px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .container {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  .speech-button,
+  .text-to-speech-button {
+    font-size: 0.9em;
+    padding: 10px 20px;
+  }
+
+  .back-button {
+    font-size: 0.9em;
+  }
+
+  .transcript,
+  .language-detected,
+  .translated-text {
+    font-size: 1em;
+  }
+}
