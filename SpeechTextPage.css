@@ -1,0 +1,115 @@
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import "./SpeechTextPage.css";
+import Avatar from "./Avatar";
+
+function SpeechTextPage() {
+  const [transcript, setTranscript] = useState("");
+  const [textInput, setTextInput] = useState("");
+  const [isListening, setIsListening] = useState(false);
+  const [selectedLanguage, setSelectedLanguage] = useState("en-US");
+  const navigate = useNavigate();
+
+  const languageOptions = [
+    { code: "en-US", label: "English (United States)" },
+    { code: "es-ES", label: "Spanish (Spain)" },
+    { code: "fr-FR", label: "French (France)" },
+    { code: "de-DE", label: "German (Germany)" },
+    { code: "zh-CN", label: "Chinese (Mandarin)" },
+    { code: "he-IL", label: "Hebrew (Israel)" },
+  ];
+
+  const handleSpeechToText = () => {
+    if (!("webkitSpeechRecognition" in window)) {
+      alert("Speech recognition is not supported in this browser.");
+      return;
+    }
+
+    const recognition = new window.webkitSpeechRecognition();
+    recognition.lang = selectedLanguage;
+    recognition.interimResults = false;
+    recognition.maxAlternatives = 1;
+
+    recognition.onstart = () => setIsListening(true);
+    recognition.onresult = (event) => {
+      const recognizedText = event.results[0][0].transcript;
+      setTranscript(recognizedText);
+      setIsListening(false);
+    };
+    recognition.onerror = (event) => {
+      console.error("Speech recognition error", event.error);
+      setIsListening(false);
+    };
+    recognition.onend = () => setIsListening(false);
+
+    recognition.start();
+  };
+
+  const handleTextToSpeech = () => {
+    if (!("speechSynthesis" in window)) {
+      alert("Text-to-speech is not supported in this browser.");
+      return;
+    }
+
+    const utterance = new SpeechSynthesisUtterance(textInput);
+    utterance.lang = selectedLanguage;
+    window.speechSynthesis.speak(utterance);
+  };
+
+  const handleBack = () => {
+    navigate("/");
+  };
+
+  return (
+    <div className="container">
+      <h1>Talk To Me!</h1>
+
+      {/* Speech-to-Text Section */}
+      <div style={{ margin: "20px 0" }}>
+        <button className="back-button" onClick={handleBack}>
+          ⬅ Back
+        </button>
+        <Avatar />
+        <label>
+          Select Language:
+          <select
+            value={selectedLanguage}
+            onChange={(e) => setSelectedLanguage(e.target.value)}
+            className="language-select"
+          >
+            {languageOptions.map((option) => (
+              <option key={option.code} value={option.code}>
+                {option.label}
+              </option>
+            ))}
+          </select>
+        </label>
+        <button
+          onClick={handleSpeechToText}
+          className="speech-button"
+          disabled={isListening}
+        >
+          {isListening ? "Listening..." : "Start Speaking"}
+        </button>
+        <p className="transcript">Transcript: {transcript}</p>
+      </div>
+
+      {/* Text-to-Speech Section */}
+      <div style={{ margin: "20px 0" }}>
+        <textarea
+          rows="4"
+          className="text-area"
+          value={textInput}
+          onChange={(e) => setTextInput(e.target.value)}
+          placeholder="Enter text to read out loud"
+        />
+        <br />
+        <button onClick={handleTextToSpeech} className="text-to-speech-button">
+          Read Text Aloud
+        </button>
+      </div>
+    </div>
+  );
+}
+
+export default SpeechTextPage;
