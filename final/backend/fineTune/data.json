@@ -473,10 +473,5 @@
         "prompt": "How do I charge my BT2-Z watch?",
         "completion": "To charge your BT2-Z watch (or respective model), attach the charging cable to the charging port, ensuring that the metal pins are fully connected. Please use a USB adapter with a 5V output and at least 0.5A current rating or higher.",
         "tags": "[how, charge, BT2-Z, watch, smart watch, smartwatch]"
-    },
-    {
-        "prompt": "test",
-        "completion": "test",
-        "tags": "test"
     }
 ]

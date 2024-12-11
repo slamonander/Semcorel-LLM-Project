@@ -270,27 +270,31 @@
 //    }
 //}
 
-
 import SwiftUI
 import WebKit
 import AVFoundation // Import AVFoundation to request microphone permission and use TTS
 
 struct ContentView: View {
     var body: some View {
-        URLWebView(urlString: "http://10.34.3.151:8080/")
-            .edgesIgnoringSafeArea(.all)
-            .onAppear {
-                // Request microphone permission when the view appears
-                AVAudioSession.sharedInstance().requestRecordPermission { granted in
-                    if granted {
-                        print("Microphone permission granted")
-                    } else {
-                        print("Microphone permission denied")
-                    }
+        VStack(spacing: 0) { // Add VStack to contain the WebView
+            URLWebView(urlString: "http://10.34.3.151:8080/")
+        
+                .edgesIgnoringSafeArea(.leading) // Extend to all
+            
+                .frame(maxWidth: .infinity, maxHeight: .infinity) // Use full screen space
+        }
+        .onAppear {
+            // Request microphone permission when the view appears
+            AVAudioSession.sharedInstance().requestRecordPermission { granted in
+                if granted {
+                    print("Microphone permission granted")
+                } else {
+                    print("Microphone permission denied")
                 }
-                // Example usage of speech synthesis
-                speakText("Hello! This is Daniel's voice speaking.")
             }
+            // Example usage of speech synthesis
+            speakText("Hello! This is Daniel's voice speaking.")
+        }
     }
 }
 
@@ -318,6 +322,10 @@ struct URLWebView: UIViewRepresentable {
         webView.scrollView.delegate = context.coordinator
         webView.uiDelegate = context.coordinator // Set the UI delegate
 
+        // Optionally, disable zooming if desired
+        webView.scrollView.isScrollEnabled = true
+        webView.scrollView.bounces = false
+        
         return webView
     }
 
@@ -340,9 +348,9 @@ struct URLWebView: UIViewRepresentable {
         }
         
         // Implement UIScrollViewDelegate method to prevent zooming
-//        func viewForZooming(in scrollView: UIScrollView) -> UIView? {
-//            return nil // enables scrolling
-//        }
+        func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+            return nil // Disables zooming
+        }
         
         // Implement the method to handle media capture permission requests
         func webView(_ webView: WKWebView,
@@ -355,6 +363,11 @@ struct URLWebView: UIViewRepresentable {
             } else {
                 decisionHandler(.deny) // Deny other types of media capture
             }
+        }
+        
+        // Inject JavaScript to modify the viewport meta tag after the page finishes loading
+        func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+            // No JavaScript injection for viewport scaling
         }
     }
 }

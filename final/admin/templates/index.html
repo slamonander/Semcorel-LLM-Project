@@ -3,23 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Insert Prompt</title>
+    <title>Dataset Management</title>
+    <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-    <h1>Add a New Entry</h1>
-    <form action="/add" method="POST">
-        <label for="prompt">Prompt:</label><br>
-        <textarea id="prompt" name="prompt" rows="4" cols="50" required></textarea><br><br>
-        <label for="completion">Completion:</label><br>
-        <textarea id="completion" name="completion" rows="4" cols="50" required></textarea><br><br>
-        <label for="tags">Tags (comma-separated):</label><br>
-        <input type="text" id="tags" name="tags" required><br><br>
-        <button type="submit">Submit</button>
-    </form>
-    <hr>
-    <h2>View Dataset</h2>
-    <a href="/data" target="_blank">View All Entries</a>
+    <div class="container">
+        <h1>Dataset Management</h1>
+        <form action="/add" method="POST" class="form-container">
+            <label for="prompt">Prompt:</label><br>
+            <textarea id="prompt" name="prompt" rows="4" required></textarea><br><br>
+
+            <label for="completion">Completion:</label><br>
+            <textarea id="completion" name="completion" rows="4" required></textarea><br><br>
+
+            <label for="tags">Tags (comma-separated):</label><br>
+            <input type="text" id="tags" name="tags" required><br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <hr>
+        <h2>View Dataset</h2>
+        <a href="/data" class="btn" target="_blank">View All Entries</a>
+    </div>
 </body>
 </html>
-
-
