@@ -473,5 +473,20 @@
         "prompt": "How do I charge my BT2-Z watch?",
         "completion": "To charge your BT2-Z watch (or respective model), attach the charging cable to the charging port, ensuring that the metal pins are fully connected. Please use a USB adapter with a 5V output and at least 0.5A current rating or higher.",
         "tags": "[how, charge, BT2-Z, watch, smart watch, smartwatch]"
+    },
+    {
+        "prompt": "Why is my watch not connecting",
+        "completion": "We understand that connecting the watch with your phone is important. Could you please check a few things to diagnose the issue? 1. Please double-check whether Bluetooth is enabled on your phone. Go to your phone's settings and verify whether 'Bluetooth' is set to 'On.' If it's off, please turn on Bluetooth and reconnect your watch in the CoCo App. If it was previously connected, remove the connection and reconnect. 2. If Bluetooth is enabled on your phone, tap 'Bluetooth' to see if you can find 'CoCo BT2 (ID-xxx)' listed there (xxx could be different for each watch). If you find it, remove it, then return to the CoCo app and reconnect your watch. 3. If the issue persists, please reboot your phone and repeat either step 1 or 2. Normally, the CoCo watch should automatically reconnect after being disconnected due to reasons such as low battery or being out of the (30 ft) Bluetooth range.",
+        "tags": "[why, watch, not connecting]"
+    },
+    {
+        "prompt": "Mi reloj no recibe sonido y mi telefono no suena.",
+        "completion": "1. Asegurese de que su telefono no este en modo silencioso. Vuelve a verificar el boton de control del modo silencioso, que es el primer boton en el lado izquierdo de tu iPhone. 2. Si eso no funciona, asegurese de que su reloj ise muestre como conectado en su telefono. 3. Desliza hacia tu mano si usas el reloj en tu muneca izquierda o hacia tu brazo si lo usas en tu muneca derecha. Desliza el dedo hacia abajo para buscar Funciones, haz clic en el y luego haz clic en Buscar telefono. Su telefono deberia emitir un sonido.",
+        "tags": "[reloj, no recibe, sonido, telefono, no suena]"
+    },
+    {
+        "prompt": "Por que no se connecta mi reloj",
+        "completion": "Entendemos que conectando su reloj con su telefono es importante. Podria verificar algunas cosas para diagnosticar el problema? 1. Vuelva a verificar si Bluetooth esta activado en su telefono. Vaya a la configuracion de su telefono y verifique si \"Bluetooth\" esta configurado en \"Si\". Si esta apagado, active Bluetooth y vuelva a conectar su reloj en la aplicacion CoCo. Si estaba conectado anteriormente, cancela la conexi\u00f3n y vuelva a conectarlo. 2. Si Bluetooth esta habilitado en su telefono, toque 'Bluetooth' para ver si puede encontrar 'CoCo BT2 (ID-xxx)' en la lista (xxx podr\u00eda ser diferente para cada reloj). Si lo encuentra, elim\u00ednelo, luego regrese a la aplicacion CoCo y vuelva a conectar su reloj. 3. Si el problema persiste, reinicie su telefono y repita el paso 1 o 2. Normalmente, el reloj CoCo deberia volver a conectarse automaticamente despuus de desconectarse por razones como bateria baja o estando fuera del alcance de Bluetooth (30 pies).",
+        "tags": "[por que, porque, no se connecta, no connecta, reloj]"
     }
 ]
