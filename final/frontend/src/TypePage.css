@@ -1,114 +1,250 @@
-body {
-    font-family: 'Roboto', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+html, body {
+    margin: 0;
+    padding: 0;
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(135deg, #e2ebf0, #cfd9e2);
-    margin: 0;
-    flex-direction: column;
-    padding: 0 15px;
-    box-sizing: border-box;
-}
+    overflow: hidden; /* Prevent scrolling */
+  }
 
+/* main-container ensures everything is positioned and stacked vertically */
 .main-container {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Align items to the start (left) */
-    align-items: flex-start; /* Align items to the top */
-    position: relative; /* Keeps other positioned elements in context */
-    height: 100vh; /* Full viewport height */
-    width: 100vw; /* Full viewport width */
+    justify-content: flex-start;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    margin: 5%; /* This adds a margin around the entire application to hopefully stop the scroll error*/
+    background-color: white;
+  }
+
+/* HEADER CSS (WAVE ANIMATION, COCO AVATAR, BACK BTN (INVIS BTN), FONT BTNS*/
+  /* Container for positioning wave animation*/
+.triangle-container {
+    position: relative;
+    width: 100vw; /* Full width */
+    height: 300px; 
+    margin-top: 5%;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  
+  /* Triangle shape */
+  .triangle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 140vw; /* Adjust width to desired size */
+    height: 175px; /* Adjust height as needed */
+    overflow: hidden;
 }
 
-.chat-container {
-    width: 100%;
+@keyframes waveAnimation {
+  0% {
+    d: path('M 0,100 Q 20,75 45,85 T 100,15 L 100,0 L 0,0 Z'); /* Starting position */
+  }
+  50% {
+    d: path('M -50,100 Q 20,60 50,85 T 150,25 L 150,0 L -50,0 Z'); /* More movement at bottom-left */
+  }
+  100% {
+    d: path('M 0,100 Q 20,75 45,85 T 100,15 L 100,0 L 0,0 Z'); /* Reset to start */
+  }
+}
+
+.wave {
+  animation: waveAnimation 8s ease-in-out infinite;
+}
+
+  /* Coco styles */
+  .coco-small {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 3px; /* Adjust as needed */
+    left: 250px; /* Adjust as needed */
+    background-color: black;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    gap: 20px;
+    outline: 9px solid white;
+    margin-bottom: 10px;
+  }
+  
+  .eye-small {
+    width: 30px;
+    height: 25px;
+    margin-bottom: 5px;
+    background-color: #5A9BFF;
+    border-radius: 50%;
+    animation: blink 3s infinite;
+    clip-path: ellipse(100% 50% at 50% 50%);
+  }
+  
+  @keyframes blink {
+    0%, 100% {
+      transform: scaleY(1);
+      clip-path: ellipse(100% 50% at 50% 50%); /* Normal eye shape */
+    }
+    50%, 60% {
+      transform: scaleY(0.8);
+      /* Create crescent shape: cut the bottom half to create a crescent */
+      clip-path: ellipse(100% 35% at 50% 35%); 
+    }
+  }
+
+.btn-invis { /*BACK BUTTON*/
+  position: absolute;
+  top: 40px;
+  left: 5px;
+  background-color: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.invis{
+  font-size: 2rem;
+}
+
+.font-size-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.font-size-buttons button {
+  padding: 10px 15px;
+  font-size: 16px;
+  background-color: #5A9BFF;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  /* align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  font-size: 16px;
+  line-height: 1.5; */
+  height: auto; /* Ensure full clickable area */
+}
+
+
+/* LLM RESPONSE BOX */
+  /* Chat box container */
+  .chat-container {
+    width: 90%;
     max-width: 600px;
     background: #ffffff;
-    padding: 20px;
+    padding: 5px;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    height: 80vh;
+    height: 220vh;
     max-height: 700px;
+    margin-top: 10px;
     position: relative;
-}
+  }
 
-.chat-box {
+  .chat-box {
     flex-grow: 1;
     overflow-y: auto;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     padding-right: 10px;
     display: flex;
     flex-direction: column;
-    border: 1px solid #e0e0e0;
+    border: 1px solid #90acd6;
     border-radius: 10px;
     padding: 15px;
     background: #CFE2FF;
-    max-height: calc(100% - 100px);
+    max-height: calc(100% - 50px);
 }
 
 .chat-message {
-    padding: 15px;
-    border-radius: 25px;
-    margin: 10px 0;
-    max-width: 75%;
-    word-wrap: break-word;
-    display: inline-block;
-    font-size: 16px;
+  padding: 15px;
+  border-radius: 25px;
+  margin: 10px 0;
+  max-width: 75%;
+  word-wrap: break-word;
+  display: inline-block;
+  font-size: 18px;
 }
 
 .user-message {
-    background: #5A9BFF;
-    color: #fff;
-    align-self: flex-end;
-    border-bottom-right-radius: 5px;
-    animation: slide-in 0.5s ease-out;
-    text-align: right;
+  background: #5A9BFF;
+  color: #fff;
+  align-self: flex-end;
+  border-bottom-right-radius: 5px;
+  animation: slide-in 0.5s ease-out;
+  text-align: right;
 }
 
 .bot-message {
-    background: #FFFFFF;
-    color: #333;
-    align-self: flex-start;
-    border-bottom-left-radius: 5px;
-    animation: slide-in 0.5s ease-out;
-    text-align: left;
+  background: #FFFFFF;
+  color: #333;
+  align-self: flex-start;
+  border-bottom-left-radius: 5px;
+  animation: slide-in 0.5s ease-out;
+  text-align: left;
 }
 
-.input-container {
+  .input-container {
+    margin-top: 0;
+    margin-bottom: 60px;
     display: flex;
     align-items: center;
-    margin-top: 10px;
     padding: 10px;
     border-radius: 10px;
     background: #ffffff;
 }
 
 input[type="text"] {
-    flex-grow: 1;
-    padding: 15px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 15px;
-    margin-right: 10px;
-    outline: none;
-    transition: all 0.3s ease;
+  flex-grow: 1;
+  padding: 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  margin-right: 10px;
+  outline: none;
+  transition: all 0.3s ease;
 }
 
 input[type="text"]:focus {
-    border-color: #007bff;
+  border-color: #5A9BFF;
 }
 
-button {
+@keyframes slide-in {
+  0% {
+      transform: translateY(30px);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+  .icon-send {
+    display: inline-block; /* Ensure the element can be transformed */
+    transform: rotate(-45deg); /* Rotate the icon by 45 degrees (you can change this value) */
+  }
+
+  button {
+    width: 60px;
+    height: 60px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     padding: 15px 25px;
     font-size: 16px;
     color: #fff;
     background: #5A9BFF;
     border: none;
-    border-radius: 30px;
+    border-radius: 50%;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -117,13 +253,31 @@ button:hover {
     background-color: #004080;
 }
 
-@keyframes slide-in {
-    0% {
-        transform: translateY(30px);
-        opacity: 0;
+  .typing-animation span {
+    display: inline-block;
+    animation: typing-blink 1.5s infinite;
+  }
+  
+  .typing-animation span:nth-child(1) {
+    animation-delay: 0s;
+  }
+  
+  .typing-animation span:nth-child(2) {
+    animation-delay: 0.3s;
+  }
+  
+  .typing-animation span:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+  
+  @keyframes typing-blink {
+    0%, 20% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
     }
     100% {
-        transform: translateY(0);
-        opacity: 1;
+      opacity: 0;
     }
-}
+  }
