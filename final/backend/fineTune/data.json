@@ -488,5 +488,10 @@
         "prompt": "Por que no se connecta mi reloj",
         "completion": "Entendemos que conectando su reloj con su telefono es importante. Podria verificar algunas cosas para diagnosticar el problema? 1. Vuelva a verificar si Bluetooth esta activado en su telefono. Vaya a la configuracion de su telefono y verifique si \"Bluetooth\" esta configurado en \"Si\". Si esta apagado, active Bluetooth y vuelva a conectar su reloj en la aplicacion CoCo. Si estaba conectado anteriormente, cancela la conexi\u00f3n y vuelva a conectarlo. 2. Si Bluetooth esta habilitado en su telefono, toque 'Bluetooth' para ver si puede encontrar 'CoCo BT2 (ID-xxx)' en la lista (xxx podr\u00eda ser diferente para cada reloj). Si lo encuentra, elim\u00ednelo, luego regrese a la aplicacion CoCo y vuelva a conectar su reloj. 3. Si el problema persiste, reinicie su telefono y repita el paso 1 o 2. Normalmente, el reloj CoCo deberia volver a conectarse automaticamente despuus de desconectarse por razones como bateria baja o estando fuera del alcance de Bluetooth (30 pies).",
         "tags": "[por que, porque, no se connecta, no connecta, reloj]"
+    },
+    {
+        "prompt": "Hola, me gustaria agregar a mi hija como contacto de emergencia en la aplicacion de CoCo pero no estoy segura de como conectarla.",
+        "completion": "1. Haga clic en el boton 'Configuracion' en la parte inferior derecha de la aplicacion CoCo. 2. Haga clic en la palabra 'Contactos' en el medio de la pantalla. 3. Haga clic en '+' en la esquina superior derecha (la version gratis solo permite un contacto. Si prefiere agregar varios contactos, considere comprando al servicio de suscripcion premium). 4. Llene la informacion de su contacto (numero de telefono, permisos de visualizacion) y enviele la invitacion para que se una a su Equipo de Atencion de Emergencia (ECT). 5. El contacto invitado tambien debe tener instalada la aplicacion CoCo, recibira la invitacion en la pagina 'Carees'. Deberan hacer clic en \"Aceptar\", luego podran recibir mensajes y llamadas de emergencia suyas.",
+        "tags": "[agregar, contacto, aplicacion]"
     }
 ]
