@@ -3,6 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import Coco from './Coco';
 import './TypePage.css';
 
+// Font: Roboto
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"></link>
+
 const TypePage = () => {
   const [userInput, setUserInput] = useState('');
   const [conversationHistory, setConversationHistory] = useState([]);
@@ -98,7 +101,7 @@ const TypePage = () => {
 
       <div className="font-size-buttons">
         <button
-          style={{ fontSize: '19px' }}
+          style={{ fontSize: '14px' }}
           onClick={() => changeFontSize(-2)}
         >
           A-

@@ -116,26 +116,29 @@ html, body {
 }
 
 .font-size-buttons {
-  display: flex;
-  gap: 10px;
-}
-
-.font-size-buttons button {
-  padding: 10px 15px;
-  font-size: 16px;
-  background-color: #5A9BFF;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  /* align-items: center;
-  justify-content: center;
-  padding: 10px 20px;
-  font-size: 16px;
-  line-height: 1.5; */
-  height: auto; /* Ensure full clickable area */
-}
+    display: flex;
+    gap: 10px;
+    z-index: 2;
+    position: relative;
+  }
+  
+  .font-size-buttons button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #5A9BFF;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    /* align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    font-size: 16px;
+    line-height: 1.5; /
+    height: auto; / Ensure full clickable area */
+    font-weight: 600;
+  }
 
 
 /* LLM RESPONSE BOX */
