@@ -4,6 +4,10 @@
 <dict>
 	<key>NSSpeechRecognitionUsageDescription</key>
 	<string>needs it</string>
+	<key>CFBundleIdentifier</key>
+	<string></string>
+	<key>Uiv</key>
+	<string></string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>needs it</string>
 </dict>

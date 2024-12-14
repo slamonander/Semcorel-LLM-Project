@@ -273,22 +273,42 @@
 
 import SwiftUI
 import WebKit
-import AVFoundation // Import AVFoundation to request microphone permission
+import AVFoundation
 
 struct ContentView: View {
     var body: some View {
-        URLWebView(urlString: "http://10.34.3.151:8080/")
-            .edgesIgnoringSafeArea(.all)
-            .onAppear {
-                // Request microphone permission when the view appears
-                AVAudioSession.sharedInstance().requestRecordPermission { granted in
-                    if granted {
-                        print("Microphone permission granted")
-                    } else {
-                        print("Microphone permission denied")
-                    }
-                }
+        ZStack {
+            Color.white // Change this color as needed
+                .ignoresSafeArea() // Extend blue background to cover everything
+
+            VStack(spacing: 0) {
+                URLWebView(urlString: "http://10.34.3.151:8080/")
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
             }
+        }
+        .onAppear {
+            requestMicrophonePermission()
+            speakText("Hello! This is Daniel's voice speaking.")
+        }
+    }
+
+    func requestMicrophonePermission() {
+        AVAudioSession.sharedInstance().requestRecordPermission { granted in
+            if granted {
+                print("Microphone permission granted")
+            } else {
+                print("Microphone permission denied")
+            }
+        }
+    }
+
+    func speakText(_ text: String) {
+        let utterance = AVSpeechUtterance(string: text)
+        utterance.voice = AVSpeechSynthesisVoice(identifier: "com.apple.ttsbundle.Daniel-compact")
+        utterance.rate = AVSpeechUtteranceDefaultSpeechRate
+
+        let synthesizer = AVSpeechSynthesizer()
+        synthesizer.speak(utterance)
     }
 }
 
@@ -348,3 +368,5 @@ struct URLWebView: UIViewRepresentable {
         }
     }
 }
+
+// Ensure that your App struct uses ContentView

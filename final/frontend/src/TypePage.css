@@ -199,7 +199,7 @@ html, body {
 
   .input-container {
     margin-top: 0;
-    margin-bottom: 60px;
+    margin-bottom: 0px;
     display: flex;
     align-items: center;
     padding: 10px;

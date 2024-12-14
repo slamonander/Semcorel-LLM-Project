@@ -1,4 +1,4 @@
-from tts import speak
+from final.backend.tts import speak
 from stt import speech_to_text
 
 
