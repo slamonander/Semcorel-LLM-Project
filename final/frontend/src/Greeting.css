@@ -36,7 +36,7 @@
     z-index: 1;
   } 
 
-  /* the little circles */
+  /* the huge circle in the corner of the page */
 
   .speech-bubble::before {
     content: '';
@@ -67,6 +67,9 @@
       font-size: 1.2rem; /* Decrease font size for smaller screens */
       padding: 20px; /* Reduce padding to fit smaller screens */
       width: 95%; /* Maximize width usage */
+    }
+    .speech-bubble::before {
+      left: 120%;
     }
   }
 
@@ -131,7 +134,7 @@
     transform: translate(-50%, -50%) scale(1); /* Original size */
   }
   50% {
-    transform: translate(-50%, -50%) scale(1.5); /* Expand to 1.5x */
+    transform: translate(-50%, -50%) scale(1.7); /* Expand to 1.7x */
   }
 }
 

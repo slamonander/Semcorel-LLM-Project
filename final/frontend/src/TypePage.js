@@ -89,11 +89,21 @@ const TypePage = () => {
       </div>
 
       <div className="font-size-buttons">
-        <button onClick={() => changeFontSize(-2)}>A-</button>
-        <button onClick={() => changeFontSize(2)}>A+</button>
-      </div>
-
+  <button 
+    style={{ fontSize: '19px' }} 
+    onClick={() => changeFontSize(-2)}
+  >
+    A-
+  </button>
+  <button 
+    style={{ fontSize: '21px' }} 
+    onClick={() => changeFontSize(2)}
+  >
+    A+
+  </button>
+</div>
       {/* Chat container */}
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_upward" />
       <div className="chat-container">
         <div id="chat-box" className="chat-box">
           {messages.map((msg, index) => (
@@ -118,7 +128,7 @@ const TypePage = () => {
             placeholder="Type a message..."
           />
           <button onClick={sendMessage}>
-            <span className="material-icons icon-send">send</span>
+          <span class="material-symbols-outlined">arrow_upward</span>
           </button>
         </div>
       </div>
