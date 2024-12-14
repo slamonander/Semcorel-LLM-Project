@@ -282,7 +282,9 @@ struct ContentView: View {
                 .ignoresSafeArea() // Extend blue background to cover everything
 
             VStack(spacing: 0) {
-                URLWebView(urlString: "http://10.34.3.151:8080/")
+//                URLWebView(urlString: "http://10.34.3.151:8080/")
+                URLWebView(urlString: "http://10.35.20.252:8080/")
+
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
             }
         }

@@ -182,7 +182,7 @@ const SpeakPage = () => {
             className="speech-button"
             disabled={isListening}
           >
-            {isListening ? 'Listening...' : 'Start Speaking'}
+            {isListening ? 'Listening...' : 'Listen'}
           </button>
         </div>
       </div>
