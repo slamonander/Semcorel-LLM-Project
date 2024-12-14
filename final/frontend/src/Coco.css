@@ -12,8 +12,8 @@
 }
 
 .eye {
-    width: 30px;
-    height: 20px;
+    width: 20px;
+    height: 15px;
     background-color: #5A9BFF;
     border-radius: 50%;
     animation: blink 4s infinite; /* Adjusted blink speed */

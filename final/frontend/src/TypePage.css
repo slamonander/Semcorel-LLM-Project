@@ -41,6 +41,8 @@ html, body {
     overflow: hidden;
 }
 
+/* Wave animations at the top of the page */
+
 @keyframes waveAnimation {
   0% {
     d: path('M 0,100 Q 20,75 45,85 T 100,15 L 100,0 L 0,0 Z'); /* Starting position */
@@ -57,16 +59,18 @@ html, body {
   animation: waveAnimation 8s ease-in-out infinite;
 }
 
+
   /* Coco styles */
+
   .coco-small {
     display: flex;
     justify-content: center;
     align-items: center;
     top: 3px; /* Adjust as needed */
-    left: 250px; /* Adjust as needed */
+    left: 280px; /* Adjust as needed */
     background-color: black;
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     gap: 20px;
     outline: 9px solid white;
@@ -74,8 +78,8 @@ html, body {
   }
   
   .eye-small {
-    width: 30px;
-    height: 25px;
+    width: 20px;
+    height: 15px;
     margin-bottom: 5px;
     background-color: #5A9BFF;
     border-radius: 50%;
@@ -108,6 +112,7 @@ html, body {
 
 .invis{
   font-size: 2rem;
+  color: black;
 }
 
 .font-size-buttons {
@@ -228,9 +233,8 @@ input[type="text"]:focus {
   }
 }
 
-  .icon-send {
+  .material-symbols-outlined {
     display: inline-block; /* Ensure the element can be transformed */
-    transform: rotate(-45deg); /* Rotate the icon by 45 degrees (you can change this value) */
   }
 
   button {
@@ -251,6 +255,10 @@ input[type="text"]:focus {
 
 button:hover {
     background-color: #004080;
+} 
+
+button:hover .material-symbols-outlined {
+  opacity: 75%;
 }
 
   .typing-animation span {
