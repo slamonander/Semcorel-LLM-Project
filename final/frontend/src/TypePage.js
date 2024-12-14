@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Coco from './Coco';
 import './TypePage.css';
@@ -10,6 +10,7 @@ const TypePage = () => {
   const [isTyping, setIsTyping] = useState(false);
   const [fontSize, setFontSize] = useState(19); // Default font size
   const navigate = useNavigate();
+  const chatBoxRef = useRef(null); // Ref for chat box container
 
   const addMessage = (content, className) => {
     setMessages((prevMessages) => [
@@ -74,11 +75,18 @@ const TypePage = () => {
     setFontSize((prevSize) => Math.max(12, Math.min(36, prevSize + adjustment))); // Restrict between 12px and 36px
   };
 
+  // Automatically scroll to the bottom of the chat box
+  useEffect(() => {
+    if (chatBoxRef.current) {
+      chatBoxRef.current.scrollTop = chatBoxRef.current.scrollHeight;
+    }
+  }, [messages, isTyping]);
+
   return (
     <div className="container">
       <div className="triangle-container">
         <svg className="triangle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 125" preserveAspectRatio="none">
-            <path className="wave" d="M 0,50 Q 20,35 45,40 T 100,15 L 100,0 L 0,0 Z" fill="#5A9BFF" transform="skewY(-15)" />
+          <path className="wave" d="M 0,50 Q 20,35 45,40 T 100,15 L 100,0 L 0,0 Z" fill="#5A9BFF" transform="skewY(-15)" />
         </svg>
         <button className="btn-invis" onClick={() => navigate('/')}>
           <span className="material-icons invis">arrow_back_ios</span>
@@ -89,27 +97,27 @@ const TypePage = () => {
       </div>
 
       <div className="font-size-buttons">
-  <button 
-    style={{ fontSize: '19px' }} 
-    onClick={() => changeFontSize(-2)}
-  >
-    A-
-  </button>
-  <button 
-    style={{ fontSize: '21px' }} 
-    onClick={() => changeFontSize(2)}
-  >
-    A+
-  </button>
-</div>
+        <button
+          style={{ fontSize: '19px' }}
+          onClick={() => changeFontSize(-2)}
+        >
+          A-
+        </button>
+        <button
+          style={{ fontSize: '21px' }}
+          onClick={() => changeFontSize(2)}
+        >
+          A+
+        </button>
+      </div>
       {/* Chat container */}
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_upward" />
       <div className="chat-container">
-        <div id="chat-box" className="chat-box">
+        <div id="chat-box" className="chat-box" ref={chatBoxRef}>
           {messages.map((msg, index) => (
-            <div key={index} className={`chat-message ${msg.className}`} style={{ fontSize: `${fontSize}px` }}> 
-            {msg.content}
-          </div>
+            <div key={index} className={`chat-message ${msg.className}`} style={{ fontSize: `${fontSize}px` }}>
+              {msg.content}
+            </div>
           ))}
           {isTyping && (
             <div className="chat-message bot-message typing-animation">
@@ -128,7 +136,7 @@ const TypePage = () => {
             placeholder="Type a message..."
           />
           <button onClick={sendMessage}>
-          <span class="material-symbols-outlined">arrow_upward</span>
+            <span className="material-symbols-outlined">arrow_upward</span>
           </button>
         </div>
       </div>
