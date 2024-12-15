@@ -4,6 +4,7 @@ html, body {
   width: 100vw;
   height: 100vh;
   overflow: hidden; /* Prevent scrolling */
+  font-family: 'Roboto', sans-serif;
 }
 
 /* main-container ensures everything is positioned and stacked vertically */
