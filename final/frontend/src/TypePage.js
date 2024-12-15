@@ -88,8 +88,24 @@ const TypePage = () => {
   return (
     <div className="container">
       <div className="triangle-container">
-        <svg className="triangle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 125" preserveAspectRatio="none">
-          <path className="wave" d="M 0,50 Q 20,35 45,40 T 100,15 L 100,0 L 0,0 Z" fill="#5A9BFF" transform="skewY(-15)" />
+        <svg className="triangle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 200" preserveAspectRatio="none">
+        <g className="parallax">
+          <path
+              className="wave wave1"
+              d="M-160 56c30 0 58 18 88 18s 58-18 88-18 58 18 88 18 58-18 88-18 58-18 88-18 v-44h-352z"
+              fill="rgba(90, 155, 255, 0.7)"
+            />
+            <path
+              className="wave wave2"
+              d="M-160 56c30 0 58 18 88 18s 58-18 88-18 58 18 88 18 58-18 88-18 58-18 88-18 v-44h-352z"
+              fill="rgba(90, 155, 255, 0.5)"
+            />
+            <path
+              className="wave wave3"
+              d="M-160 56c30 0 58 18 88 18s 58-18 88-18 58 18 88 18 58-18 88-18 58-18 88-18 v-44h-352z"
+              fill="rgba(90, 155, 255, 0.3)"
+            />
+          </g>
         </svg>
         <button className="btn-invis" onClick={() => navigate('/')}>
           <span className="material-icons invis">arrow_back_ios</span>
@@ -100,19 +116,20 @@ const TypePage = () => {
       </div>
 
       <div className="font-size-buttons">
-        <button
-          style={{ fontSize: '14px' }}
-          onClick={() => changeFontSize(-2)}
-        >
-          A-
-        </button>
-        <button
-          style={{ fontSize: '21px' }}
-          onClick={() => changeFontSize(2)}
-        >
-          A+
-        </button>
-      </div>
+  <button 
+    style={{ fontSize: '19px' }} 
+    onClick={() => changeFontSize(-2)}
+  >
+    A-
+  </button>
+  <button 
+    style={{ fontSize: '21px' }} 
+    onClick={() => changeFontSize(2)}
+  >
+    A+
+  </button>
+</div>
+
       {/* Chat container */}
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_upward" />
       <div className="chat-container">
