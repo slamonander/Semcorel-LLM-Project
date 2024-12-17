@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, render_template_string, send_from_directory
+from flask import Flask, request, jsonify, render_template_string, send_from_directory, Response
 from flask_cors import CORS
 import json
 from langchain_ollama import OllamaLLM
@@ -32,7 +32,7 @@ faq_embeddings = embedding_model.encode(
 # Define the template with instructions for conciseness
 template = """
 You are a helpful customer service assistant for a company called SemCorel. Answer the user's question concisely and clearly. You are only allowed to answer questions related to SemCorel's technical support. 
-If the user's question is not related to SemCorel or is unclear, politely inform them that you cannot assist with unrelated matters.
+If the user's question is not related to tech support inquiries or is unclear, politely inform them that you cannot assist with unrelated matters.
 
 Conversation history:
 {history}
@@ -42,7 +42,7 @@ Here are some relevant FAQs:
 
 Current question: {question}
 
-Answer (provide a brief and clear response, respond only if the question is related to SemCorel's technical support):
+Answer (provide a brief and clear response, respond only if the question is related to SemCorel's and or CoCo's technical support):
 
 """
 
@@ -68,7 +68,8 @@ def retrieve_faqs(question, faq_texts, faq_embeddings, k=3):
 # Route for the chat interface
 @app.route('/')
 def chat_interface():
-    return send_from_directory(app.template_folder, 'index.html')
+    with open(f"{app.template_folder}/index.html", "rb") as f:
+        return Response(f.read(), content_type="text/html")
 
 @app.route('/static/<path:path>')
 def send_static(path):
@@ -79,6 +80,11 @@ def send_static(path):
 def handle_data():
     # Receive JSON data
     data = request.get_json()
+
+    # Handle case where the body is not valid JSON
+    if data is None:
+        return jsonify({"response": "Invalid JSON format."}), 400
+
     user_input = data.get('userInput')
     conversation_history_json = data.get('history')
     
@@ -102,7 +108,7 @@ def handle_data():
 
     # Get the response from the model
     result = prompt.format(faqs=relevant_faqs, question=user_input, history=formatted_history)
-    assistant_response = model(result).strip()
+    assistant_response = model.invoke(result).strip()
 
     # Return the result as JSON
     return jsonify({"response": assistant_response})

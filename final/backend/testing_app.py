@@ -4,15 +4,21 @@ from app import app
 
 class TestAppRoutes(unittest.TestCase):
     def setUp(self):
-        """Set up the test client for the Flask app."""
+        """Set up the test client and push the app context."""
         app.testing = True  # Enables testing mode
         self.client = app.test_client()
+        self.app_context = app.app_context()
+        self.app_context.push()  # Push the context for the Flask app
+
+    def tearDown(self):
+        """Clean up by popping the app context."""
+        self.app_context.pop()  # Pop the context to avoid resource leaks
 
     def test_chat_interface_route(self):
         """Test the '/' route to return the index.html page."""
         response = self.client.get('/')
         self.assertEqual(response.status_code, 200)
-        self.assertIn(b"<!DOCTYPE html>", response.data)  # Check basic HTML presence
+        self.assertTrue(b"<!doctype html>" in response.data.lower())
 
     def test_static_files_route(self):
         """Test the '/static/<path>' route to return static files."""
@@ -61,9 +67,10 @@ class TestAppRoutes(unittest.TestCase):
             content_type='application/json'
         )
         self.assertEqual(response.status_code, 400)
-        data = json.loads(response.data)
+        data = response.get_json()
+        self.assertIsNotNone(data)
         self.assertIn("response", data)
-        self.assertEqual(data["response"], "Invalid conversation history format.")
+        self.assertEqual(data["response"], "Invalid JSON format.")
 
 if __name__ == '__main__':
     unittest.main()
